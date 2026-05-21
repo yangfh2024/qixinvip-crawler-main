@@ -1,6 +1,20 @@
 """
 启信宝爬虫 FastAPI 服务
+
+这个文件把爬虫包装成了 Web API（网页接口），
+通过 HTTP 请求就能调爬虫，不用每次都敲命令行。
+
+核心思路：
+1. 用 FastAPI 框架创建 Web 服务
+2. 把爬虫的每个功能（单公司爬取、批量爬取、高级搜索等）注册成 API 路由
+3. 用 uvicorn 启动 HTTP 服务器，监听 8004 端口
+4. 启动后自动生成 Swagger 文档（访问 http://localhost:8004/docs 查看）
+
+和 CLI 版的区别：
+- CLI 版每次运行都重新启动浏览器
+- API 版浏览器是全局复用的，多个请求共享同一个浏览器实例
 """
+
 import asyncio
 import os
 import uuid
@@ -15,14 +29,14 @@ from fastapi.responses import FileResponse, JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 
 import sys
-# 确保 Windows 事件循环支持子进程（Playwright 需要）
+# Windows 上需要特殊的事件循环策略，Playwright 才能正常工作
 if sys.platform == 'win32':
     asyncio.set_event_loop_policy(asyncio.WindowsProactorEventLoopPolicy())
 
 if hasattr(sys.stdout, 'reconfigure'):
     sys.stdout.reconfigure(encoding='utf-8')
 
-# 添加项目根目录到路径
+# 把项目根目录加到 Python 路径中，才能 import 到 crawler 等模块
 _root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if _root not in sys.path:
     sys.path.insert(0, _root)
@@ -46,26 +60,36 @@ from app.schemas import (
 )
 
 # ── 全局状态 ──────────────────────────────────────────────
-browser_manager: Optional[BrowserManager] = None
-_tasks: Dict[str, Dict] = {}  # task_id -> task info
-_config = load_config()
+# 这些变量在整个服务运行期间保持，不随请求销毁
+browser_manager: Optional[BrowserManager] = None  # 全局浏览器管理器（所有请求共用）
+_tasks: Dict[str, Dict] = {}                      # 批量任务队列 {task_id: 任务信息}
+_config = load_config()                           # 加载配置
 
 
 def _clean_field(value: str) -> str:
-    """清理字段值中的复制按钮文本"""
+    """
+    清理字段值——去除"复制"按钮文本和"历史变动"等无关文字
+
+    Args:
+        value: 原始字段值
+
+    Returns:
+        清理后的字段值
+    """
     if not value or value == "N/A":
         return "N/A"
     return value.replace("复制", "").replace(" 历史变动", "").strip()
 
 
 def _cookie_status() -> dict:
-    """检查当前 Cookie 状态"""
+    """检查当前 Cookie 状态——有没有登录凭证"""
     try:
         from utils import load_config
         config = load_config()
         cookie_str = config.get("cookie", "")
         cookies = parse_cookie_string(cookie_str, domain=".qixin.com")
 
+        # 检查是否包含登录相关的关键字段
         auth_keywords = ["session", "token", "sid", "auth", "uin", "ETK", "RK", "p_skey", "pt4_token"]
         has_auth = any(
             any(kw in c["name"].lower() for kw in auth_keywords)
@@ -78,7 +102,13 @@ def _cookie_status() -> dict:
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    """应用生命周期"""
+    """
+    应用生命周期管理
+
+    FastAPI 的 lifespan 机制：
+    - 服务启动时：打印就绪信息
+    - 服务关闭时：自动关闭浏览器，释放资源
+    """
     print("[启动] API 服务就绪（浏览器按需懒加载）")
     yield
     global browser_manager
@@ -87,6 +117,8 @@ async def lifespan(app: FastAPI):
         await browser_manager.stop()
 
 
+# 创建 FastAPI 应用实例
+# FastAPI 会自动生成 Swagger 文档，访问 /docs 就能看到
 app = FastAPI(
     title="启信宝企业数据爬虫 API",
     description="基于 Playwright 的启信宝企业信息爬取服务。支持单公司查询、批量导出、进度追踪。",
@@ -94,19 +126,25 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
+# 配置 CORS 中间件——允许其他域名下的网页调用本 API
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["*"],       # 允许所有来源
     allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_methods=["*"],       # 允许所有 HTTP 方法
+    allow_headers=["*"],       # 允许所有请求头
 )
 
 
 # ── 辅助函数 ────────────────────────────────────────────
 
 async def _ensure_browser():
-    """确保浏览器已启动"""
+    """
+    确保浏览器已启动（懒加载）
+
+    第一次请求时才会启动浏览器，后续请求复用。
+    这叫"懒加载"——用的时候再加载，不用提前占用资源。
+    """
     global browser_manager
     if browser_manager is None:
         browser_manager = BrowserManager(_config)
@@ -120,7 +158,16 @@ async def _ensure_browser():
 
 
 async def _crawl_single(company_name: str, timeout: int = 120) -> dict:
-    """执行单公司爬取（内部方法）"""
+    """
+    执行单公司爬取（内部方法，不直接对外暴露）
+
+    Args:
+        company_name: 公司名称
+        timeout: 超时秒数
+
+    Returns:
+        公司数据字典，失败返回 None
+    """
     await _ensure_browser()
 
     config = load_config()
@@ -131,13 +178,13 @@ async def _crawl_single(company_name: str, timeout: int = 120) -> dict:
     crawler.cookie = cookie
     crawler.config = config
 
-    # 超时控制
+    # 带上超时控制，防止某个公司一直卡住
     data = await asyncio.wait_for(
         crawler.crawl_single_company(company_name),
         timeout=timeout,
     )
     if data:
-        # 清理字段
+        # 清理字段中的干扰文本
         cleaned = {k: _clean_field(v) if isinstance(v, str) else v for k, v in data.items()}
         return cleaned
     return None
@@ -146,9 +193,9 @@ async def _crawl_single(company_name: str, timeout: int = 120) -> dict:
 # ── API 路由 ────────────────────────────────────────────
 
 
-@app.get("/health", summary="健康检查")
+@app.get("/health", summary="健康检查（查看服务是否正常运行）")
 async def health_check():
-    """检查服务状态"""
+    """检查服务状态——浏览器是否就绪、Cookie 是否有效"""
     cookie_info = _cookie_status()
     return {
         "status": "ok",
@@ -165,7 +212,8 @@ async def crawl_single(request: SingleCrawlRequest):
     """
     爬取单个公司的企业信息。
 
-    返回公司基本信息、联系方式等数据。
+    输入公司名称，返回基本资料、联系方式等数据。
+    需要先配置好 VIP Cookie。
     """
     try:
         data = await _crawl_single(request.company_name, timeout=request.timeout)
@@ -186,13 +234,19 @@ async def crawl_single(request: SingleCrawlRequest):
         return SingleCrawlResponse(success=False, error=str(e))
 
 
-@app.post("/crawl/advanced", response_model=AdvancedSearchResponse, summary="高级搜索")
+@app.post("/crawl/advanced", response_model=AdvancedSearchResponse, summary="高级搜索（直接调 API，更快）")
 async def crawl_advanced(request: AdvancedSearchRequest):
     """
-    高级搜索（直接调用 API，无需浏览器启动）。
+    高级搜索——直接调启信宝 API，不需要启动浏览器。
 
-    支持多维筛选：关键词、经营状态、地区、行业、注册资本、成立年限等全部筛选项。
-    搜索速度快（通常 0.1-0.5 秒），不消耗浏览器资源。
+    优势：
+    - 速度快（通常 0.1-0.5 秒出结果）
+    - 不消耗浏览器资源
+    - 支持多维度筛选（经营状态、地区、行业、注册资本等）
+
+    劣势：
+    - 返回的数据不如浏览器爬取详细
+    - 取决于 API 是否稳定
     """
     try:
         crawler = QixinbaoCrawler()
@@ -218,7 +272,7 @@ async def crawl_advanced(request: AdvancedSearchRequest):
         _strip_em = lambda s: _re.sub(r"</?em>", "", s) if isinstance(s, str) else s
 
         # ── Cookie 过期检测 ──────────────────────────
-        # totalNum=0 时可能是指标不匹配，也可能是 cookie 失效
+        # totalNum=0 可能是指标不匹配，也可能是 cookie 失效了
         if result.get("totalNum") == 0 and not result.get("isLimit"):
             cookie_ok = QixinbaoCrawler.check_cookie_valid()
             if not cookie_ok:
@@ -227,6 +281,7 @@ async def crawl_advanced(request: AdvancedSearchRequest):
                     error="Cookie 已过期或无效，请重新扫码登录后更新 cookie.txt",
                 )
 
+        # 转换 API 返回的字段为统一的格式
         items = []
         for item in result.get("items", []):
             items.append(AdvancedSearchItem(
@@ -260,21 +315,24 @@ async def crawl_advanced(request: AdvancedSearchRequest):
         )
 
 
-@app.post("/crawl/batch", response_model=CrawlTaskResponse, summary="批量爬取（异步）", include_in_schema=False)
+@app.post("/crawl/batch", response_model=CrawlTaskResponse, summary="批量爬取（异步任务）", include_in_schema=False)
 async def crawl_batch(request: BatchCrawlRequest, background_tasks: BackgroundTasks):
     """
     批量爬取多个公司。
 
-    创建异步任务后立即返回 task_id，通过 GET /crawl/task/{task_id} 查询进度，
-    完成后通过 GET /crawl/download/{filename} 下载结果文件。
+    因为批量爬取耗时较长，这里采用"异步任务"模式：
+    1. 提交任务后立即返回 task_id
+    2. 通过 GET /crawl/task/{task_id} 查询进度
+    3. 完成后通过 GET /crawl/download/{filename} 下载结果文件
     """
-    task_id = uuid.uuid4().hex[:12]
+    task_id = uuid.uuid4().hex[:12]  # 生成唯一的任务 ID
 
+    # 创建任务记录
     _tasks[task_id] = {
         "id": task_id,
-        "status": "queued",
-        "progress": 0,
-        "total": len(request.companies),
+        "status": "queued",          # 排队中
+        "progress": 0,               # 当前进度
+        "total": len(request.companies),  # 总数
         "companies": request.companies,
         "export_format": request.export_format,
         "timeout": request.timeout,
@@ -283,6 +341,7 @@ async def crawl_batch(request: BatchCrawlRequest, background_tasks: BackgroundTa
         "results": [],
     }
 
+    # 在后台执行爬取（不阻塞当前请求）
     background_tasks.add_task(_run_batch, task_id)
     return CrawlTaskResponse(
         task_id=task_id,
@@ -292,9 +351,13 @@ async def crawl_batch(request: BatchCrawlRequest, background_tasks: BackgroundTa
 
 
 async def _run_batch(task_id: str):
-    """后台执行批量爬取"""
+    """
+    后台执行批量爬取（FastAPI 的 BackgroundTasks 机制）
+
+    这个函数会在后台运行，不影响其他请求的处理。
+    """
     task = _tasks[task_id]
-    task["status"] = "running"
+    task["status"] = "running"  # 改为运行中
 
     try:
         await _ensure_browser()
@@ -308,6 +371,7 @@ async def _run_batch(task_id: str):
 
         exporter = get_exporter(config)
 
+        # 逐个爬取公司
         for idx, company in enumerate(task["companies"]):
             try:
                 data = await asyncio.wait_for(
@@ -326,14 +390,14 @@ async def _run_batch(task_id: str):
             except Exception as e:
                 task["results"].append({"company_name": company, "error": str(e)})
 
-            task["progress"] = idx + 1
+            task["progress"] = idx + 1  # 更新进度
 
-        # 导出文件
+        # 导出结果到文件
         exporter.save()
         if exporter.data:
             task["result_file"] = exporter.filename
 
-        task["status"] = "completed"
+        task["status"] = "completed"  # 标记完成
 
     except Exception as e:
         task["status"] = "failed"
@@ -341,9 +405,9 @@ async def _run_batch(task_id: str):
         traceback.print_exc()
 
 
-@app.get("/crawl/task/{task_id}", response_model=CrawlTaskStatus, summary="查询任务状态", include_in_schema=False)
+@app.get("/crawl/task/{task_id}", response_model=CrawlTaskStatus, summary="查询任务状态")
 async def get_task_status(task_id: str):
-    """查询批量爬取任务的执行进度和结果"""
+    """查询批量爬取任务的执行进度和结果（轮询这个接口就能看到进度）"""
     task = _tasks.get(task_id)
     if not task:
         raise HTTPException(status_code=404, detail="任务不存在")
@@ -358,7 +422,7 @@ async def get_task_status(task_id: str):
     )
 
 
-@app.get("/crawl/download/{filename:path}", summary="下载结果文件", include_in_schema=False)
+@app.get("/crawl/download/{filename:path}", summary="下载结果文件")
 async def download_file(filename: str):
     """下载爬取结果文件（Excel 或 CSV）"""
     filepath = os.path.join(os.path.dirname(__file__), "..", filename)
@@ -369,7 +433,7 @@ async def download_file(filename: str):
 
     return FileResponse(
         filepath,
-        filename=os.path.basename(filepath),
+        filename=os.path.basename(filename),
         media_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
         if filename.endswith(".xlsx")
         else "text/csv",
@@ -378,7 +442,7 @@ async def download_file(filename: str):
 
 @app.post("/cookie/check", response_model=CookieStatusResponse, summary="检查 Cookie 状态")
 async def check_cookie():
-    """检查当前配置的 Cookie 是否有效（包含登录凭证）"""
+    """检查当前配置的 Cookie 是否有效（有没有登录凭证）"""
     info = _cookie_status()
     msg = "Cookie 有效，包含登录凭证" if info["has_auth"] else \
           "Cookie 未包含登录凭证，请重新登录" if info["count"] > 0 else \
@@ -396,8 +460,8 @@ async def update_cookie(cookie_str: str):
     """
     手动更新 Cookie 字符串。
 
-    将完整的 Cookie 字符串写入 cookie.txt 文件，
-    下次请求时生效。
+    把完整的 Cookie 字符串写到 cookie.txt 文件，
+    下次请求就会用新的 Cookie。
     """
     if not cookie_str or len(cookie_str) < 10:
         raise HTTPException(status_code=400, detail="Cookie 字符串无效")

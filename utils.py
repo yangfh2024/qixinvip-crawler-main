@@ -1,6 +1,14 @@
 """
 工具函数模块
+
+各种零散但常用的功能都放在这里：
+1. 加载配置文件（含 Cookie 读取）
+2. 解析 Cookie 字符串
+3. 模拟人类操作（随机延迟、打字、鼠标移动、滚动）
+4. 文件名处理
+5. 启信宝 API 的签名算法（逆向工程反编译得来的）
 """
+
 import os
 import json
 import random
@@ -15,28 +23,29 @@ def load_config(config_path: str = 'config.json') -> Dict:
     """
     加载配置文件
 
-    支持两种 Cookie 配置方式：
-    1. config.json 中的 "cookie" 字段
-    2. cookie.txt 文件（优先级更高）
+    Cookie 有两个来源，按优先级排列：
+    1. cookie.txt 文件（优先级高）—— 用 qr_login.py 扫码登录后会自动生成
+    2. config.json 中的 "cookie" 字段（优先级低）
+
+    cookie.txt 支持 # 开头的注释行，方便管理多个 Cookie。
     """
     try:
         with open(config_path, 'r', encoding='utf-8') as f:
             config = json.load(f)
 
-        # 如果存在 cookie.txt，优先使用
+        # 如果存在 cookie.txt，优先使用它（扫码登录生成的）
         if os.path.exists('cookie.txt'):
             print("[提示] 发现 cookie.txt 文件，优先使用")
             with open('cookie.txt', 'r', encoding='utf-8') as cf:
-                # 读取所有行，过滤掉注释和空行
                 lines = cf.readlines()
                 cookie_lines = []
                 for line in lines:
                     line = line.strip()
-                    # 跳过注释行和空行
+                    # 跳过注释行（#开头）和空行
                     if line and not line.startswith('#'):
                         cookie_lines.append(line)
 
-                # 将所有行合并为一个 Cookie 字符串
+                # 把多行合并为一个 Cookie 字符串
                 cookie_from_file = ' '.join(cookie_lines).strip()
 
                 if cookie_from_file:
@@ -54,14 +63,17 @@ def load_config(config_path: str = 'config.json') -> Dict:
 
 def parse_cookie_string(cookie_string: str, domain: str = '.qixin.com') -> List[Dict]:
     """
-    解析Cookie字符串为Playwright格式
+    解析 Cookie 字符串为 Playwright 能用的格式
+
+    浏览器复制的 Cookie 是 "key1=value1; key2=value2" 这种格式，
+    Playwright 需要的是 [{name, value, domain, path}, ...] 这种列表格式。
 
     Args:
-        cookie_string: 浏览器复制的Cookie字符串
-        domain: Cookie的域名
+        cookie_string: 从浏览器复制的 Cookie 字符串
+        domain: Cookie 所属域名（默认 .qixin.com）
 
     Returns:
-        Cookie字典列表
+        Playwright 格式的 Cookie 字典列表
     """
     cookies = []
     for item in cookie_string.split(';'):
@@ -78,20 +90,30 @@ def parse_cookie_string(cookie_string: str, domain: str = '.qixin.com') -> List[
 
 
 async def random_delay(min_sec: float = 1.0, max_sec: float = 3.0):
-    """随机延迟，模拟人类操作"""
+    """
+    随机等待一段时间——模拟人类操作节奏
+
+    真实用户的操作之间会有间隔，程序执行太快反而会被网站识别为爬虫。
+
+    Args:
+        min_sec: 最短等待秒数
+        max_sec: 最长等待秒数
+    """
     delay = random.uniform(min_sec, max_sec)
     await asyncio.sleep(delay)
 
 
 async def human_like_typing(page, selector: str, text: str, delay_range: tuple = (0.05, 0.15)):
     """
-    模拟人类打字输入
+    模拟人类打字——逐字输入，每个字之间有随机延迟
+
+    和直接把文本粘贴进去不同，逐字输入更接近真实用户的行为。
 
     Args:
-        page: Playwright页面对象
-        selector: 输入框选择器
+        page: Playwright 页面对象
+        selector: 输入框的 CSS 选择器
         text: 要输入的文本
-        delay_range: 每个字符的延迟范围(秒)
+        delay_range: 每个字符之间的延迟范围（秒）
     """
     await page.click(selector)
     for char in text:
@@ -99,22 +121,27 @@ async def human_like_typing(page, selector: str, text: str, delay_range: tuple =
 
 
 async def random_mouse_move(page):
-    """随机鼠标移动，模拟真实用户（带平滑轨迹）"""
+    """
+    随机鼠标移动——模拟真实用户的鼠标轨迹
+
+    真实用户的鼠标不是直线瞬移的，而是有抖动和弧度。
+    这里把移动分成多段，每段加随机噪声，看起来更像人手操作。
+    """
     try:
         viewport_size = page.viewport_size
         if not viewport_size:
             return
         w, h = viewport_size['width'], viewport_size['height']
 
-        # 随机选择终点
+        # 随机选一个终点
         end_x = random.randint(0, w)
         end_y = random.randint(0, h)
 
-        # 分段移动，模拟人类鼠标轨迹（非直线瞬移）
+        # 分多步移动，模拟真实鼠标轨迹（不是瞬移）
         steps = random.randint(6, 15)
         for i in range(1, steps + 1):
             t = i / steps
-            # 线性插值 + 随机噪声，模拟手部抖动
+            # 线性插值 + 随机噪声（模仿手抖）
             x = end_x * t + random.randint(-4, 4)
             y = end_y * t + random.randint(-4, 4)
             x = max(0, min(w, x))
@@ -126,7 +153,13 @@ async def random_mouse_move(page):
 
 
 async def random_scroll(page, distance_range: tuple = (100, 500)):
-    """随机滚动页面"""
+    """
+    随机滚动页面
+
+    Args:
+        page: Playwright 页面对象
+        distance_range: 滚动距离范围（像素）
+    """
     try:
         distance = random.randint(*distance_range)
         await page.evaluate(f'window.scrollBy(0, {distance})')
@@ -136,12 +169,16 @@ async def random_scroll(page, distance_range: tuple = (100, 500)):
 
 
 def generate_timestamp() -> str:
-    """生成时间戳字符串"""
+    """生成时间戳字符串，用于导出文件名（如 20250101_143025）"""
     return datetime.now().strftime("%Y%m%d_%H%M%S")
 
 
 def sanitize_filename(filename: str) -> str:
-    """清理文件名，移除非法字符"""
+    """
+    清理文件名——移除 Windows 不允许的字符
+
+    Windows 文件名不能包含：< > : " / \ | ? *
+    """
     invalid_chars = '<>:"/\\|?*'
     for char in invalid_chars:
         filename = filename.replace(char, '_')
@@ -152,12 +189,14 @@ def extract_text_content(element, default: str = "N/A") -> str:
     """
     安全地提取元素文本内容
 
+    如果 element 为 None 或提取出错，返回默认值而不是崩溃。
+
     Args:
-        element: Playwright元素对象
-        default: 提取失败时的默认值
+        element: Playwright 元素对象
+        default: 提取失败返回的默认值
 
     Returns:
-        提取的文本内容
+        元素的文本内容
     """
     try:
         if element:
@@ -169,8 +208,14 @@ def extract_text_content(element, default: str = "N/A") -> str:
 
 
 # ── 启信宝 API 签名算法 ────────────────────────────────────
-# 逆向自 Vue.js Axios 拦截器的 codeBook() 函数
-
+#
+# 启信宝的 API 请求需要带一个自定义签名头（header），
+# 这个签名是通过 HMAC-SHA256 算法算出来的。
+#
+# 算法是逆向工程从 Vue.js 前端代码的 Axios 拦截器里反编译出来的，
+# 具体函数名叫 codeBook()。
+#
+# 代码对照表（0-19 映射到 20 个字符）
 _QIXIN_CODES = {
     0: "a", 1: "z", 2: "p", 3: "W", 4: "V", 5: "3", 6: "K", 7: "W",
     8: "j", 9: "p", 10: "S", 11: "X", 12: "S", 13: "d", 14: "a",
@@ -180,17 +225,24 @@ _QIXIN_PROXY_BASE = "/api-proxy"
 
 
 def _qixin_get_key(url_path: str) -> str:
-    """生成 HMAC 密钥: 将 URL 加倍后逐字符映射到 codes 表."""
+    """
+    生成 HMAC 密钥
+
+    算法：把 URL 路径加倍后，每个字符取 ASCII 码模20，
+    然后用映射表转成一个字符，拼起来就是密钥。
+    """
     doubled = url_path + url_path
     return "".join(_QIXIN_CODES[ord(ch) % 20] for ch in doubled)
 
 
 def _qixin_build_q(base_url: str, url_path: str) -> str:
     """
-    构建待签名字符串，匹配 Vue 端逻辑:
-      q = BROWSER_API_BASE_URL
-          + _.get(_.split(N, BROWSER_API_BASE_URL), "[1]")
-          + B
+    构建待签名字符串
+
+    匹配前端 Vue.js 的逻辑：
+    q = BROWSER_API_BASE_URL + 路径剩余部分 + B（POST 请求体）
+
+    具体逻辑在 Axios 拦截器里，看不懂是正常的，这是逆向出来的。
     """
     parts = base_url.split(_QIXIN_PROXY_BASE)
     rest = parts[1] if len(parts) > 1 else ""
@@ -203,15 +255,18 @@ def compute_qixin_signature(
     base_url: str = None,
 ) -> Tuple[str, str]:
     """
-    计算启信宝 API 请求的自定义认证头。
+    计算启信宝 API 请求的自定义认证头
+
+    每个 API 请求都要带这个签名头，否则会返回 403 拒绝访问。
+    算法是 HMAC-SHA256，密钥由 URL 路径经过特殊变换生成。
 
     Args:
-        url_path: API 路径, 如 "/search/advanced"
-        json_body: JSON 请求体（需与 JS JSON.stringify 行为一致：紧凑、不转义非 ASCII）
-        base_url: API 基础路径, 默认 "/api-proxy"
+        url_path: API 路径，如 "/search/advanced"
+        json_body: JSON 请求体（必须是紧凑格式，和 JS JSON.stringify 一致）
+        base_url: API 基础路径，默认 "/api-proxy"
 
     Returns:
-        (header_name, header_value), 如 ("04d73", "8373a7c9...")
+        (header_name, header_value)，如 ("04d73", "8373a7c9...")
     """
     if base_url is None:
         base_url = _QIXIN_PROXY_BASE
@@ -225,5 +280,15 @@ def compute_qixin_signature(
 
 
 def qixin_json(data) -> str:
-    """JSON 序列化，行为与 JS JSON.stringify 一致（紧凑、不转义非 ASCII）. """
+    """
+    JSON 序列化——行为要和 JS 的 JSON.stringify 完全一致
+
+    区别在于：
+    - Python 默认会在 : 后面加空格
+    - JS 的 JSON.stringify 是紧凑的（没空格）
+    - Python 默认会转义非 ASCII 字符（如中文变 \\uXXXX）
+    - JS 不会
+
+    所以这里用 separators=(",", ":") 紧凑格式，ensure_ascii=False 不转义中文。
+    """
     return json.dumps(data, ensure_ascii=False, separators=(",", ":"))

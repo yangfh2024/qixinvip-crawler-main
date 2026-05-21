@@ -1,6 +1,12 @@
 """
-单公司爬取测试脚本
+快速单公司爬取测试脚本
+
+比 main.py 更轻量，专门用来测试单个公司能不能爬成功。
+适合开发调试时用——不用进菜单选模式，直接改公司名就能跑。
+
+用法：python test_single.py
 """
+
 import asyncio
 import sys
 import io
@@ -9,7 +15,7 @@ from crawler import QixinbaoCrawler
 from exporter import get_exporter
 from utils import load_config
 
-# 设置 UTF-8 编码
+# 设置 UTF-8 编码，解决 Windows 控制台中文乱码
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
 sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8', errors='replace')
 
@@ -28,17 +34,16 @@ async def test_single_company():
         print("\n请编辑 cookie.txt 或 config.json 文件")
         return
 
-    # 测试公司
+    # 测试公司（可以改成你要测的公司名）
     test_company = "景煜熙曜（上海）创业投资管理中心（有限合伙）"
     print(f"\n测试公司: {test_company}")
     print("-" * 60)
 
-    # 创建爬虫实例（不使用上下文管理器，手动控制）
+    # 手动管理爬虫生命周期（不用 async with，更灵活）
     crawler = QixinbaoCrawler()
     await crawler.browser_manager.start()
 
     try:
-        # 爬取数据
         data = await crawler.crawl_single_company(test_company)
 
         if data:
@@ -62,7 +67,7 @@ async def test_single_company():
             print("4. 公司名称是否正确")
             print("5. 选择器是否需要调整")
     finally:
-        # 确保浏览器正确关闭
+        # 确保浏览器关闭
         print("\n正在关闭浏览器...")
         await crawler.browser_manager.stop()
 

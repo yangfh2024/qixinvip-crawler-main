@@ -1,7 +1,8 @@
 {
-  "说明": "如果网站改版，选择器失效，只需修改这个文件即可",
+  "说明": "CSS 选择器配置文件。如果网站改版导致爬虫失效，修改这个文件即可，不用改代码。\n每个字段有多个备选选择器，程序会按顺序尝试，哪个能用用哪个。",
+
   "search": {
-    "说明": "搜索相关的选择器",
+    "说明": "搜索功能相关的选择器",
     "input_selectors": [
       "input[placeholder*=\"搜索\"]",
       "input[placeholder*=\"企业名称\"]",
@@ -20,6 +21,7 @@
       "a.search-btn"
     ]
   },
+
   "company_list": {
     "说明": "搜索结果列表的选择器",
     "first_result": [
@@ -30,8 +32,9 @@
       ".result-item:first-child a"
     ]
   },
+
   "company_detail": {
-    "说明": "公司详情页的选择器",
+    "说明": "公司详情页各字段的选择器",
     "company_name": [
       ".company-name h1",
       "h1.company-title",
@@ -69,8 +72,9 @@
       "[data-key=\"address\"]"
     ]
   },
+
   "tabs": {
-    "说明": "标签页选择器（股东、高管等）",
+    "说明": "标签页选择器（股东、高管等子页面）",
     "shareholders": [
       "text=股东信息",
       "a:has-text(\"股东\")",

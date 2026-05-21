@@ -1,6 +1,15 @@
 """
-测试脚本 - 用于验证配置和选择器
+配置诊断和选择器测试脚本
+
+用来排查问题：
+- Cookie 配对了没有？
+- 浏览器能正常启动吗？
+- 搜索功能好用吗？
+- 当前页面的 CSS 选择器是什么？
+
+当你发现爬虫不好使了，先跑这个脚本看看是哪里的问题。
 """
+
 import asyncio
 import sys
 import io
@@ -12,7 +21,7 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='repla
 
 
 async def test_cookie():
-    """测试 Cookie 是否有效"""
+    """测试1：检查 Cookie 有没有配"""
     print("=" * 60)
     print("测试 1: 验证 Cookie 配置")
     print("=" * 60)
@@ -29,7 +38,7 @@ async def test_cookie():
 
 
 async def test_browser_launch():
-    """测试浏览器启动"""
+    """测试2：测试浏览器能不能正常启动，Cookie 是否有效"""
     print("\n" + "=" * 60)
     print("测试 2: 浏览器启动")
     print("=" * 60)
@@ -46,7 +55,7 @@ async def test_browser_launch():
             await page.goto("https://www.qixin.com/")
             print("[OK] 成功访问启信宝首页")
 
-            # 检查是否登录
+            # 注入 Cookie 后刷新，看能不能保持登录状态
             config = load_config()
             cookies = parse_cookie_string(config['cookie'])
             await context.add_cookies(cookies)
@@ -54,9 +63,8 @@ async def test_browser_launch():
             await page.reload()
             await asyncio.sleep(2)
 
-            # 检查登录状态（根据页面元素判断）
+            # 检查是否有登录后的元素出现
             try:
-                # 可能的登录后元素
                 login_indicators = [
                     '.user-info',
                     '.vip-icon',
@@ -83,7 +91,7 @@ async def test_browser_launch():
                 print(f"[!] 登录检查失败: {e}")
 
             print("\n按 Ctrl+C 关闭浏览器...")
-            await asyncio.sleep(10)  # 显示10秒供检查
+            await asyncio.sleep(10)  # 停留10秒供观察
 
             await browser.close()
 
@@ -95,7 +103,7 @@ async def test_browser_launch():
 
 
 async def test_search():
-    """测试搜索功能"""
+    """测试3：测试搜索功能能不能用"""
     print("\n" + "=" * 60)
     print("测试 3: 搜索功能")
     print("=" * 60)
@@ -156,12 +164,12 @@ async def test_search():
 
 
 async def test_selectors():
-    """测试页面选择器"""
+    """测试4：打开浏览器让你手动查找 CSS 选择器"""
     print("\n" + "=" * 60)
     print("测试 4: 选择器验证")
     print("=" * 60)
-    print("\n此测试将打开浏览器并进入一个公司页面")
-    print("请手动查找并记录下各类元素的 CSS 选择器")
+    print("\n这个测试会打开浏览器，让你进入公司详情页")
+    print("请手动查找并记下各个字段的 CSS 选择器")
     print("\n建议测试公司: 腾讯科技（深圳）有限公司")
 
     input("\n按 Enter 继续...")
@@ -186,9 +194,9 @@ async def test_selectors():
             print("1. 手动搜索一个公司")
             print("2. 进入公司详情页")
             print("3. 使用 F12 开发者工具检查元素")
-            print("4. 记录下需要的 CSS 选择器")
-            print("\n常用查找方法:")
-            print("- 右键点击元素 → Copy → Copy selector")
+            print("4. 记下需要的 CSS 选择器")
+            print("\n如何获取选择器:")
+            print("- 右键点击元素 → 检查 → 右键元素 → Copy → Copy selector")
 
             print("\n按 Ctrl+C 关闭浏览器...")
             await asyncio.sleep(60)

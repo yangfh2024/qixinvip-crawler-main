@@ -1,0 +1,232 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e8]:
+      - link "text-url" [ref=e9] [cursor=pointer]:
+        - /url: /
+        - img "text-url" [ref=e10]
+      - img "credential-title" [ref=e12]
+      - generic [ref=e13]:
+        - generic [ref=e14]:
+          - generic [ref=e15]:
+            - textbox "企业名、人名、品牌" [ref=e16]
+            - text: 
+          - generic [ref=e17] [cursor=pointer]:
+            - generic [ref=e18]: 
+            - generic [ref=e19]: 搜索
+        - generic [ref=e20] [cursor=pointer]: 企业版
+        - generic [ref=e22] [cursor=pointer]: 数据服务
+        - generic [ref=e24] [cursor=pointer]: 合作入口
+        - generic [ref=e26] [cursor=pointer]: 应用
+      - generic [ref=e28] [cursor=pointer]: 注册/登录
+    - generic [ref=e31]:
+      - generic [ref=e32]:
+        - link "text-url":
+          - /url: /
+          - img "text-url"
+        - generic [ref=e33]: 扫码登录
+        - generic [ref=e34]:
+          - link "app-logo":
+            - /url: /
+            - img "app-logo"
+        - generic [ref=e36]:
+          - text: 使用
+          - link "启信宝APP" [ref=e37] [cursor=pointer]:
+            - /url: https://www.qixin.com/download
+          - text: 或 微信 扫码登录
+      - generic [ref=e38]:
+        - generic [ref=e39]:
+          - generic [ref=e40] [cursor=pointer]: 验证码登录
+          - generic [ref=e41] [cursor=pointer]: 密码登录
+        - generic [ref=e43]:
+          - generic [ref=e44]: 中国 +86
+          - textbox "请输入手机号码" [ref=e45]
+        - generic [ref=e46]:
+          - textbox "请输入验证码" [ref=e47]
+          - generic [ref=e48]: 获取验证码
+        - generic [ref=e49] [cursor=pointer]:
+          - generic [ref=e50]:
+            - checkbox "我已阅读并同意《用户协议》《隐私政策》《儿童隐私指引》"
+          - generic [ref=e53]:
+            - text: 我已阅读并同意
+            - link "《用户协议》" [ref=e54]:
+              - /url: /other/about/terms
+            - link "《隐私政策》" [ref=e55]:
+              - /url: /other/about/privacy
+            - link "《儿童隐私指引》" [ref=e56]:
+              - /url: https://static-cdn-p.qixin.com/policy/qixinbao_Web/children_zh-cn.html
+        - generic [ref=e57] [cursor=pointer]: 登录/注册
+        - generic [ref=e58]: 验证码登录手机账号，未注册用户将自动创建账号
+        - generic [ref=e60]: 其他登录方式
+  - contentinfo [ref=e64]:
+    - generic [ref=e65]:
+      - generic [ref=e66]:
+        - generic [ref=e67]:
+          - link "text-url-reverse":
+            - /url: /
+            - img "text-url-reverse"
+          - img "brand" [ref=e68]
+        - generic [ref=e69]:
+          - heading "快速导航" [level=4] [ref=e70]
+          - generic [ref=e71]:
+            - link "地区导航" [ref=e72] [cursor=pointer]:
+              - /url: https://www.qixin.com/area-nav
+            - link "行业导航" [ref=e73] [cursor=pointer]:
+              - /url: https://www.qixin.com/industry-nav
+            - link "热门搜索" [ref=e74] [cursor=pointer]:
+              - /url: https://www.qixin.com/hot
+            - link "人员名录" [ref=e75] [cursor=pointer]:
+              - /url: https://www.qixin.com/people-nav
+            - link "年报查询" [ref=e76] [cursor=pointer]:
+              - /url: https://www.qixin.com/report
+            - link "品牌名录" [ref=e77] [cursor=pointer]:
+              - /url: https://www.qixin.com/brand-nav
+            - link "企业查询" [ref=e78] [cursor=pointer]:
+              - /url: /search?key=小米
+            - link "老板查询" [ref=e79] [cursor=pointer]:
+              - /url: /search/people?key=雷军
+            - link "商标查询" [ref=e80] [cursor=pointer]:
+              - /url: /search/trademark?key=小米
+            - link "融资查询" [ref=e81] [cursor=pointer]:
+              - /url: /search/financing
+            - link "关系查询" [ref=e82] [cursor=pointer]:
+              - /url: https://www.qixin.com/search/find-relation
+            - link "招标查询" [ref=e83] [cursor=pointer]:
+              - /url: https://zhaobiao.qixin.com/bidding
+            - link "批量查询" [ref=e84] [cursor=pointer]:
+              - /url: https://www.qixin.com/batch/search
+            - link "版权查询" [ref=e85] [cursor=pointer]:
+              - /url: https://www.qixin.com/copy-right
+            - link "姓氏大全" [ref=e86] [cursor=pointer]:
+              - /url: https://www.qixin.com/names
+            - link "企业版" [ref=e87] [cursor=pointer]:
+              - /url: https://b.qixin.com/?from=index
+            - link "招聘查询" [ref=e88] [cursor=pointer]:
+              - /url: https://www.qixin.com/job
+            - link "守护个人信息安全" [ref=e89] [cursor=pointer]:
+              - /url: https://www.qixin.com/network-case
+            - link "藏蓝青春 “键”指河山" [ref=e90] [cursor=pointer]:
+              - /url: https://www.qixin.com/network-youth
+            - link "守护“数字世界身份信息”" [ref=e91] [cursor=pointer]:
+              - /url: https://www.qixin.com/network-number
+        - generic [ref=e92]:
+          - heading "关于启信宝" [level=4] [ref=e93]
+          - generic [ref=e94]:
+            - link "关于我们" [ref=e95] [cursor=pointer]:
+              - /url: /other/about
+            - link "常见问题" [ref=e96] [cursor=pointer]:
+              - /url: https://www.qixin.com/customer-service
+            - generic [ref=e97] [cursor=pointer]: 意见反馈
+            - link "服务协议" [ref=e98] [cursor=pointer]:
+              - /url: /other/about/terms
+            - link "隐私政策" [ref=e99] [cursor=pointer]:
+              - /url: /other/about/privacy
+            - link "儿童隐私" [ref=e100] [cursor=pointer]:
+              - /url: https://static-cdn-p.qixin.com/policy/qixinbao_Web/children_zh-cn.html
+        - generic [ref=e101]:
+          - heading "联系方式" [level=4] [ref=e102]
+          - generic [ref=e103]:
+            - link "在线咨询" [ref=e104] [cursor=pointer]:
+              - /url: https://www.qixin.com/customer-service
+            - generic [ref=e105]:
+              - text: 企业邮箱：
+              - link "kefu@qixin.com" [ref=e106] [cursor=pointer]:
+                - /url: mailto:kefu@qixin.com
+            - generic [ref=e107]: 客服电话：400-6383-888
+            - generic [ref=e108]: 工作时间：工作日9:30-19:00
+        - generic [ref=e109]:
+          - generic [ref=e110]:
+            - img "启信宝APP" [ref=e111]
+            - generic [ref=e112]: 扫码下载APP
+          - generic [ref=e113]:
+            - img "启信宝小程序" [ref=e114]
+            - generic [ref=e115]: 启信宝小程序
+      - generic [ref=e116]: 数据来源：全国企业信用信息公示系统国家知识产权局商标局版权局
+      - generic [ref=e117]:
+        - text: 友情链接：
+        - link "合合信息" [ref=e118] [cursor=pointer]:
+          - /url: https://www.intsig.com
+        - link "名片全能王" [ref=e119] [cursor=pointer]:
+          - /url: https://www.camcard.com
+        - link "扫描全能王" [ref=e120] [cursor=pointer]:
+          - /url: https://www.camscanner.com
+        - link "开放平台" [ref=e121] [cursor=pointer]:
+          - /url: https://data.qixin.com/?from=footer_link
+        - link "国务院发展研究中心信息网" [ref=e122] [cursor=pointer]:
+          - /url: http://www.drcnet.com.cn
+        - link "蝉大师" [ref=e123] [cursor=pointer]:
+          - /url: https://chandashi.com
+        - link "权大师" [ref=e124] [cursor=pointer]:
+          - /url: https://www.quandashi.com
+        - link "中国比地招标网" [ref=e125] [cursor=pointer]:
+          - /url: http://www.bidizhaobiao.com
+        - link "网络非法金融信息举报专区" [ref=e126] [cursor=pointer]:
+          - /url: http://www.js12377.cn/wyjb/index.jhtml?reportNext=1&reportClass=2&harmType=2
+        - link "建设招标网" [ref=e127] [cursor=pointer]:
+          - /url: https://www.jszhaobiao.com
+        - link "蔚蓝地图" [ref=e128] [cursor=pointer]:
+          - /url: https://www.ipe.org.cn
+        - link "洞见研报" [ref=e129] [cursor=pointer]:
+          - /url: https://www.djyanbao.com/index
+        - link "猪八戒网" [ref=e130] [cursor=pointer]:
+          - /url: https://suzhou.zbj.com
+        - link "小程序商城系统" [ref=e131] [cursor=pointer]:
+          - /url: https://www.youzan.com
+      - generic [ref=e132]:
+        - generic [ref=e133]:
+          - generic [ref=e134]:
+            - link "沪公网安备 31010602003968号" [ref=e135] [cursor=pointer]:
+              - /url: http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010602003968
+            - text: 上海生腾数据科技有限公司，版权所有©2014 - 2026
+            - link "沪ICP备18033674号-2" [ref=e136] [cursor=pointer]:
+              - /url: https://beian.miit.gov.cn
+          - generic [ref=e137]:
+            - generic [ref=e138]:
+              - text: 增值电信业务经营许可证：
+              - link "沪B2-20200755" [ref=e139] [cursor=pointer]:
+                - /url: https://beian.miit.gov.cn
+            - text: 公司地址：上海市静安区万荣路1268号云立方A座11层
+        - generic [ref=e140]:
+          - img "营业执照" [ref=e141]
+          - link "工商网监" [ref=e142] [cursor=pointer]:
+            - /url: http://scjgj.sh.gov.cn
+            - img "工商网监" [ref=e143]
+          - link "上海市互联网违法和不良信息举报中心" [ref=e144] [cursor=pointer]:
+            - /url: http://www.shjbzx.cn
+            - img "上海市互联网违法和不良信息举报中心" [ref=e145]
+          - link "中央网信办违法和不良信息举报中心" [ref=e146] [cursor=pointer]:
+            - /url: https://www.12377.cn
+            - img "中央网信办违法和不良信息举报中心" [ref=e147]
+        - generic [ref=e148]:
+          - generic [ref=e149]: 不良信息举报电话：400-6383-888
+          - generic [ref=e150]: 举报邮箱：
+          - link "kefu@qixin.com" [ref=e151] [cursor=pointer]:
+            - /url: mailto:kefu@qixin.com
+  - generic [ref=e152]:
+    - generic [ref=e153]:
+      - generic [ref=e154]: 
+      - generic [ref=e155]: 小程序
+    - generic [ref=e156]:
+      - generic [ref=e157]: 
+      - generic [ref=e158]: APP
+    - generic [ref=e159]:
+      - generic [ref=e160]: 
+      - generic [ref=e161]: 微信
+    - generic [ref=e162] [cursor=pointer]:
+      - generic [ref=e163]: 
+      - generic [ref=e164]: 反馈
+    - generic [ref=e165] [cursor=pointer]:
+      - generic [ref=e166]: 
+      - generic [ref=e167]: 客服中心
+    - generic [ref=e168] [cursor=pointer]:
+      - generic [ref=e169]: 
+      - generic [ref=e170]: 回到顶部
+    - generic [ref=e172] [cursor=pointer]: 
+  - generic:
+    - generic:
+      - img "negative" [ref=e173]
+      - generic [ref=e174]:
+        - generic [ref=e175] [cursor=pointer]:
+          - img "left" [ref=e176]
+          - img "right" [ref=e177]
+          - img "qrcode" [ref=e178]
+        - generic [ref=e179] [cursor=pointer]: 

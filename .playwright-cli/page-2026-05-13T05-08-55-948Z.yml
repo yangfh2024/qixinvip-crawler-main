@@ -1,0 +1,2871 @@
+- generic [active] [ref=e1]:
+  - generic:    
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e8]:
+        - link "text-url" [ref=e9] [cursor=pointer]:
+          - /url: /
+          - img "text-url" [ref=e10]
+        - img "credential-title" [ref=e12]
+        - generic [ref=e13]:
+          - generic [ref=e14]:
+            - generic [ref=e15]:
+              - textbox "企业名、人名、品牌" [ref=e16]: 小米科技有限责任公司
+              - generic [ref=e17] [cursor=pointer]: 
+            - generic [ref=e18] [cursor=pointer]:
+              - generic [ref=e19]: 
+              - generic [ref=e20]: 搜索
+          - generic [ref=e21] [cursor=pointer]: 企业版
+          - generic [ref=e23] [cursor=pointer]: 数据服务
+          - generic [ref=e25] [cursor=pointer]: 合作入口
+          - generic [ref=e27] [cursor=pointer]: 应用
+        - generic [ref=e28]:
+          - link "vip 成为VIP" [ref=e29] [cursor=pointer]:
+            - /url: /pay/vip
+            - img "vip" [ref=e30]
+            - generic [ref=e31]: 成为VIP
+          - img "backup-avatar" [ref=e36] [cursor=pointer]
+      - generic [ref=e38]:
+        - generic [ref=e39]:
+          - img "side-company" [ref=e40]
+          - img "side-claim" [ref=e41] [cursor=pointer]
+        - generic [ref=e42]:
+          - link "首页" [ref=e44] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e45]: 首页
+          - generic [ref=e46]:
+            - text: /
+            - link "北京企业查询" [ref=e47] [cursor=pointer]:
+              - /url: https://www.qixin.com/search-prov/11
+              - generic [ref=e48]: 北京企业查询
+          - generic [ref=e49]:
+            - text: /
+            - link "小米科技有限责任公司" [ref=e50] [cursor=pointer]:
+              - /url: /company/534472fd-7d53-4958-8132-d6a6242423d8
+              - generic [ref=e51]: 小米科技有限责任公司
+        - generic [ref=e52]:
+          - generic [ref=e53]:
+            - img "小米科技有限责任公司" [ref=e57]
+            - generic [ref=e58]:
+              - generic [ref=e60]:
+                - heading "小米科技有限责任公司" [level=1] [ref=e61]
+                - link "去认证" [ref=e62] [cursor=pointer]:
+                  - /url: https://www.qixin.com/user/claim?target=certificate_introduce&params=%7B%22eid%22%3A%22534472fd-7d53-4958-8132-d6a6242423d8%22%2C%22trackfrom%22%3A%22pc_company_detail%22%7D
+                  - generic [ref=e63]: 去认证
+              - generic [ref=e65]:
+                - generic [ref=e66]: 存续
+                - generic [ref=e67] [cursor=pointer]: 发票抬头
+                - generic [ref=e68]: 曾用名
+                - link "小米集团" [ref=e69] [cursor=pointer]:
+                  - /url: /group/info/534472fd-7d53-4958-8132-d6a6242423d8
+                  - text: 小米集团
+                - link "中概股|小米集团-W 01810.HK" [ref=e71] [cursor=pointer]:
+                  - /url: /publiclyHk/534472fd-7d53-4958-8132-d6a6242423d8?section=overview
+                  - text: 中概股|小米集团-W 01810.HK
+                - generic [ref=e73]: 2020年税务信用A级
+                - generic [ref=e74]: 一般纳税人
+                - generic [ref=e75]: 小微企业
+                - generic [ref=e76]: 私募基金管理人
+                - link "risk 自身风险 1919条" [ref=e77] [cursor=pointer]:
+                  - /url: /detail/company/qx-risk/534472fd-7d53-4958-8132-d6a6242423d8
+                  - img "risk" [ref=e78]
+                  - generic [ref=e79]: 自身风险 1919条
+                - link "司法案件" [ref=e81] [cursor=pointer]:
+                  - /url: /risk/534472fd-7d53-4958-8132-d6a6242423d8?section=judicialCase
+                  - text: 司法案件
+              - generic [ref=e84]:
+                - generic [ref=e85]: "#智能硬件"
+                - generic [ref=e86]: "#电子产品研发"
+                - generic [ref=e87]: "#移动互联网"
+                - generic [ref=e88]: "#即时通讯"
+                - generic [ref=e89]: "#工具"
+                - generic [ref=e90]: "#社交"
+                - generic [ref=e91]: "#小米手机"
+                - generic [ref=e92]: "#手机"
+                - generic [ref=e93]: "#数码"
+                - generic [ref=e94]: "#金融"
+            - generic [ref=e95]:
+              - generic [ref=e96]:
+                - generic [ref=e98] [cursor=pointer]: 启信分：745分
+                - generic [ref=e102] [cursor=pointer]:
+                  - generic [ref=e103]: 
+                  - generic [ref=e104]: 导出
+                - generic [ref=e105] [cursor=pointer]:
+                  - generic [ref=e106]: 
+                  - generic [ref=e107]: 报告
+                - generic [ref=e109] [cursor=pointer]:
+                  - generic [ref=e110]: 
+                  - generic [ref=e111]: 监控
+              - generic [ref=e112]:
+                - generic [ref=e113]:
+                  - img [ref=e114]
+                  - text: 浏览：1951万+
+                - generic [ref=e115]:
+                  - generic [ref=e116]: 
+                  - generic [ref=e117]: 今日已更新
+          - generic [ref=e118]:
+            - generic [ref=e119]:
+              - generic [ref=e120]:
+                - generic [ref=e121]:
+                  - generic [ref=e122]:
+                    - generic [ref=e123]:
+                      - generic [ref=e124]:
+                        - generic [ref=e125]: 法定代表人：
+                        - generic [ref=e126]:
+                          - link "雷军" [ref=e131] [cursor=pointer]:
+                            - /url: https://www.qixin.com/people/info/02ad6587897a976a793aa72ead924a47
+                            - generic [ref=e132]: 雷军
+                          - generic [ref=e134] [cursor=pointer]:
+                            - img "related-ent" [ref=e135]
+                            - generic [ref=e136]: "87"
+                      - generic [ref=e137]:
+                        - generic [ref=e138]: 注册资本：
+                        - generic [ref=e139]:
+                          - text: 147652.5441 万元
+                          - generic [ref=e140] [cursor=pointer]: 历史变动
+                      - generic [ref=e142]:
+                        - generic [ref=e143]: 成立日期：
+                        - generic [ref=e144]: 2010-03-03
+                      - generic [ref=e145]:
+                        - text: 统一社会信用代码：
+                        - generic [ref=e146]: 91110108551385082Q
+                    - generic [ref=e147]:
+                      - generic [ref=e148]:
+                        - generic [ref=e149]: 电话：
+                        - generic [ref=e150]:
+                          - generic [ref=e151]:
+                            - img "phone" [ref=e152]
+                            - generic [ref=e154]: 167********
+                            - generic [ref=e155] [cursor=pointer]:
+                              - text: 更多
+                              - generic [ref=e156]: "5"
+                          - generic [ref=e158] [cursor=pointer]:
+                            - text: 同电话企业
+                            - generic [ref=e159]: 99+
+                      - generic [ref=e161]:
+                        - generic [ref=e162]: 网址：
+                        - generic [ref=e164]:
+                          - img "website" [ref=e165]
+                          - generic [ref=e166] [cursor=pointer]: http://www.mi.com
+                          - generic [ref=e167] [cursor=pointer]:
+                            - text: 更多
+                            - generic [ref=e168]: "68"
+                      - generic [ref=e170]:
+                        - generic [ref=e171]: 邮箱：
+                        - generic [ref=e173]:
+                          - link "legal-corpstru@xiaomi.com" [ref=e174] [cursor=pointer]:
+                            - /url: mailto:legal-corpstru@xiaomi.com
+                          - generic [ref=e175] [cursor=pointer]:
+                            - text: 更多
+                            - generic [ref=e176]: "3"
+                          - generic [ref=e178] [cursor=pointer]:
+                            - text: 同邮箱企业
+                            - generic [ref=e179]: 99+
+                      - generic [ref=e181]:
+                        - generic [ref=e182]: 疑似实控人：
+                        - generic [ref=e183]:
+                          - generic [ref=e185]: 雷*
+                          - link "持股 xxxxxx" [ref=e186] [cursor=pointer]:
+                            - /url: /company/534472fd-7d53-4958-8132-d6a6242423d8?section=actController
+                            - text: 持股
+                            - generic [ref=e187]: xxxxxx
+                  - generic [ref=e189]:
+                    - generic [ref=e190]: 地址：
+                    - generic [ref=e191]:
+                      - generic [ref=e192] [cursor=pointer]: 北京市海淀区西二旗中路33号院6号楼6层006号
+                      - generic [ref=e193]:
+                        - generic [ref=e194] [cursor=pointer]:
+                          - text: 更多
+                          - generic [ref=e195]: "2"
+                        - generic [ref=e197] [cursor=pointer]:
+                          - text: 同地址企业
+                          - generic [ref=e198]: "2"
+                        - link "附近企业" [ref=e200] [cursor=pointer]:
+                          - /url: https://www.qixin.com/app/map-search?ename=小米科技有限责任公司
+                          - text: 附近企业
+                        - generic [ref=e202] [cursor=pointer]: 历史地址 2
+                - generic [ref=e204]:
+                  - generic [ref=e205]:
+                    - generic [ref=e206]:
+                      - generic [ref=e207]: 所属行业
+                      - generic [ref=e208]: 
+                      - generic [ref=e209]: ：
+                    - generic [ref=e210]:
+                      - generic [ref=e211]: 其他技术推广服务（M7519）
+                      - generic [ref=e213]: 
+                  - generic [ref=e214]:
+                    - generic [ref=e215]:
+                      - generic [ref=e216]: 企业规模
+                      - generic [ref=e217]: 
+                      - generic [ref=e218]: ：
+                    - generic [ref=e219]: 大型
+                  - generic [ref=e220]:
+                    - generic [ref=e221]:
+                      - generic [ref=e222]: 企业员工
+                      - generic [ref=e223]: 
+                      - generic [ref=e224]: ：
+                    - generic [ref=e225]:
+                      - text: 37人（2024年）
+                      - generic [ref=e227]: 
+                  - generic [ref=e228]:
+                    - generic [ref=e229]:
+                      - generic [ref=e230]: 营业收入
+                      - generic [ref=e231]: 
+                      - generic [ref=e232]: ：
+                    - generic [ref=e233]:
+                      - text: 4572.87亿元（2025年）
+                      - generic [ref=e235]: 
+                  - generic [ref=e236]:
+                    - generic [ref=e237]:
+                      - generic [ref=e238]: 利润总额
+                      - generic [ref=e239]: 
+                      - generic [ref=e240]: ：
+                    - generic [ref=e241]:
+                      - text: 496.47亿元（2025年）
+                      - generic [ref=e243]: 
+                  - generic [ref=e244]:
+                    - generic [ref=e245]:
+                      - generic [ref=e246]: 总资产
+                      - generic [ref=e247]: 
+                      - generic [ref=e248]: ：
+                    - generic [ref=e249]:
+                      - text: 5080.96亿元（2025年）
+                      - generic [ref=e251]: 
+              - generic [ref=e252]:
+                - generic [ref=e253]:
+                  - generic [ref=e254]:
+                    - generic [ref=e255]: 简介
+                    - generic [ref=e256]: 
+                    - generic [ref=e257]: ：
+                  - text: 小米集团是一家以智能手机、智能硬件和IoT平台为核心的消费电子及智能制造公司。胸怀“和用户交朋友，做用户心中最酷的公司”的愿景，致力于持续创新，不断追求极致的产品服务体验和公司运营效率，努力践行“始终坚持做感动人心、价格厚道的好产品，让全球每个人都能享受科技带来的美好生活”的公司使命。
+                - generic [ref=e258] [cursor=pointer]:
+                  - text: 展开
+                  - generic [ref=e259]: 
+              - link "minute":
+                - /url: /detail/company/minute/534472fd-7d53-4958-8132-d6a6242423d8
+                - img "minute" [ref=e260] [cursor=pointer]
+            - generic [ref=e261]:
+              - text: 
+              - generic [ref=e263]:
+                - link "hot-property 财产线索 hot 5297条线索信息" [ref=e264] [cursor=pointer]:
+                  - /url: /detail/company/property-clue/534472fd-7d53-4958-8132-d6a6242423d8?from=company
+                  - img "hot-property" [ref=e265]
+                  - generic [ref=e266]:
+                    - generic [ref=e267]:
+                      - generic [ref=e268]: 财产线索
+                      - img "hot" [ref=e269]
+                    - generic [ref=e270]: 5297条线索信息
+                - link "hot-contract 合同违约指数 合作风险等级L2 低风险" [ref=e271] [cursor=pointer]:
+                  - /url: /detail/company/contract-breach/534472fd-7d53-4958-8132-d6a6242423d8
+                  - img "hot-contract" [ref=e272]
+                  - generic [ref=e273]:
+                    - generic [ref=e275]: 合同违约指数
+                    - generic [ref=e276]: 合作风险等级L2 低风险
+                - link "hot-group 集团：小米 成员企业152成员风险99+" [ref=e277] [cursor=pointer]:
+                  - /url: /group/info/534472fd-7d53-4958-8132-d6a6242423d8
+                  - img "hot-group" [ref=e278]
+                  - generic [ref=e279]:
+                    - generic [ref=e280]: 集团：小米
+                    - generic [ref=e281]:
+                      - text: 成员企业152
+                      - generic [ref=e282]: 成员风险99+
+                - link "hot-holder 股东信息： 雷军 持股比例97.4816%关联企业87" [ref=e283] [cursor=pointer]:
+                  - /url: /company/534472fd-7d53-4958-8132-d6a6242423d8?section=holder
+                  - img "hot-holder" [ref=e284]
+                  - generic [ref=e285]:
+                    - generic [ref=e286]:
+                      - generic [ref=e287]: 股东信息：
+                      - link "雷军" [ref=e289]:
+                        - /url: https://www.qixin.com/people/info/02ad6587897a976a793aa72ead924a47
+                    - generic [ref=e290]: 持股比例97.4816%关联企业87
+                - link "hot-stock 股权穿透图 疑似实控人雷军持股97.48%" [ref=e291] [cursor=pointer]:
+                  - /url: /detail/company/chart/equity-penetration/534472fd-7d53-4958-8132-d6a6242423d8
+                  - img "hot-stock" [ref=e292]
+                  - generic [ref=e293]:
+                    - generic [ref=e294]: 股权穿透图
+                    - generic [ref=e295]: 疑似实控人雷军持股97.48%
+                - link "hot-structure 企业图谱 对外投资53分支机构32" [ref=e296] [cursor=pointer]:
+                  - /url: /detail/company/chart/ent-chart/534472fd-7d53-4958-8132-d6a6242423d8
+                  - img "hot-structure" [ref=e297]
+                  - generic [ref=e298]:
+                    - generic [ref=e299]: 企业图谱
+                    - generic [ref=e300]: 对外投资53分支机构32
+                - link "hot-product 产品信息： 小米科技 简介：智能消费电子产品研发商" [ref=e301] [cursor=pointer]:
+                  - /url: /detail/company/brand/66368270ffd51418ec58bd793f2d9b1b?eid=534472fd-7d53-4958-8132-d6a6242423d8
+                  - img "hot-product" [ref=e302]
+                  - generic [ref=e303]:
+                    - generic [ref=e304]:
+                      - generic [ref=e305]: 产品信息：
+                      - generic [ref=e306]: 小米科技
+                    - generic [ref=e308]: 简介：智能消费电子产品研发商
+              - generic [ref=e309] [cursor=pointer]: 
+        - generic [ref=e310]:
+          - generic [ref=e311]:
+            - img "dynamic" [ref=e312]
+            - link "2026-05-13 新增开庭公告 案由：侵害商标权纠纷 更多  2026-05-13 新增新闻舆情 小米卢伟冰称“618”为今年最佳购机窗口旗舰至高立省1500元 更多  2026-05-13 新增新闻舆情 601991，6连涨停！超100万手买单封板，电力板块，全线爆发！ 更多  2026-05-12 新增招标信息 宁夏工商职业技术大学现代化工职业教育数据中心及专业群大模型算力中心平台建设项目二标段中标公告 更多  2026-05-12 新增开庭公告 案由：产品责任纠纷 更多  2026-05-12 新增开庭公告 案由：侵害商标权纠纷 更多 " [ref=e313] [cursor=pointer]:
+              - /url: /detail/company/trend/534472fd-7d53-4958-8132-d6a6242423d8
+              - generic [ref=e315]:
+                - generic [ref=e317]:
+                  - generic [ref=e318]: 2026-05-13 新增开庭公告 案由：侵害商标权纠纷
+                  - generic [ref=e319]:
+                    - text: 更多
+                    - generic [ref=e320]: 
+                - generic [ref=e322]:
+                  - generic [ref=e323]: 2026-05-13 新增新闻舆情 小米卢伟冰称“618”为今年最佳购机窗口旗舰至高立省1500元
+                  - generic [ref=e324]:
+                    - text: 更多
+                    - generic [ref=e325]: 
+                - generic [ref=e327]:
+                  - generic [ref=e328]: 2026-05-13 新增新闻舆情 601991，6连涨停！超100万手买单封板，电力板块，全线爆发！
+                  - generic [ref=e329]:
+                    - text: 更多
+                    - generic [ref=e330]: 
+                - generic [ref=e332]:
+                  - generic [ref=e333]: 2026-05-12 新增招标信息 宁夏工商职业技术大学现代化工职业教育数据中心及专业群大模型算力中心平台建设项目二标段中标公告
+                  - generic [ref=e334]:
+                    - text: 更多
+                    - generic [ref=e335]: 
+                - generic [ref=e337]:
+                  - generic [ref=e338]: 2026-05-12 新增开庭公告 案由：产品责任纠纷
+                  - generic [ref=e339]:
+                    - text: 更多
+                    - generic [ref=e340]: 
+                - generic [ref=e342]:
+                  - generic [ref=e343]: 2026-05-12 新增开庭公告 案由：侵害商标权纠纷
+                  - generic [ref=e344]:
+                    - text: 更多
+                    - generic [ref=e345]: 
+            - generic [ref=e346] [cursor=pointer]:
+              - generic [ref=e347]: 
+              - generic [ref=e348]: 发票抬头
+            - generic [ref=e349] [cursor=pointer]:
+              - generic [ref=e350]: 
+              - generic [ref=e351]: 分享企业
+            - generic [ref=e352] [cursor=pointer]:
+              - generic [ref=e353]: 
+              - generic [ref=e354]: 问题反馈
+            - generic [ref=e356] [cursor=pointer]:
+              - generic [ref=e357]: 
+              - generic [ref=e358]: 关注
+            - generic [ref=e359] [cursor=pointer]:
+              - generic [ref=e360]: 
+              - generic [ref=e361]: 笔记
+          - generic [ref=e362]:
+            - generic [ref=e363]:
+              - img "risk" [ref=e364]
+              - generic [ref=e365]: 
+              - generic [ref=e366]:
+                - generic [ref=e367] [cursor=pointer]:
+                  - generic [ref=e368]: 风险总量
+                  - generic [ref=e369]: 999+
+                - generic [ref=e370] [cursor=pointer]:
+                  - generic [ref=e371]: 自身风险
+                  - generic [ref=e372]: 999+
+                - generic [ref=e373] [cursor=pointer]:
+                  - generic [ref=e374]: 提示信息
+                  - generic [ref=e375]: 999+
+                - generic [ref=e376] [cursor=pointer]:
+                  - generic [ref=e377]: 关联风险
+                  - generic [ref=e378]: 999+
+                - generic [ref=e380] [cursor=pointer]: 
+            - img "analysis" [ref=e381]
+            - generic [ref=e382] [cursor=pointer]: 
+            - generic [ref=e383]:
+              - generic [ref=e384] [cursor=pointer]:
+                - generic [ref=e385]: 日常经营
+                - generic [ref=e386]: 表现正常
+              - generic [ref=e387] [cursor=pointer]:
+                - generic [ref=e388]: 司法涉诉
+                - generic [ref=e389]: 潜在危机
+              - generic [ref=e390] [cursor=pointer]:
+                - generic [ref=e391]: 经营活力
+                - generic [ref=e392]: 审慎关注
+              - generic [ref=e393] [cursor=pointer]:
+                - generic [ref=e394]: 企业合规
+                - generic [ref=e395]: 表现正常
+              - generic [ref=e396] [cursor=pointer]:
+                - generic [ref=e397]: 内部管理
+                - generic [ref=e398]: 稳健向好
+              - generic [ref=e399] [cursor=pointer]:
+                - generic [ref=e400]: 企业存续
+                - generic [ref=e401]: 表现正常
+              - generic [ref=e403] [cursor=pointer]: 
+        - generic [ref=e407]:
+          - generic [ref=e408]:
+            - link "" [ref=e410] [cursor=pointer]:
+              - /url: https://www.qixin.com/pay/vip
+              - img [ref=e411]
+              - generic [ref=e412]: 
+            - link "" [ref=e414] [cursor=pointer]:
+              - /url: https://www.qixin.com/pay/vip
+              - img [ref=e415]
+              - generic [ref=e416]: 
+            - link "" [ref=e418] [cursor=pointer]:
+              - /url: https://www.qixin.com/pay/vip?tab=teamvip
+              - img [ref=e419]
+              - generic [ref=e420]: 
+          - list [ref=e421]:
+            - listitem [ref=e422] [cursor=pointer]:
+              - button "幻灯片切换至索引 1" [ref=e423]
+            - listitem [ref=e424] [cursor=pointer]:
+              - button "幻灯片切换至索引 2" [ref=e425]
+            - listitem [ref=e426] [cursor=pointer]:
+              - button "幻灯片切换至索引 3" [ref=e427]
+        - generic [ref=e428]:
+          - generic [ref=e429]:
+            - link "上市信息" [ref=e430] [cursor=pointer]:
+              - /url: /publiclyHk/534472fd-7d53-4958-8132-d6a6242423d8
+              - heading "上市信息" [level=2] [ref=e431]:
+                - generic [ref=e432]: 上市信息
+            - link "基本信息" [ref=e433] [cursor=pointer]:
+              - /url: /company/534472fd-7d53-4958-8132-d6a6242423d8
+              - heading "基本信息" [level=2] [ref=e434]:
+                - generic [ref=e435]: 基本信息
+            - link "司法涉诉 999+" [ref=e436] [cursor=pointer]:
+              - /url: /risk/534472fd-7d53-4958-8132-d6a6242423d8
+              - heading "司法涉诉 999+" [level=2] [ref=e437]:
+                - generic [ref=e438]: 司法涉诉
+                - generic [ref=e439]: 999+
+            - link "投融资 999+" [ref=e440] [cursor=pointer]:
+              - /url: /financing/534472fd-7d53-4958-8132-d6a6242423d8
+              - heading "投融资 999+" [level=2] [ref=e441]:
+                - generic [ref=e442]: 投融资
+                - generic [ref=e443]: 999+
+            - link "经营风险 1" [ref=e444] [cursor=pointer]:
+              - /url: /warn/534472fd-7d53-4958-8132-d6a6242423d8
+              - heading "经营风险 1" [level=2] [ref=e445]:
+                - generic [ref=e446]: 经营风险
+                - generic [ref=e447]: "1"
+            - link "经营信息 999+" [ref=e448] [cursor=pointer]:
+              - /url: /operation/534472fd-7d53-4958-8132-d6a6242423d8
+              - heading "经营信息 999+" [level=2] [ref=e449]:
+                - generic [ref=e450]: 经营信息
+                - generic [ref=e451]: 999+
+            - link "知识产权 999+" [ref=e452] [cursor=pointer]:
+              - /url: /ability/534472fd-7d53-4958-8132-d6a6242423d8
+              - heading "知识产权 999+" [level=2] [ref=e453]:
+                - generic [ref=e454]: 知识产权
+                - generic [ref=e455]: 999+
+            - generic [ref=e457] [cursor=pointer]:
+              - generic [ref=e458]: 历
+              - generic [ref=e459]: 史
+              - generic [ref=e460]: 
+          - text:                                    
+        - generic [ref=e461]:
+          - link "启信图谱" [ref=e462] [cursor=pointer]:
+            - /url: /company/534472fd-7d53-4958-8132-d6a6242423d8?section=chart
+          - link "工商信息" [ref=e463] [cursor=pointer]:
+            - /url: /company/534472fd-7d53-4958-8132-d6a6242423d8?section=business
+          - link "股东信息2" [ref=e464] [cursor=pointer]:
+            - /url: /company/534472fd-7d53-4958-8132-d6a6242423d8?section=holder
+          - generic [ref=e465]: 间接股东
+          - link "主要人员5" [ref=e466] [cursor=pointer]:
+            - /url: /company/534472fd-7d53-4958-8132-d6a6242423d8?section=people
+          - link "分支机构32" [ref=e467] [cursor=pointer]:
+            - /url: /company/534472fd-7d53-4958-8132-d6a6242423d8?section=branch
+          - link "变更记录13" [ref=e468] [cursor=pointer]:
+            - /url: /company/534472fd-7d53-4958-8132-d6a6242423d8?section=change
+          - link "企业年报12" [ref=e469] [cursor=pointer]:
+            - /url: /company/534472fd-7d53-4958-8132-d6a6242423d8?section=annual
+          - link "财务数据" [ref=e470] [cursor=pointer]:
+            - /url: /company/534472fd-7d53-4958-8132-d6a6242423d8?section=finance
+          - link "社保人数" [ref=e471] [cursor=pointer]:
+            - /url: /company/534472fd-7d53-4958-8132-d6a6242423d8?section=social
+          - link "关联企业/人员" [ref=e472] [cursor=pointer]:
+            - /url: /company/534472fd-7d53-4958-8132-d6a6242423d8?section=related
+          - link "协同股东23" [ref=e473] [cursor=pointer]:
+            - /url: /company/534472fd-7d53-4958-8132-d6a6242423d8?section=cooperateStock
+          - link "疑似实控人" [ref=e474] [cursor=pointer]:
+            - /url: /company/534472fd-7d53-4958-8132-d6a6242423d8?section=actController
+          - link "最终受益人" [ref=e475] [cursor=pointer]:
+            - /url: /company/534472fd-7d53-4958-8132-d6a6242423d8?section=beneficial
+          - link "实际控制企业46" [ref=e476] [cursor=pointer]:
+            - /url: /company/534472fd-7d53-4958-8132-d6a6242423d8?section=control
+          - link "集团/族群" [ref=e477] [cursor=pointer]:
+            - /url: /company/534472fd-7d53-4958-8132-d6a6242423d8?section=group
+          - link "同业分析" [ref=e478] [cursor=pointer]:
+            - /url: /company/534472fd-7d53-4958-8132-d6a6242423d8?section=industry
+          - link "疑似关系64" [ref=e479] [cursor=pointer]:
+            - /url: /company/534472fd-7d53-4958-8132-d6a6242423d8?section=suspect
+          - link "多证合一1" [ref=e480] [cursor=pointer]:
+            - /url: /company/534472fd-7d53-4958-8132-d6a6242423d8?section=mutiCertificateCombine
+        - generic [ref=e482]:
+          - generic [ref=e483]:
+            - generic [ref=e484]:
+              - heading "启信图谱" [level=3] [ref=e486]:
+                - generic [ref=e487]: 启信图谱
+              - generic [ref=e488]:
+                - link "text":
+                  - /url: /
+                  - img "text"
+            - generic [ref=e489]:
+              - link "企业图谱 企业图谱" [ref=e490] [cursor=pointer]:
+                - /url: /detail/company/chart/ent-chart/534472fd-7d53-4958-8132-d6a6242423d8
+                - img "企业图谱" [ref=e491]
+                - generic [ref=e492]: 企业图谱
+              - link "股权结构 股权结构" [ref=e493] [cursor=pointer]:
+                - /url: /detail/company/chart/equity-structure/534472fd-7d53-4958-8132-d6a6242423d8
+                - img [ref=e494]
+                - img "股权结构" [ref=e495]
+                - generic [ref=e496]: 股权结构
+              - link "企业受益股东 企业受益股东 " [ref=e497] [cursor=pointer]:
+                - /url: /detail/company/chart/beneficiary/534472fd-7d53-4958-8132-d6a6242423d8
+                - img [ref=e498]
+                - img "企业受益股东" [ref=e499]
+                - generic [ref=e500]:
+                  - generic [ref=e501]: 企业受益股东
+                  - generic [ref=e502]: 
+              - link "关联方认定图 关联方认定图" [ref=e503] [cursor=pointer]:
+                - /url: /detail/company/chart/related-identify/534472fd-7d53-4958-8132-d6a6242423d8
+                - img [ref=e504]
+                - img "关联方认定图" [ref=e505]
+                - generic [ref=e506]: 关联方认定图
+              - link "集团图谱 集团图谱" [ref=e507] [cursor=pointer]:
+                - /url: /detail/company/chart/group/534472fd-7d53-4958-8132-d6a6242423d8
+                - img [ref=e508]
+                - img "集团图谱" [ref=e509]
+                - generic [ref=e510]: 集团图谱
+              - link "疑似实控人 疑似实控人" [ref=e511] [cursor=pointer]:
+                - /url: /detail/company/chart/actual-controller/534472fd-7d53-4958-8132-d6a6242423d8
+                - img [ref=e512]
+                - img "疑似实控人" [ref=e513]
+                - generic [ref=e514]: 疑似实控人
+              - link "关联关系 关联关系" [ref=e515] [cursor=pointer]:
+                - /url: /detail/company/chart/related-enterprise/534472fd-7d53-4958-8132-d6a6242423d8
+                - img "关联关系" [ref=e516]
+                - generic [ref=e517]: 关联关系
+              - link "股权穿透图 股权穿透图" [ref=e518] [cursor=pointer]:
+                - /url: /detail/company/chart/equity-penetration/534472fd-7d53-4958-8132-d6a6242423d8
+                - img [ref=e519]
+                - img "股权穿透图" [ref=e520]
+                - generic [ref=e521]: 股权穿透图
+              - link "专利相关方图谱 专利相关方图谱" [ref=e522] [cursor=pointer]:
+                - /url: /detail/company/chart/interested-parties/534472fd-7d53-4958-8132-d6a6242423d8
+                - img [ref=e523]
+                - img "专利相关方图谱" [ref=e524]
+                - generic [ref=e525]: 专利相关方图谱
+          - generic [ref=e526]:
+            - generic [ref=e527]:
+              - heading "工商信息" [level=3] [ref=e529]:
+                - generic [ref=e530]: 工商信息
+              - generic [ref=e531]:
+                - link "text":
+                  - /url: /
+                  - img "text"
+            - generic [ref=e532]:
+              - generic [ref=e533]:
+                - generic [ref=e534]:
+                  - generic [ref=e537] [cursor=pointer]: 工商信息
+                  - generic [ref=e540] [cursor=pointer]:
+                    - generic [ref=e541]: 历史工商信息
+                    - img [ref=e542]
+                - generic [ref=e544]:
+                  - button " 文字介绍" [ref=e545] [cursor=pointer]:
+                    - generic [ref=e546]: 
+                    - generic [ref=e547]: 文字介绍
+                  - generic [ref=e548] [cursor=pointer]:
+                    - generic [ref=e549]: 
+                    - generic [ref=e550]: 导出
+              - generic [ref=e551]:
+                - table [ref=e552]:
+                  - rowgroup [ref=e553]:
+                    - row "统一社会信用代码 91110108551385082Q 企业名称 小米科技有限责任公司 曾用名 北京小米科技有限责任公司（- 至 2013-07-30）" [ref=e554]:
+                      - cell "统一社会信用代码" [ref=e555]
+                      - cell "91110108551385082Q" [ref=e556]
+                      - cell "企业名称" [ref=e557]
+                      - cell "小米科技有限责任公司 曾用名 北京小米科技有限责任公司（- 至 2013-07-30）" [ref=e558]:
+                        - generic [ref=e559]: 小米科技有限责任公司
+                        - generic [ref=e560]:
+                          - generic [ref=e561]: 曾用名
+                          - generic [ref=e565]: 北京小米科技有限责任公司（- 至 2013-07-30）
+                    - row "法定代表人 雷军 雷军 related-ent 87 export 经营状态 存续 成立日期 2010-03-03" [ref=e566]:
+                      - cell "法定代表人" [ref=e567]:
+                        - generic [ref=e568]: 法定代表人
+                      - cell "雷军 雷军 related-ent 87 export" [ref=e569]:
+                        - generic [ref=e572]:
+                          - generic [ref=e573]:
+                            - img "雷军" [ref=e576]
+                            - generic [ref=e577]:
+                              - link "雷军" [ref=e582] [cursor=pointer]:
+                                - /url: https://www.qixin.com/people/info/02ad6587897a976a793aa72ead924a47
+                                - generic [ref=e583]: 雷军
+                              - link "related-ent 87" [ref=e584] [cursor=pointer]:
+                                - /url: https://www.qixin.com/people/info/02ad6587897a976a793aa72ead924a47?section=relate-sum
+                                - generic [ref=e585]:
+                                  - img "related-ent" [ref=e586]
+                                  - generic [ref=e587]: "87"
+                          - img "export" [ref=e590] [cursor=pointer]
+                      - cell "经营状态" [ref=e591]
+                      - cell "存续" [ref=e592]
+                      - cell "成立日期" [ref=e593]
+                      - cell "2010-03-03" [ref=e594]
+                    - row "注册资本 147652.5441 万元 历史变动 实缴资本 5000 万元 " [ref=e595]:
+                      - cell "注册资本" [ref=e596]
+                      - cell "147652.5441 万元 历史变动" [ref=e597]:
+                        - generic [ref=e598]: 147652.5441 万元
+                        - generic [ref=e600] [cursor=pointer]: 历史变动
+                      - cell "实缴资本" [ref=e602]
+                      - cell "5000 万元 " [ref=e603]:
+                        - generic [ref=e604]: 5000 万元
+                        - generic [ref=e605]: 
+                    - row "组织机构代码 551385082 工商注册号 110108012660422 纳税人识别号 91110108551385082Q" [ref=e606]:
+                      - cell "组织机构代码" [ref=e607]
+                      - cell "551385082" [ref=e608]
+                      - cell "工商注册号" [ref=e609]
+                      - cell "110108012660422" [ref=e610]
+                      - cell "纳税人识别号" [ref=e611]
+                      - cell "91110108551385082Q" [ref=e612]
+                    - row "进出口企业代码 1100551385082 海关注册编码 1108963587 纳税人资质 增值税一般纳税人" [ref=e613]:
+                      - cell "进出口企业代码" [ref=e614]
+                      - cell "1100551385082" [ref=e615]
+                      - cell "海关注册编码" [ref=e616]
+                      - cell "1108963587" [ref=e617]
+                      - cell "纳税人资质" [ref=e618]
+                      - cell "增值税一般纳税人" [ref=e619]
+                    - row "企业类型 有限责任公司（自然人投资或控股） 营业期限 2010-03-03 至 无固定期限 登记机关 北京市海淀区市场监督管理局" [ref=e620]:
+                      - cell "企业类型" [ref=e621]
+                      - cell "有限责任公司（自然人投资或控股）" [ref=e622]
+                      - cell "营业期限" [ref=e623]
+                      - cell "2010-03-03 至 无固定期限" [ref=e624]
+                      - cell "登记机关" [ref=e625]
+                      - cell "北京市海淀区市场监督管理局" [ref=e626]
+                    - row "企业规模  大型 员工数量 37人 （2024年工商年报社保人数） 社保人数 37 （ 2024年报） trend" [ref=e627]:
+                      - cell "企业规模 " [ref=e628]:
+                        - generic [ref=e629]:
+                          - generic [ref=e630]: 企业规模
+                          - generic [ref=e631]: 
+                      - cell "大型" [ref=e632]
+                      - cell "员工数量" [ref=e633]
+                      - cell "37人 （2024年工商年报社保人数）" [ref=e634]:
+                        - generic [ref=e635]:
+                          - text: 37人 （
+                          - link "2024年工商年报社保人数" [ref=e636] [cursor=pointer]:
+                            - /url: /detail/company/report/534472fd-7d53-4958-8132-d6a6242423d8/2024
+                          - text: ）
+                      - cell "社保人数" [ref=e637]
+                      - cell "37 （ 2024年报） trend" [ref=e638]:
+                        - generic [ref=e639]:
+                          - generic [ref=e641]:
+                            - text: 37 （
+                            - link "2024年报" [ref=e642] [cursor=pointer]:
+                              - /url: /detail/company/report/534472fd-7d53-4958-8132-d6a6242423d8/2024
+                            - text: ）
+                          - img "trend" [ref=e645] [cursor=pointer]
+                    - row "总社保人数  91 （ 2024年报） trend" [ref=e646]:
+                      - cell "总社保人数 " [ref=e647]:
+                        - generic [ref=e648]:
+                          - generic [ref=e649]: 总社保人数
+                          - generic [ref=e650]: 
+                      - cell "91 （ 2024年报） trend" [ref=e651]:
+                        - generic [ref=e652]:
+                          - generic [ref=e654]: 91 （ 2024年报）
+                          - img "trend" [ref=e657] [cursor=pointer]
+                    - row "所属行业  其他技术推广服务（M7519）  所属地区 北京海淀区（ 邮编：100000）" [ref=e658]:
+                      - cell "所属行业 " [ref=e659]:
+                        - generic [ref=e660]:
+                          - generic [ref=e661]: 所属行业
+                          - generic [ref=e662]: 
+                      - cell "其他技术推广服务（M7519） " [ref=e663]:
+                        - generic [ref=e664]:
+                          - generic [ref=e665]: 其他技术推广服务（M7519）
+                          - generic [ref=e667]: 
+                      - cell "所属地区" [ref=e668]
+                      - cell "北京海淀区（ 邮编：100000）" [ref=e669]
+                    - row "核准日期 check-date 英文名 Xiaomi Inc." [ref=e670]:
+                      - cell "核准日期" [ref=e671]
+                      - cell "check-date" [ref=e672]:
+                        - img "check-date" [ref=e673] [cursor=pointer]
+                      - cell "英文名" [ref=e674]
+                      - cell "Xiaomi Inc." [ref=e675]
+                    - row "注册地址 北京市海淀区西二旗中路33号院6号楼6层006号 查看地图" [ref=e676]:
+                      - cell "注册地址" [ref=e677]
+                      - cell "北京市海淀区西二旗中路33号院6号楼6层006号 查看地图" [ref=e678] [cursor=pointer]:
+                        - text: 北京市海淀区西二旗中路33号院6号楼6层006号
+                        - generic [ref=e679]: 查看地图
+                    - row "通信地址 北京市海淀区西二旗中路33号院小米科技园 （2024年报） 查看地图" [ref=e681]:
+                      - cell "通信地址" [ref=e682]
+                      - cell "北京市海淀区西二旗中路33号院小米科技园 （2024年报） 查看地图" [ref=e683] [cursor=pointer]:
+                        - text: 北京市海淀区西二旗中路33号院小米科技园
+                        - link "（2024年报）" [ref=e684]:
+                          - /url: /detail/company/report/534472fd-7d53-4958-8132-d6a6242423d8/2024
+                        - generic [ref=e685]: 查看地图
+                    - row [ref=e687]:
+                      - cell "经营范围" [ref=e688]
+                      - cell "一般项目：技术服务、技术开发、技术咨询、技术交流、技术转让、技术推广；货物进出口；技术进出口；进出口代理；通讯设备销售；厨具卫具及日用杂品批发；厨具卫具及日用杂品零售；个人卫生用品销售；卫生用品和一次性使用医疗用品销售；日用杂品销售；日用百货销售；日用品销售；化妆品批发；化妆品零售；第一类医疗器械销售；第二类医疗器械销售；玩具销售；体育用品及器材零售；体育用品及器材批发；文具用品零售；文具用品批发；鞋帽批发；鞋帽零售；服装服饰批发；服装服饰零售；钟表销售；眼镜销售（不含隐形眼镜）；针纺织品销售；家用电器销售；日用家电零售；家具销售；礼品花卉销售；农作物种子经营（仅限不再分装的包装种子）；照相机及器材销售；照相器材及望远镜批发；照相器材及望远镜零售；工艺美术品及收藏品零售（象牙及其制品除外）；工艺美术品及礼仪用品销售（象牙及其制品除外）；计算机软硬件及辅助设备零售；计算机软硬件及辅助设备批发；珠宝首饰零售；珠宝首饰批发；食用农产品批发；食用农产品零售；宠物食品及用品批发；宠物食品及用品零售；电子产品销售；摩托车及零配件零售；摩托车及零配件批发；电动自行车销售；助动自行车、代步车及零配件销售；自行车及零配件零售；自行车及零配件批发；单用途商业预付卡代理销售；商用密码产品销售；五金产品批发；五金产品零售；建筑材料销售；仪器仪表修理；计算机及办公设备维修；办公设备销售；会议及展览服务；组织文化艺术交流活动；广告设计、代理；广告制作；广告发布；摄影扩印服务；票务代理服务；通讯设备修理；移动终端设备制造；可穿戴智能设备制造。（除依法须经批准的项目外，凭营业执照依法自主开展经营活动）许可项目：第三类医疗器械经营；网络文化经营；出版物零售；出版物批发；食品销售；药品零售；广播电视节目制作经营；第一类增值电信业务；第二类增值电信业务；在线数据处理与交易处理业务（经营类电子商务）；基础电信业务；互联网信息服务；信息网络传播视听节目。（依法须经批准的项目，经相关部门批准后方可开展经营活动，具体经营项目以相关部门批准文件或许可证件为准）（不得从事国家和本市产业政策禁止和限制类项目的经营活动。）" [ref=e689]
+                - generic [ref=e690]:
+                  - text: 更新时间：2026-05-12
+                  - generic [ref=e691]:
+                    - text: 来源：
+                    - link "国家信用信息公示系统" [ref=e692] [cursor=pointer]:
+                      - /url: http://www.gsxt.gov.cn/
+          - generic [ref=e693]:
+            - generic [ref=e694]:
+              - generic [ref=e695]:
+                - heading "股东信息" [level=3] [ref=e696]:
+                  - generic [ref=e697]: 股东信息
+                - link " 股权结构图谱" [ref=e698] [cursor=pointer]:
+                  - /url: /detail/company/chart/equity-structure/534472fd-7d53-4958-8132-d6a6242423d8?section=partners
+                  - generic [ref=e699]: 
+                  - text: 股权结构图谱
+              - generic [ref=e700]:
+                - link "text":
+                  - /url: /
+                  - img "text"
+            - generic [ref=e702]:
+              - generic [ref=e703]:
+                - generic [ref=e706] [cursor=pointer]:
+                  - text: 工商公示
+                  - generic [ref=e707]: "2"
+                - generic [ref=e710] [cursor=pointer]:
+                  - generic [ref=e711]:
+                    - text: 历史公示
+                    - generic [ref=e712]: "2"
+                  - img [ref=e713]
+              - generic [ref=e716] [cursor=pointer]:
+                - generic [ref=e717]: 
+                - generic [ref=e718]: 导出
+            - table [ref=e719]:
+              - rowgroup [ref=e720]:
+                - row "序号 股东名称 认缴出资额 持股比例 认缴出资日期 实缴出资额 实缴出资日期" [ref=e721]:
+                  - columnheader "序号" [ref=e722]
+                  - columnheader "股东名称" [ref=e723]
+                  - columnheader "认缴出资额" [ref=e724]
+                  - columnheader "持股比例" [ref=e725]
+                  - columnheader "认缴出资日期" [ref=e726]
+                  - columnheader "实缴出资额" [ref=e727]
+                  - columnheader "实缴出资日期" [ref=e728]
+              - rowgroup [ref=e729]:
+                - row "1 雷军 雷军 invest-ent 57 大股东 疑似实控人 受益所有人 143934.0478万元 97.4816% - - -" [ref=e730]:
+                  - cell "1" [ref=e731]
+                  - cell "雷军 雷军 invest-ent 57 大股东 疑似实控人 受益所有人" [ref=e732]:
+                    - generic [ref=e733]:
+                      - img "雷军" [ref=e736]
+                      - generic [ref=e737]:
+                        - link "雷军" [ref=e738] [cursor=pointer]:
+                          - /url: https://www.qixin.com/people/info/02ad6587897a976a793aa72ead924a47
+                        - generic [ref=e739]:
+                          - link "invest-ent 57" [ref=e740] [cursor=pointer]:
+                            - /url: https://www.qixin.com/people/info/e99bb7e5869b/534472fd-7d53-4958-8132-d6a6242423d8
+                            - generic [ref=e741]:
+                              - img "invest-ent" [ref=e742]
+                              - generic [ref=e743]: "57"
+                          - generic [ref=e745]: 大股东
+                          - generic [ref=e747]: 疑似实控人
+                          - generic [ref=e749]: 受益所有人
+                  - cell "143934.0478万元" [ref=e750]
+                  - cell "97.4816%" [ref=e751]
+                  - cell "-" [ref=e752]
+                  - cell "-" [ref=e753]
+                  - cell "-" [ref=e754]
+                - row "2 刘德 刘德 invest-ent 13 3718.4963万元 2.5184% - - -" [ref=e755]:
+                  - cell "2" [ref=e756]
+                  - cell "刘德 刘德 invest-ent 13" [ref=e757]:
+                    - generic [ref=e758]:
+                      - img "刘德" [ref=e761]
+                      - generic [ref=e762]:
+                        - link "刘德" [ref=e763] [cursor=pointer]:
+                          - /url: https://www.qixin.com/people/info/11201954e9928c752e8c7ac169ee9792
+                        - link "invest-ent 13" [ref=e765] [cursor=pointer]:
+                          - /url: https://www.qixin.com/people/info/e58898e5beb7/534472fd-7d53-4958-8132-d6a6242423d8
+                          - generic [ref=e766]:
+                            - img "invest-ent" [ref=e767]
+                            - generic [ref=e768]: "13"
+                  - cell "3718.4963万元" [ref=e769]
+                  - cell "2.5184%" [ref=e770]
+                  - cell "-" [ref=e771]
+                  - cell "-" [ref=e772]
+                  - cell "-" [ref=e773]
+            - generic [ref=e775]:
+              - generic [ref=e777]:
+                - text: 数据来源：
+                - link "国家信用信息公示系统" [ref=e778] [cursor=pointer]:
+                  - /url: http://www.gsxt.gov.cn/
+              - generic [ref=e779]: "|"
+              - generic [ref=e780] [cursor=pointer]:
+                - generic [ref=e781]: 查看工商自主公示股东
+                - generic [ref=e782]: 
+          - generic [ref=e783]:
+            - generic [ref=e784]:
+              - heading "主要人员" [level=3] [ref=e786]:
+                - generic [ref=e787]: 主要人员
+              - generic [ref=e788]:
+                - link "text":
+                  - /url: /
+                  - img "text"
+            - generic [ref=e790]:
+              - generic [ref=e791]:
+                - generic [ref=e794] [cursor=pointer]:
+                  - text: 工商公示
+                  - generic [ref=e795]: "5"
+                - generic [ref=e798] [cursor=pointer]:
+                  - generic [ref=e799]:
+                    - text: 历史公示
+                    - generic [ref=e800]: "3"
+                  - img [ref=e801]
+              - generic [ref=e804] [cursor=pointer]:
+                - generic [ref=e805]: 
+                - generic [ref=e806]: 导出
+            - table [ref=e807]:
+              - rowgroup [ref=e808]:
+                - row "序号 姓名 职务 直接持股比例 综合持股比例" [ref=e809]:
+                  - columnheader "序号" [ref=e810]
+                  - columnheader "姓名" [ref=e811]
+                  - columnheader "职务" [ref=e812]
+                  - columnheader "直接持股比例" [ref=e813]
+                  - columnheader "综合持股比例" [ref=e814]
+              - rowgroup [ref=e815]:
+                - row "1 雷军 雷军 男 related-ent 87 大股东 疑似实控人 受益所有人 经理,董事长 97.4816% 97.48% path" [ref=e816]:
+                  - cell "1" [ref=e817]
+                  - cell "雷军 雷军 男 related-ent 87 大股东 疑似实控人 受益所有人" [ref=e818]:
+                    - generic [ref=e819]:
+                      - img "雷军" [ref=e822]
+                      - generic [ref=e823]:
+                        - link "雷军" [ref=e824] [cursor=pointer]:
+                          - /url: https://www.qixin.com/people/info/02ad6587897a976a793aa72ead924a47
+                        - generic [ref=e825]:
+                          - generic [ref=e826]: 男
+                          - link "related-ent 87" [ref=e827] [cursor=pointer]:
+                            - /url: https://www.qixin.com/people/info/02ad6587897a976a793aa72ead924a47
+                            - generic [ref=e828]:
+                              - img "related-ent" [ref=e829]
+                              - generic [ref=e830]: "87"
+                          - generic [ref=e831]: 大股东
+                          - generic [ref=e832]: 疑似实控人
+                          - generic [ref=e833]: 受益所有人
+                  - cell "经理,董事长" [ref=e834]
+                  - cell "97.4816%" [ref=e835]
+                  - cell "97.48% path" [ref=e836]:
+                    - generic [ref=e837]:
+                      - generic [ref=e838]: 97.48%
+                      - img "path" [ref=e841] [cursor=pointer]
+                - row "2 林斌 林斌 男 related-ent 18 董事 - -" [ref=e842]:
+                  - cell "2" [ref=e843]
+                  - cell "林斌 林斌 男 related-ent 18" [ref=e844]:
+                    - generic [ref=e845]:
+                      - img "林斌" [ref=e848]
+                      - generic [ref=e849]:
+                        - link "林斌" [ref=e850] [cursor=pointer]:
+                          - /url: https://www.qixin.com/people/info/208a521520fd675557e4a8920bea3557
+                        - generic [ref=e851]:
+                          - generic [ref=e852]: 男
+                          - link "related-ent 18" [ref=e853] [cursor=pointer]:
+                            - /url: https://www.qixin.com/people/info/208a521520fd675557e4a8920bea3557
+                            - generic [ref=e854]:
+                              - img "related-ent" [ref=e855]
+                              - generic [ref=e856]: "18"
+                  - cell "董事" [ref=e857]
+                  - cell "-" [ref=e858]
+                  - cell "-" [ref=e859]:
+                    - generic [ref=e861]: "-"
+                - row "3 卢伟冰 卢伟冰 related-ent 14 董事 - -" [ref=e862]:
+                  - cell "3" [ref=e863]
+                  - cell "卢伟冰 卢伟冰 related-ent 14" [ref=e864]:
+                    - generic [ref=e865]:
+                      - img "卢伟冰" [ref=e868]
+                      - generic [ref=e869]:
+                        - link "卢伟冰" [ref=e870] [cursor=pointer]:
+                          - /url: https://www.qixin.com/people/info/0e422391871590cc1fef2eef975ca575
+                        - link "related-ent 14" [ref=e872] [cursor=pointer]:
+                          - /url: https://www.qixin.com/people/info/0e422391871590cc1fef2eef975ca575
+                          - generic [ref=e873]:
+                            - img "related-ent" [ref=e874]
+                            - generic [ref=e875]: "14"
+                  - cell "董事" [ref=e876]
+                  - cell "-" [ref=e877]
+                  - cell "-" [ref=e878]:
+                    - generic [ref=e880]: "-"
+                - row "4 刘德 刘德 男 related-ent 99+ 监事 2.5184% 2.52% path" [ref=e881]:
+                  - cell "4" [ref=e882]
+                  - cell "刘德 刘德 男 related-ent 99+" [ref=e883]:
+                    - generic [ref=e884]:
+                      - img "刘德" [ref=e887]
+                      - generic [ref=e888]:
+                        - link "刘德" [ref=e889] [cursor=pointer]:
+                          - /url: https://www.qixin.com/people/info/11201954e9928c752e8c7ac169ee9792
+                        - generic [ref=e890]:
+                          - generic [ref=e891]: 男
+                          - link "related-ent 99+" [ref=e892] [cursor=pointer]:
+                            - /url: https://www.qixin.com/people/info/11201954e9928c752e8c7ac169ee9792
+                            - generic [ref=e893]:
+                              - img "related-ent" [ref=e894]
+                              - generic [ref=e895]: 99+
+                  - cell "监事" [ref=e896]
+                  - cell "2.5184%" [ref=e897]
+                  - cell "2.52% path" [ref=e898]:
+                    - generic [ref=e899]:
+                      - generic [ref=e900]: 2.52%
+                      - img "path" [ref=e903] [cursor=pointer]
+                - row "5 孙 孙谦 related-ent 93 财务负责人 - -" [ref=e904]:
+                  - cell "5" [ref=e905]
+                  - cell "孙 孙谦 related-ent 93" [ref=e906]:
+                    - generic [ref=e907]:
+                      - generic [ref=e911]: 孙
+                      - generic [ref=e912]:
+                        - link "孙谦" [ref=e913] [cursor=pointer]:
+                          - /url: https://www.qixin.com/people/info/a70aab8541d7c308634ccca651ebe0ec
+                        - link "related-ent 93" [ref=e915] [cursor=pointer]:
+                          - /url: https://www.qixin.com/people/info/a70aab8541d7c308634ccca651ebe0ec
+                          - generic [ref=e916]:
+                            - img "related-ent" [ref=e917]
+                            - generic [ref=e918]: "93"
+                  - cell "财务负责人" [ref=e919]
+                  - cell "-" [ref=e920]
+                  - cell "-" [ref=e921]:
+                    - generic [ref=e923]: "-"
+          - generic [ref=e924]:
+            - generic [ref=e925]:
+              - generic [ref=e926]:
+                - heading "分支机构" [level=3] [ref=e928]:
+                  - generic [ref=e929]: 分支机构
+                - generic [ref=e930]:
+                  - link "text":
+                    - /url: /
+                    - img "text"
+              - generic [ref=e935]:
+                - link "全部特权 " [ref=e936] [cursor=pointer]:
+                  - /url: /pay/vip
+                  - text: 全部特权
+                  - generic [ref=e937]: 
+                - generic [ref=e939]:
+                  - generic [ref=e940]:
+                    - text: 开通
+                    - img [ref=e941]
+                    - generic [ref=e942]: ·
+                    - text: 查看分支机构统计信息
+                  - generic [ref=e943]: 一键了解企业分支机构全貌
+                - generic [ref=e944]:
+                  - generic [ref=e945] [cursor=pointer]:
+                    - generic [ref=e948]:
+                      - img [ref=e949]
+                      - text: VIP会员
+                    - generic [ref=e951]:
+                      - img [ref=e952]
+                      - text: SVIP会员
+                  - generic [ref=e954]:
+                    - generic [ref=e955]:
+                      - generic [ref=e957] [cursor=pointer]:
+                        - generic [ref=e958]: 送30天VIP
+                        - generic [ref=e959]: 半年VIP
+                        - generic [ref=e960]: ¥198
+                        - generic [ref=e962]: 低至¥1.0/天
+                      - generic [ref=e964] [cursor=pointer]:
+                        - generic [ref=e965]: 1年VIP
+                        - generic [ref=e966]: ¥366
+                        - generic [ref=e968]: 低至¥1.0/天
+                      - generic [ref=e970] [cursor=pointer]:
+                        - generic [ref=e971]: 2年VIP
+                        - generic [ref=e972]: ¥596
+                        - generic [ref=e974]: 低至¥0.8/天
+                      - generic [ref=e976] [cursor=pointer]:
+                        - generic [ref=e977]: 送18个月VIP
+                        - generic [ref=e978]: 3年VIP
+                        - generic [ref=e979]: ¥780
+                        - generic [ref=e981]: 低至¥0.9/天
+                        - img [ref=e983]
+                    - generic [ref=e986]:
+                      - generic [ref=e987]: 赠 18个月启信宝VIP
+                      - generic [ref=e988]: 5.1~5.31，新用户买3年VIP送18个月VIP，支付后自动到账。
+                    - generic [ref=e989]:
+                      - generic [ref=e991]:
+                        - generic [ref=e992]:
+                          - text: 实付金额：
+                          - generic [ref=e993]: ¥780
+                        - generic [ref=e994]:
+                          - text: 开通前请阅读
+                          - link "《会员服务协议》" [ref=e995] [cursor=pointer]:
+                            - /url: https://static-cdn-p.qixin.com/policy/qixinbao_Web/member_service_zh-cn.html
+                        - generic [ref=e996]: 支付成功后可在【个人中心-我的订单】中申请开票
+                        - generic [ref=e997]: 会员权益将在支付完成后5分钟内生效
+                      - generic [ref=e1000]:
+                        - generic [ref=e1001]: 使用
+                        - img "ali-pay" [ref=e1002]
+                        - img "wx-pay" [ref=e1003]
+                        - generic [ref=e1004]: 扫码支付
+                - img "example" [ref=e1006]
+                - text: 
+            - generic [ref=e1007]:
+              - heading "分支机构 32" [level=3] [ref=e1009]:
+                - generic [ref=e1010]: 分支机构
+                - generic [ref=e1011]: "32"
+              - generic [ref=e1012]:
+                - generic [ref=e1013]:
+                  - generic [ref=e1014]:
+                    - generic [ref=e1015]: 
+                    - textbox "点击搜索" [ref=e1018]
+                  - button "所属地区 " [ref=e1020] [cursor=pointer]:
+                    - generic [ref=e1022]:
+                      - generic [ref=e1023]: 所属地区
+                      - generic [ref=e1024]: 
+                  - button "所属行业 " [ref=e1026] [cursor=pointer]:
+                    - generic [ref=e1028]:
+                      - generic [ref=e1029]: 所属行业
+                      - generic [ref=e1030]: 
+                  - button "成立日期 " [ref=e1032] [cursor=pointer]:
+                    - generic [ref=e1034]:
+                      - generic [ref=e1035]: 成立日期
+                      - generic [ref=e1036]: 
+                  - button "经营状态 " [ref=e1038] [cursor=pointer]:
+                    - generic [ref=e1040]:
+                      - generic [ref=e1041]: 经营状态
+                      - generic [ref=e1042]: 
+                - generic [ref=e1043] [cursor=pointer]:
+                  - generic [ref=e1044]: 
+                  - generic [ref=e1045]: 导出
+            - table [ref=e1046]:
+              - rowgroup [ref=e1047]:
+                - row "序号 企业名称 所属行业 法定代表人/负责人 成立时间 所在地区" [ref=e1048]:
+                  - columnheader "序号" [ref=e1049]
+                  - columnheader "企业名称" [ref=e1050]
+                  - columnheader "所属行业" [ref=e1051]
+                  - columnheader "法定代表人/负责人" [ref=e1052]
+                  - columnheader "成立时间" [ref=e1053]
+                  - columnheader "所在地区" [ref=e1054]
+              - rowgroup [ref=e1055]:
+                - row "1 小米科技有限责任公司保定莲池分公司 小米科技有限责任公司保定莲池分公司 存续 计算机、软件及辅助设备批发 张伟 2022-03-04 河北省保定市莲池区" [ref=e1056]:
+                  - cell "1" [ref=e1057]
+                  - cell "小米科技有限责任公司保定莲池分公司 小米科技有限责任公司保定莲池分公司 存续" [ref=e1058]:
+                    - generic [ref=e1059]:
+                      - img "小米科技有限责任公司保定莲池分公司" [ref=e1062]
+                      - generic [ref=e1063]:
+                        - link "小米科技有限责任公司保定莲池分公司" [ref=e1064] [cursor=pointer]:
+                          - /url: https://www.qixin.com/company/aecbbefd-09e1-4883-a9a8-68c6daf5d693
+                        - generic [ref=e1066]: 存续
+                  - cell "计算机、软件及辅助设备批发" [ref=e1067]:
+                    - generic [ref=e1068]:
+                      - text: 计算机、软件及辅助设备批发
+                      - generic [ref=e1069]: 
+                  - cell "张伟" [ref=e1070]:
+                    - link "张伟" [ref=e1075] [cursor=pointer]:
+                      - /url: https://www.qixin.com/people/info/9ad514fb59fe4c62a0660d6b0823a6c0
+                      - generic [ref=e1076]: 张伟
+                  - cell "2022-03-04" [ref=e1077]
+                  - cell "河北省保定市莲池区" [ref=e1078]
+                - row "2 小米科技有限责任公司仙桃分公司 小米科技有限责任公司仙桃分公司 注销 信息系统集成服务 刘凌迪 2014-11-07 湖北省省直辖县级行政区划仙桃市" [ref=e1079]:
+                  - cell "2" [ref=e1080]
+                  - cell "小米科技有限责任公司仙桃分公司 小米科技有限责任公司仙桃分公司 注销" [ref=e1081]:
+                    - generic [ref=e1082]:
+                      - img "小米科技有限责任公司仙桃分公司" [ref=e1085]
+                      - generic [ref=e1086]:
+                        - link "小米科技有限责任公司仙桃分公司" [ref=e1087] [cursor=pointer]:
+                          - /url: https://www.qixin.com/company/2956c2d8-27c7-4e89-810a-63b0ea08438e
+                        - generic [ref=e1089]: 注销
+                  - cell "信息系统集成服务" [ref=e1090]:
+                    - generic [ref=e1091]:
+                      - text: 信息系统集成服务
+                      - generic [ref=e1092]: 
+                  - cell "刘凌迪" [ref=e1093]:
+                    - link "刘凌迪" [ref=e1098] [cursor=pointer]:
+                      - /url: https://www.qixin.com/people/info/4b50ab5d77b4e3c7a83a29abc3cc20a8
+                      - generic [ref=e1099]: 刘凌迪
+                  - cell "2014-11-07" [ref=e1100]
+                  - cell "湖北省省直辖县级行政区划仙桃市" [ref=e1101]
+                - row "3 小米科技有限责任公司天津南开分公司 小米科技有限责任公司天津南开分公司 注销 其他技术推广服务 黎万强 2014-04-29 天津市南开区" [ref=e1102]:
+                  - cell "3" [ref=e1103]
+                  - cell "小米科技有限责任公司天津南开分公司 小米科技有限责任公司天津南开分公司 注销" [ref=e1104]:
+                    - generic [ref=e1105]:
+                      - img "小米科技有限责任公司天津南开分公司" [ref=e1108]
+                      - generic [ref=e1109]:
+                        - link "小米科技有限责任公司天津南开分公司" [ref=e1110] [cursor=pointer]:
+                          - /url: https://www.qixin.com/company/097fb475-9c25-453f-8330-8b10f190bc38
+                        - generic [ref=e1112]: 注销
+                  - cell "其他技术推广服务" [ref=e1113]:
+                    - generic [ref=e1114]:
+                      - text: 其他技术推广服务
+                      - generic [ref=e1115]: 
+                  - cell "黎万强" [ref=e1116]:
+                    - link "黎万强" [ref=e1121] [cursor=pointer]:
+                      - /url: https://www.qixin.com/people/info/007e105cd80818842acd7a512f26a7fe
+                      - generic [ref=e1122]: 黎万强
+                  - cell "2014-04-29" [ref=e1123]
+                  - cell "天津市南开区" [ref=e1124]
+                - row "4 小米科技有限责任公司上海分公司 小米科技有限责任公司上海分公司 注销 其他未列明信息技术服务业 黎万强 2014-04-28 上海市徐汇区" [ref=e1125]:
+                  - cell "4" [ref=e1126]
+                  - cell "小米科技有限责任公司上海分公司 小米科技有限责任公司上海分公司 注销" [ref=e1127]:
+                    - generic [ref=e1128]:
+                      - img "小米科技有限责任公司上海分公司" [ref=e1131]
+                      - generic [ref=e1132]:
+                        - link "小米科技有限责任公司上海分公司" [ref=e1133] [cursor=pointer]:
+                          - /url: https://www.qixin.com/company/037bb17b-f275-41a9-96bd-188bb1c9acdb
+                        - generic [ref=e1135]: 注销
+                  - cell "其他未列明信息技术服务业" [ref=e1136]:
+                    - generic [ref=e1137]:
+                      - text: 其他未列明信息技术服务业
+                      - generic [ref=e1138]: 
+                  - cell "黎万强" [ref=e1139]:
+                    - link "黎万强" [ref=e1144] [cursor=pointer]:
+                      - /url: https://www.qixin.com/people/info/007e105cd80818842acd7a512f26a7fe
+                      - generic [ref=e1145]: 黎万强
+                  - cell "2014-04-28" [ref=e1146]
+                  - cell "上海市徐汇区" [ref=e1147]
+                - row "5 小米科技有限责任公司东莞分公司 小米科技有限责任公司东莞分公司 存续 信息技术咨询服务 张健 2013-11-26 广东省东莞市" [ref=e1148]:
+                  - cell "5" [ref=e1149]
+                  - cell "小米科技有限责任公司东莞分公司 小米科技有限责任公司东莞分公司 存续" [ref=e1150]:
+                    - generic [ref=e1151]:
+                      - img "小米科技有限责任公司东莞分公司" [ref=e1154]
+                      - generic [ref=e1155]:
+                        - link "小米科技有限责任公司东莞分公司" [ref=e1156] [cursor=pointer]:
+                          - /url: https://www.qixin.com/company/b87b30f4-b949-44e3-8cb4-7a0cd7341a14
+                        - generic [ref=e1158]: 存续
+                  - cell "信息技术咨询服务" [ref=e1159]:
+                    - generic [ref=e1160]:
+                      - text: 信息技术咨询服务
+                      - generic [ref=e1161]: 
+                  - cell "张健" [ref=e1162]:
+                    - link "张健" [ref=e1167] [cursor=pointer]:
+                      - /url: https://www.qixin.com/people/info/b49a05432a0a0b8948af589f661167a2
+                      - generic [ref=e1168]: 张健
+                  - cell "2013-11-26" [ref=e1169]
+                  - cell "广东省东莞市" [ref=e1170]
+                - row "6 小米科技有限责任公司珠海分公司 小米科技有限责任公司珠海分公司 注销 计算机、通信和其他电子设备制造业 黎万强 2013-04-03 广东省珠海市香洲区" [ref=e1171]:
+                  - cell "6" [ref=e1172]
+                  - cell "小米科技有限责任公司珠海分公司 小米科技有限责任公司珠海分公司 注销" [ref=e1173]:
+                    - generic [ref=e1174]:
+                      - img "小米科技有限责任公司珠海分公司" [ref=e1177]
+                      - generic [ref=e1178]:
+                        - link "小米科技有限责任公司珠海分公司" [ref=e1179] [cursor=pointer]:
+                          - /url: https://www.qixin.com/company/73d4e75b-6ac0-4a3c-bdcb-cf951240313f
+                        - generic [ref=e1181]: 注销
+                  - cell "计算机、通信和其他电子设备制造业" [ref=e1182]:
+                    - generic [ref=e1183]:
+                      - text: 计算机、通信和其他电子设备制造业
+                      - generic [ref=e1184]: 
+                  - cell "黎万强" [ref=e1185]:
+                    - link "黎万强" [ref=e1190] [cursor=pointer]:
+                      - /url: https://www.qixin.com/people/info/007e105cd80818842acd7a512f26a7fe
+                      - generic [ref=e1191]: 黎万强
+                  - cell "2013-04-03" [ref=e1192]
+                  - cell "广东省珠海市香洲区" [ref=e1193]
+                - row "7 小米科技有限责任公司天津分公司 小米科技有限责任公司天津分公司 注销 其他机械设备及电子产品批发 黎万强 2012-08-30 天津市河北区" [ref=e1194]:
+                  - cell "7" [ref=e1195]
+                  - cell "小米科技有限责任公司天津分公司 小米科技有限责任公司天津分公司 注销" [ref=e1196]:
+                    - generic [ref=e1197]:
+                      - img "小米科技有限责任公司天津分公司" [ref=e1200]
+                      - generic [ref=e1201]:
+                        - link "小米科技有限责任公司天津分公司" [ref=e1202] [cursor=pointer]:
+                          - /url: https://www.qixin.com/company/3fe82e73-0acc-4265-8619-8f73d34a3e4e
+                        - generic [ref=e1204]: 注销
+                  - cell "其他机械设备及电子产品批发" [ref=e1205]:
+                    - generic [ref=e1206]:
+                      - text: 其他机械设备及电子产品批发
+                      - generic [ref=e1207]: 
+                  - cell "黎万强" [ref=e1208]:
+                    - link "黎万强" [ref=e1213] [cursor=pointer]:
+                      - /url: https://www.qixin.com/people/info/007e105cd80818842acd7a512f26a7fe
+                      - generic [ref=e1214]: 黎万强
+                  - cell "2012-08-30" [ref=e1215]
+                  - cell "天津市河北区" [ref=e1216]
+                - row "8 小米科技有限责任公司沈阳分公司 小米科技有限责任公司沈阳分公司 存续 经营异常 自然科学研究和试验发展 黎万强 2012-07-25 辽宁省沈阳市和平区" [ref=e1217]:
+                  - cell "8" [ref=e1218]
+                  - cell "小米科技有限责任公司沈阳分公司 小米科技有限责任公司沈阳分公司 存续 经营异常" [ref=e1219]:
+                    - generic [ref=e1220]:
+                      - img "小米科技有限责任公司沈阳分公司" [ref=e1223]
+                      - generic [ref=e1224]:
+                        - link "小米科技有限责任公司沈阳分公司" [ref=e1225] [cursor=pointer]:
+                          - /url: https://www.qixin.com/company/02f235bd-0b50-40e9-a592-f746ff47828b
+                        - generic [ref=e1226]:
+                          - generic [ref=e1227]: 存续
+                          - generic [ref=e1228] [cursor=pointer]: 经营异常
+                  - cell "自然科学研究和试验发展" [ref=e1230]:
+                    - generic [ref=e1231]:
+                      - text: 自然科学研究和试验发展
+                      - generic [ref=e1232]: 
+                  - cell "黎万强" [ref=e1233]:
+                    - link "黎万强" [ref=e1238] [cursor=pointer]:
+                      - /url: https://www.qixin.com/people/info/007e105cd80818842acd7a512f26a7fe
+                      - generic [ref=e1239]: 黎万强
+                  - cell "2012-07-25" [ref=e1240]
+                  - cell "辽宁省沈阳市和平区" [ref=e1241]
+                - row "9 小米科技有限责任公司西安分公司 小米科技有限责任公司西安分公司 注销 批发业 黎万强 2012-07-19 陕西省西安市莲湖区" [ref=e1242]:
+                  - cell "9" [ref=e1243]
+                  - cell "小米科技有限责任公司西安分公司 小米科技有限责任公司西安分公司 注销" [ref=e1244]:
+                    - generic [ref=e1245]:
+                      - img "小米科技有限责任公司西安分公司" [ref=e1248]
+                      - generic [ref=e1249]:
+                        - link "小米科技有限责任公司西安分公司" [ref=e1250] [cursor=pointer]:
+                          - /url: https://www.qixin.com/company/0b7140ea-eb5b-4075-bcf6-6e91d72fcae0
+                        - generic [ref=e1252]: 注销
+                  - cell "批发业" [ref=e1253]:
+                    - generic [ref=e1254]:
+                      - text: 批发业
+                      - generic [ref=e1255]: 
+                  - cell "黎万强" [ref=e1256]:
+                    - link "黎万强" [ref=e1261] [cursor=pointer]:
+                      - /url: https://www.qixin.com/people/info/007e105cd80818842acd7a512f26a7fe
+                      - generic [ref=e1262]: 黎万强
+                  - cell "2012-07-19" [ref=e1263]
+                  - cell "陕西省西安市莲湖区" [ref=e1264]
+                - row "10 北京小米科技有限责任公司福州分公司 北京小米科技有限责任公司福州分公司 注销 研究和试验发展 黎万强 2012-07-02 福建省福州市晋安区" [ref=e1265]:
+                  - cell "10" [ref=e1266]
+                  - cell "北京小米科技有限责任公司福州分公司 北京小米科技有限责任公司福州分公司 注销" [ref=e1267]:
+                    - generic [ref=e1268]:
+                      - img "北京小米科技有限责任公司福州分公司" [ref=e1271]
+                      - generic [ref=e1272]:
+                        - link "北京小米科技有限责任公司福州分公司" [ref=e1273] [cursor=pointer]:
+                          - /url: https://www.qixin.com/company/71b5ccf5-739c-4e7e-be67-27a825cdf8b8
+                        - generic [ref=e1275]: 注销
+                  - cell "研究和试验发展" [ref=e1276]:
+                    - generic [ref=e1277]:
+                      - text: 研究和试验发展
+                      - generic [ref=e1278]: 
+                  - cell "黎万强" [ref=e1279]:
+                    - link "黎万强" [ref=e1284] [cursor=pointer]:
+                      - /url: https://www.qixin.com/people/info/007e105cd80818842acd7a512f26a7fe
+                      - generic [ref=e1285]: 黎万强
+                  - cell "2012-07-02" [ref=e1286]
+                  - cell "福建省福州市晋安区" [ref=e1287]
+            - generic [ref=e1290]:
+              - button "上一页" [disabled] [ref=e1291]:
+                - generic:
+                  - img
+              - list [ref=e1292]:
+                - listitem "第 1 页" [ref=e1293]: "1"
+                - listitem "第 2 页" [ref=e1294] [cursor=pointer]: "2"
+                - listitem "第 3 页" [ref=e1295] [cursor=pointer]: "3"
+                - listitem "第 4 页" [ref=e1296] [cursor=pointer]: "4"
+              - button "下一页" [ref=e1297] [cursor=pointer]:
+                - generic:
+                  - img
+              - generic [ref=e1298]:
+                - generic [ref=e1299]: 前往
+                - spinbutton "页" [ref=e1302]: "1"
+                - generic [ref=e1303]: 页
+          - generic [ref=e1304]:
+            - generic [ref=e1305]:
+              - heading "变更记录" [level=3] [ref=e1307]:
+                - generic [ref=e1308]: 变更记录
+              - generic [ref=e1309]:
+                - link "text":
+                  - /url: /
+                  - img "text"
+            - generic [ref=e1310]:
+              - generic [ref=e1311]:
+                - generic [ref=e1312]:
+                  - generic [ref=e1315] [cursor=pointer]:
+                    - text: 公示信息
+                    - generic [ref=e1316]: "13"
+                  - generic [ref=e1319] [cursor=pointer]:
+                    - generic [ref=e1320]:
+                      - text: 历史变更记录
+                      - generic [ref=e1321]: "21"
+                    - img [ref=e1322]
+                - generic:
+                  - generic:    
+              - generic [ref=e1328]:
+                - link "全部特权 " [ref=e1329] [cursor=pointer]:
+                  - /url: /pay/vip
+                  - text: 全部特权
+                  - generic [ref=e1330]: 
+                - generic [ref=e1332]:
+                  - generic [ref=e1333]:
+                    - text: 开通
+                    - img [ref=e1334]
+                    - generic [ref=e1335]: ·
+                    - text: 查看全部变更记录
+                  - generic [ref=e1336]: 挖掘更多变更历程，掌握企业股权/人员变动
+                - generic [ref=e1337]:
+                  - generic [ref=e1338] [cursor=pointer]:
+                    - generic [ref=e1341]:
+                      - img [ref=e1342]
+                      - text: VIP会员
+                    - generic [ref=e1344]:
+                      - img [ref=e1345]
+                      - text: SVIP会员
+                  - generic [ref=e1347]:
+                    - generic [ref=e1348]:
+                      - generic [ref=e1350] [cursor=pointer]:
+                        - generic [ref=e1351]: 送30天VIP
+                        - generic [ref=e1352]: 半年VIP
+                        - generic [ref=e1353]: ¥198
+                        - generic [ref=e1355]: 低至¥1.0/天
+                      - generic [ref=e1357] [cursor=pointer]:
+                        - generic [ref=e1358]: 1年VIP
+                        - generic [ref=e1359]: ¥366
+                        - generic [ref=e1361]: 低至¥1.0/天
+                      - generic [ref=e1363] [cursor=pointer]:
+                        - generic [ref=e1364]: 2年VIP
+                        - generic [ref=e1365]: ¥596
+                        - generic [ref=e1367]: 低至¥0.8/天
+                      - generic [ref=e1369] [cursor=pointer]:
+                        - generic [ref=e1370]: 送18个月VIP
+                        - generic [ref=e1371]: 3年VIP
+                        - generic [ref=e1372]: ¥780
+                        - generic [ref=e1374]: 低至¥0.9/天
+                        - img [ref=e1376]
+                    - generic [ref=e1379]:
+                      - generic [ref=e1380]: 赠 18个月启信宝VIP
+                      - generic [ref=e1381]: 5.1~5.31，新用户买3年VIP送18个月VIP，支付后自动到账。
+                    - generic [ref=e1382]:
+                      - generic [ref=e1384]:
+                        - generic [ref=e1385]:
+                          - text: 实付金额：
+                          - generic [ref=e1386]: ¥780
+                        - generic [ref=e1387]:
+                          - text: 开通前请阅读
+                          - link "《会员服务协议》" [ref=e1388] [cursor=pointer]:
+                            - /url: https://static-cdn-p.qixin.com/policy/qixinbao_Web/member_service_zh-cn.html
+                        - generic [ref=e1389]: 支付成功后可在【个人中心-我的订单】中申请开票
+                        - generic [ref=e1390]: 会员权益将在支付完成后5分钟内生效
+                      - generic [ref=e1393]:
+                        - generic [ref=e1394]: 使用
+                        - img "ali-pay" [ref=e1395]
+                        - img "wx-pay" [ref=e1396]
+                        - generic [ref=e1397]: 扫码支付
+                - img "example" [ref=e1399]
+                - text: 
+          - generic [ref=e1400]:
+            - generic [ref=e1401]:
+              - heading "企业年报 12" [level=3] [ref=e1403]:
+                - generic [ref=e1404]: 企业年报
+                - generic [ref=e1405]: "12"
+              - generic [ref=e1406]:
+                - generic [ref=e1407] [cursor=pointer]:
+                  - generic [ref=e1408]: 
+                  - generic [ref=e1409]: 导出
+                - link "text":
+                  - /url: /
+                  - img "text"
+            - table [ref=e1410]:
+              - rowgroup [ref=e1411]:
+                - row "序号 报送年度 公示日期 操作" [ref=e1412]:
+                  - columnheader "序号" [ref=e1413]
+                  - columnheader "报送年度" [ref=e1414]
+                  - columnheader "公示日期" [ref=e1415]
+                  - columnheader "操作" [ref=e1416]
+              - rowgroup [ref=e1417]:
+                - row "1 2024年度报告 2025-06-23 查看详情" [ref=e1418]:
+                  - cell "1" [ref=e1419]
+                  - cell "2024年度报告" [ref=e1420]
+                  - cell "2025-06-23" [ref=e1421]
+                  - cell "查看详情" [ref=e1422]:
+                    - link "查看详情" [ref=e1423] [cursor=pointer]:
+                      - /url: /detail/company/report/534472fd-7d53-4958-8132-d6a6242423d8/2024?isHistory=false
+                - row "2 2023年度报告 2024-06-26 查看详情" [ref=e1424]:
+                  - cell "2" [ref=e1425]
+                  - cell "2023年度报告" [ref=e1426]
+                  - cell "2024-06-26" [ref=e1427]
+                  - cell "查看详情" [ref=e1428]:
+                    - link "查看详情" [ref=e1429] [cursor=pointer]:
+                      - /url: /detail/company/report/534472fd-7d53-4958-8132-d6a6242423d8/2023?isHistory=false
+                - row "3 2022年度报告 2023-06-12 查看详情" [ref=e1430]:
+                  - cell "3" [ref=e1431]
+                  - cell "2022年度报告" [ref=e1432]
+                  - cell "2023-06-12" [ref=e1433]
+                  - cell "查看详情" [ref=e1434]:
+                    - link "查看详情" [ref=e1435] [cursor=pointer]:
+                      - /url: /detail/company/report/534472fd-7d53-4958-8132-d6a6242423d8/2022?isHistory=false
+                - row "4 2021年度报告 2022-06-14 查看详情" [ref=e1436]:
+                  - cell "4" [ref=e1437]
+                  - cell "2021年度报告" [ref=e1438]
+                  - cell "2022-06-14" [ref=e1439]
+                  - cell "查看详情" [ref=e1440]:
+                    - link "查看详情" [ref=e1441] [cursor=pointer]:
+                      - /url: /detail/company/report/534472fd-7d53-4958-8132-d6a6242423d8/2021?isHistory=false
+                - row "5 2020年度报告 2021-06-23 查看详情" [ref=e1442]:
+                  - cell "5" [ref=e1443]
+                  - cell "2020年度报告" [ref=e1444]
+                  - cell "2021-06-23" [ref=e1445]
+                  - cell "查看详情" [ref=e1446]:
+                    - link "查看详情" [ref=e1447] [cursor=pointer]:
+                      - /url: /detail/company/report/534472fd-7d53-4958-8132-d6a6242423d8/2020?isHistory=false
+                - row "6 2019年度报告 2020-06-24 查看详情" [ref=e1448]:
+                  - cell "6" [ref=e1449]
+                  - cell "2019年度报告" [ref=e1450]
+                  - cell "2020-06-24" [ref=e1451]
+                  - cell "查看详情" [ref=e1452]:
+                    - link "查看详情" [ref=e1453] [cursor=pointer]:
+                      - /url: /detail/company/report/534472fd-7d53-4958-8132-d6a6242423d8/2019?isHistory=false
+                - row "7 2018年度报告 2019-06-20 查看详情" [ref=e1454]:
+                  - cell "7" [ref=e1455]
+                  - cell "2018年度报告" [ref=e1456]
+                  - cell "2019-06-20" [ref=e1457]
+                  - cell "查看详情" [ref=e1458]:
+                    - link "查看详情" [ref=e1459] [cursor=pointer]:
+                      - /url: /detail/company/report/534472fd-7d53-4958-8132-d6a6242423d8/2018?isHistory=false
+                - row "8 2017年度报告 2018-06-13 查看详情" [ref=e1460]:
+                  - cell "8" [ref=e1461]
+                  - cell "2017年度报告" [ref=e1462]
+                  - cell "2018-06-13" [ref=e1463]
+                  - cell "查看详情" [ref=e1464]:
+                    - link "查看详情" [ref=e1465] [cursor=pointer]:
+                      - /url: /detail/company/report/534472fd-7d53-4958-8132-d6a6242423d8/2017?isHistory=false
+                - row "9 2016年度报告 2017-06-22 查看详情" [ref=e1466]:
+                  - cell "9" [ref=e1467]
+                  - cell "2016年度报告" [ref=e1468]
+                  - cell "2017-06-22" [ref=e1469]
+                  - cell "查看详情" [ref=e1470]:
+                    - link "查看详情" [ref=e1471] [cursor=pointer]:
+                      - /url: /detail/company/report/534472fd-7d53-4958-8132-d6a6242423d8/2016?isHistory=false
+                - row "10 2015年度报告 2016-05-30 查看详情" [ref=e1472]:
+                  - cell "10" [ref=e1473]
+                  - cell "2015年度报告" [ref=e1474]
+                  - cell "2016-05-30" [ref=e1475]
+                  - cell "查看详情" [ref=e1476]:
+                    - link "查看详情" [ref=e1477] [cursor=pointer]:
+                      - /url: /detail/company/report/534472fd-7d53-4958-8132-d6a6242423d8/2015?isHistory=false
+            - generic [ref=e1480]:
+              - button "上一页" [disabled] [ref=e1481]:
+                - generic:
+                  - img
+              - list [ref=e1482]:
+                - listitem "第 1 页" [ref=e1483]: "1"
+                - listitem "第 2 页" [ref=e1484] [cursor=pointer]: "2"
+              - button "下一页" [ref=e1485] [cursor=pointer]:
+                - generic:
+                  - img
+              - generic [ref=e1486]:
+                - generic [ref=e1487]: 前往
+                - spinbutton "页" [ref=e1490]: "1"
+                - generic [ref=e1491]: 页
+          - generic [ref=e1492]:
+            - generic [ref=e1493]:
+              - heading "财务数据" [level=3] [ref=e1495]:
+                - generic [ref=e1496]: 财务数据
+              - generic [ref=e1497]:
+                - link "text":
+                  - /url: /
+                  - img "text"
+            - generic [ref=e1498]:
+              - generic [ref=e1499]:
+                - tablist [ref=e1503]:
+                  - tab "港股财报" [selected] [ref=e1505]
+                - generic:
+                  - tabpanel "港股财报"
+              - generic [ref=e1506]:
+                - generic [ref=e1508]:
+                  - generic [ref=e1509]:
+                    - generic [ref=e1512] [cursor=pointer]: 主要指标
+                    - generic [ref=e1515] [cursor=pointer]: 利润表
+                    - generic [ref=e1518] [cursor=pointer]: 资产负债表
+                    - generic [ref=e1521] [cursor=pointer]: 现金流量表
+                  - generic [ref=e1523]:
+                    - generic [ref=e1524]:
+                      - generic [ref=e1525]:
+                        - switch [checked]
+                      - generic [ref=e1528]: 隐藏空行
+                    - button "报告期 " [ref=e1531] [cursor=pointer]:
+                      - generic [ref=e1533]:
+                        - generic [ref=e1534]: 报告期
+                        - generic [ref=e1535]: 
+                    - text:   
+                - table [ref=e1536]:
+                  - rowgroup [ref=e1537]:
+                    - row " 2025年报 2025三季度 2025中报 2025一季度 " [ref=e1538]:
+                      - cell " 2025年报 2025三季度 2025中报 2025一季度 " [ref=e1539]:
+                        - generic [ref=e1542]:
+                          - generic [ref=e1543]: 
+                          - generic [ref=e1544]: 2025年报
+                          - generic [ref=e1545]: 2025三季度
+                          - generic [ref=e1546]: 2025中报
+                          - generic [ref=e1547]: 2025一季度
+                          - generic [ref=e1548] [cursor=pointer]: 
+                    - row "利润表" [ref=e1549]:
+                      - cell "利润表" [ref=e1550]
+                      - cell [ref=e1551]
+                    - row "营业收入 4572.8669亿元 3403.7016亿元 2272.4943亿元 1112.9334亿元" [ref=e1552] [cursor=pointer]:
+                      - cell "营业收入" [ref=e1553]
+                      - cell "4572.8669亿元 3403.7016亿元 2272.4943亿元 1112.9334亿元" [ref=e1554]:
+                        - generic [ref=e1555]:
+                          - generic [ref=e1557]: 4572.8669亿元
+                          - generic [ref=e1558]: 3403.7016亿元
+                          - generic [ref=e1559]: 2272.4943亿元
+                          - generic [ref=e1560]: 1112.9334亿元
+                    - row "营业利润 479.0092亿元 416.7226亿元 265.6213亿元 131.2541亿元" [ref=e1562] [cursor=pointer]:
+                      - cell "营业利润" [ref=e1563]
+                      - cell "479.0092亿元 416.7226亿元 265.6213亿元 131.2541亿元" [ref=e1564]:
+                        - generic [ref=e1565]:
+                          - generic [ref=e1567]: 479.0092亿元
+                          - generic [ref=e1568]: 416.7226亿元
+                          - generic [ref=e1569]: 265.6213亿元
+                          - generic [ref=e1570]: 131.2541亿元
+                    - row "资产负债表" [ref=e1572]:
+                      - cell "资产负债表" [ref=e1573]
+                      - cell [ref=e1574]
+                    - row "资产总计 5080.9597亿元 5027.665亿元 4815.1776亿元 4501.1636亿元" [ref=e1575] [cursor=pointer]:
+                      - cell "资产总计" [ref=e1576]
+                      - cell "5080.9597亿元 5027.665亿元 4815.1776亿元 4501.1636亿元" [ref=e1577]:
+                        - generic [ref=e1578]:
+                          - generic [ref=e1580]: 5080.9597亿元
+                          - generic [ref=e1581]: 5027.665亿元
+                          - generic [ref=e1582]: 4815.1776亿元
+                          - generic [ref=e1583]: 4501.1636亿元
+                    - row "负债总计 2417.727亿元 2372.0314亿元 2286.5706亿元 2101.8458亿元" [ref=e1585] [cursor=pointer]:
+                      - cell "负债总计" [ref=e1586]
+                      - cell "2417.727亿元 2372.0314亿元 2286.5706亿元 2101.8458亿元" [ref=e1587]:
+                        - generic [ref=e1588]:
+                          - generic [ref=e1590]: 2417.727亿元
+                          - generic [ref=e1591]: 2372.0314亿元
+                          - generic [ref=e1592]: 2286.5706亿元
+                          - generic [ref=e1593]: 2101.8458亿元
+                    - row "股东权益合计 2662.1866亿元 2654.5876亿元 2524.7371亿元 2394.9856亿元" [ref=e1595] [cursor=pointer]:
+                      - cell "股东权益合计" [ref=e1596]
+                      - cell "2662.1866亿元 2654.5876亿元 2524.7371亿元 2394.9856亿元" [ref=e1597]:
+                        - generic [ref=e1598]:
+                          - generic [ref=e1600]: 2662.1866亿元
+                          - generic [ref=e1601]: 2654.5876亿元
+                          - generic [ref=e1602]: 2524.7371亿元
+                          - generic [ref=e1603]: 2394.9856亿元
+                    - row "现金流量表" [ref=e1605]:
+                      - cell "现金流量表" [ref=e1606]
+                      - cell [ref=e1607]
+                    - row "经营活动产生的现金流量净额 341.4238亿元 335.2836亿元 280.5474亿元 45.095亿元" [ref=e1608] [cursor=pointer]:
+                      - cell "经营活动产生的现金流量净额" [ref=e1609]
+                      - cell "341.4238亿元 335.2836亿元 280.5474亿元 45.095亿元" [ref=e1610]:
+                        - generic [ref=e1611]:
+                          - generic [ref=e1613]: 341.4238亿元
+                          - generic [ref=e1614]: 335.2836亿元
+                          - generic [ref=e1615]: 280.5474亿元
+                          - generic [ref=e1616]: 45.095亿元
+                    - row "每股指标" [ref=e1618]:
+                      - cell "每股指标" [ref=e1619]
+                      - cell [ref=e1620]
+                    - row "基本每股收益 1.62元 1.37元 0.9元 0.44元" [ref=e1621] [cursor=pointer]:
+                      - cell "基本每股收益" [ref=e1622]
+                      - cell "1.62元 1.37元 0.9元 0.44元" [ref=e1623]:
+                        - generic [ref=e1624]:
+                          - generic [ref=e1626]: 1.62元
+                          - generic [ref=e1627]: 1.37元
+                          - generic [ref=e1628]: 0.9元
+                          - generic [ref=e1629]: 0.44元
+                    - row "稀释每股收益 1.56元 1.33元 0.87元 0.42元" [ref=e1631] [cursor=pointer]:
+                      - cell "稀释每股收益" [ref=e1632]
+                      - cell "1.56元 1.33元 0.87元 0.42元" [ref=e1633]:
+                        - generic [ref=e1634]:
+                          - generic [ref=e1636]: 1.56元
+                          - generic [ref=e1637]: 1.33元
+                          - generic [ref=e1638]: 0.87元
+                          - generic [ref=e1639]: 0.42元
+                    - row "TTM每股收益EPS 1.5988元 1.6953元 1.4336元 1.173元" [ref=e1641] [cursor=pointer]:
+                      - cell "TTM每股收益EPS" [ref=e1642]
+                      - cell "1.5988元 1.6953元 1.4336元 1.173元" [ref=e1643]:
+                        - generic [ref=e1644]:
+                          - generic [ref=e1646]: 1.5988元
+                          - generic [ref=e1647]: 1.6953元
+                          - generic [ref=e1648]: 1.4336元
+                          - generic [ref=e1649]: 1.173元
+                    - row "每股净资产 10.2206元 10.199元 9.7282元 9.241元" [ref=e1651] [cursor=pointer]:
+                      - cell "每股净资产" [ref=e1652]
+                      - cell "10.2206元 10.199元 9.7282元 9.241元" [ref=e1653]:
+                        - generic [ref=e1654]:
+                          - generic [ref=e1656]: 10.2206元
+                          - generic [ref=e1657]: 10.199元
+                          - generic [ref=e1658]: 9.7282元
+                          - generic [ref=e1659]: 9.241元
+                    - row "每股经营现金流 1.3108元 1.2882元 1.081元 0.174元" [ref=e1661] [cursor=pointer]:
+                      - cell "每股经营现金流" [ref=e1662]
+                      - cell "1.3108元 1.2882元 1.081元 0.174元" [ref=e1663]:
+                        - generic [ref=e1664]:
+                          - generic [ref=e1666]: 1.3108元
+                          - generic [ref=e1667]: 1.2882元
+                          - generic [ref=e1668]: 1.081元
+                          - generic [ref=e1669]: 0.174元
+                    - row "每股营业收入 17.5561元 13.0771元 8.7562元 4.2942元" [ref=e1671] [cursor=pointer]:
+                      - cell "每股营业收入" [ref=e1672]
+                      - cell "17.5561元 13.0771元 8.7562元 4.2942元" [ref=e1673]:
+                        - generic [ref=e1674]:
+                          - generic [ref=e1676]: 17.5561元
+                          - generic [ref=e1677]: 13.0771元
+                          - generic [ref=e1678]: 8.7562元
+                          - generic [ref=e1679]: 4.2942元
+                    - row "成长能力指标" [ref=e1681]:
+                      - cell "成长能力指标" [ref=e1682]
+                      - cell [ref=e1683]
+                    - row "TTM营业收入 4572.8669亿元 4493.7532亿元 4287.6113亿元 4016.9287亿元" [ref=e1684] [cursor=pointer]:
+                      - cell "TTM营业收入" [ref=e1685]
+                      - cell "4572.8669亿元 4493.7532亿元 4287.6113亿元 4016.9287亿元" [ref=e1686]:
+                        - generic [ref=e1687]:
+                          - generic [ref=e1689]: 4572.8669亿元
+                          - generic [ref=e1690]: 4493.7532亿元
+                          - generic [ref=e1691]: 4287.6113亿元
+                          - generic [ref=e1692]: 4016.9287亿元
+                    - row "TTM毛利润 1018.0585亿元 998.9792亿元 928.4317亿元 851.3639亿元" [ref=e1694] [cursor=pointer]:
+                      - cell "TTM毛利润" [ref=e1695]
+                      - cell "1018.0585亿元 998.9792亿元 928.4317亿元 851.3639亿元" [ref=e1696]:
+                        - generic [ref=e1697]:
+                          - generic [ref=e1699]: 1018.0585亿元
+                          - generic [ref=e1700]: 998.9792亿元
+                          - generic [ref=e1701]: 928.4317亿元
+                          - generic [ref=e1702]: 851.3639亿元
+                    - row "TTM营业总收入同比增长 24.97% 36.11% 38.97% 39.96%" [ref=e1704] [cursor=pointer]:
+                      - cell "TTM营业总收入同比增长" [ref=e1705]
+                      - cell "24.97% 36.11% 38.97% 39.96%" [ref=e1706]:
+                        - generic [ref=e1707]:
+                          - generic [ref=e1709]: 24.97%
+                          - generic [ref=e1710]: 36.11%
+                          - generic [ref=e1711]: 38.97%
+                          - generic [ref=e1712]: 39.96%
+                    - row "毛利润同比增长 32.9749% 43.1339% 46.2271% 50.9586%" [ref=e1714] [cursor=pointer]:
+                      - cell "毛利润同比增长" [ref=e1715]
+                      - cell "32.9749% 43.1339% 46.2271% 50.9586%" [ref=e1716]:
+                        - generic [ref=e1717]:
+                          - generic [ref=e1719]: 32.9749%
+                          - generic [ref=e1720]: 43.1339%
+                          - generic [ref=e1721]: 46.2271%
+                          - generic [ref=e1722]: 50.9586%
+                    - row "盈利能力指标" [ref=e1724]:
+                      - cell "盈利能力指标" [ref=e1725]
+                      - cell [ref=e1726]
+                    - row "TTM年化净资产收益率 15.6426% 16.6223% 14.7369% 12.6933%" [ref=e1727] [cursor=pointer]:
+                      - cell "TTM年化净资产收益率" [ref=e1728]
+                      - cell "15.6426% 16.6223% 14.7369% 12.6933%" [ref=e1729]:
+                        - generic [ref=e1730]:
+                          - generic [ref=e1732]: 15.6426%
+                          - generic [ref=e1733]: 16.6223%
+                          - generic [ref=e1734]: 14.7369%
+                          - generic [ref=e1735]: 12.6933%
+                    - row "总资产净利率 9.1398% 10.3319% 10.3219% 10.2423%" [ref=e1737] [cursor=pointer]:
+                      - cell "总资产净利率" [ref=e1738]
+                      - cell "9.1398% 10.3319% 10.3219% 10.2423%" [ref=e1739]:
+                        - generic [ref=e1740]:
+                          - generic [ref=e1742]: 9.1398%
+                          - generic [ref=e1743]: 10.3319%
+                          - generic [ref=e1744]: 10.3219%
+                          - generic [ref=e1745]: 10.2423%
+                    - row "年化投资回报率 10.9237% 12.5708% 12.6692% 12.8622%" [ref=e1747] [cursor=pointer]:
+                      - cell "年化投资回报率" [ref=e1748]
+                      - cell "10.9237% 12.5708% 12.6692% 12.8622%" [ref=e1749]:
+                        - generic [ref=e1750]:
+                          - generic [ref=e1752]: 10.9237%
+                          - generic [ref=e1753]: 12.5708%
+                          - generic [ref=e1754]: 12.6692%
+                          - generic [ref=e1755]: 12.8622%
+                    - row "TTM总资产净利率 9.1398% 10.3373% 9.0341% 7.8242%" [ref=e1757] [cursor=pointer]:
+                      - cell "TTM总资产净利率" [ref=e1758]
+                      - cell "9.1398% 10.3373% 9.0341% 7.8242%" [ref=e1759]:
+                        - generic [ref=e1760]:
+                          - generic [ref=e1762]: 9.1398%
+                          - generic [ref=e1763]: 10.3373%
+                          - generic [ref=e1764]: 9.0341%
+                          - generic [ref=e1765]: 7.8242%
+                    - row "TTM年化投资回报率 10.9237% 12.9161% 11.4054% 10.2941%" [ref=e1767] [cursor=pointer]:
+                      - cell "TTM年化投资回报率" [ref=e1768]
+                      - cell "10.9237% 12.9161% 11.4054% 10.2941%" [ref=e1769]:
+                        - generic [ref=e1770]:
+                          - generic [ref=e1772]: 10.9237%
+                          - generic [ref=e1773]: 12.9161%
+                          - generic [ref=e1774]: 11.4054%
+                          - generic [ref=e1775]: 10.2941%
+                    - row "盈利质量指标" [ref=e1777]:
+                      - cell "盈利质量指标" [ref=e1778]
+                      - cell [ref=e1779]
+                    - row "所得税/利润总额 0.1628% 0.1764% 0.1743% 0.1728%" [ref=e1780] [cursor=pointer]:
+                      - cell "所得税/利润总额" [ref=e1781]
+                      - cell "0.1628% 0.1764% 0.1743% 0.1728%" [ref=e1782]:
+                        - generic [ref=e1783]:
+                          - generic [ref=e1785]: 0.1628%
+                          - generic [ref=e1786]: 0.1764%
+                          - generic [ref=e1787]: 0.1743%
+                          - generic [ref=e1788]: 0.1728%
+                    - row "TTM经营现金流/营业收入 0.0747% 0.1278% 0.1512% 0.1322%" [ref=e1790] [cursor=pointer]:
+                      - cell "TTM经营现金流/营业收入" [ref=e1791]
+                      - cell "0.0747% 0.1278% 0.1512% 0.1322%" [ref=e1792]:
+                        - generic [ref=e1793]:
+                          - generic [ref=e1795]: 0.0747%
+                          - generic [ref=e1796]: 0.1278%
+                          - generic [ref=e1797]: 0.1512%
+                          - generic [ref=e1798]: 0.1322%
+                    - row "财务风险指标" [ref=e1800]:
+                      - cell "财务风险指标" [ref=e1801]
+                      - cell [ref=e1802]
+                    - row "资产负债率 47.5841% 47.1796% 47.4867% 46.6956%" [ref=e1803] [cursor=pointer]:
+                      - cell "资产负债率" [ref=e1804]
+                      - cell "47.5841% 47.1796% 47.4867% 46.6956%" [ref=e1805]:
+                        - generic [ref=e1806]:
+                          - generic [ref=e1808]: 47.5841%
+                          - generic [ref=e1809]: 47.1796%
+                          - generic [ref=e1810]: 47.4867%
+                          - generic [ref=e1811]: 46.6956%
+                  - text:      
+          - generic [ref=e1813]:
+            - generic [ref=e1814]:
+              - heading "社保人数" [level=3] [ref=e1816]:
+                - generic [ref=e1817]: 社保人数
+              - generic [ref=e1818]:
+                - generic [ref=e1819] [cursor=pointer]:
+                  - generic [ref=e1820]: 
+                  - generic [ref=e1821]: 导出
+                - link "text":
+                  - /url: /
+                  - img "text"
+            - generic [ref=e1822]:
+              - generic [ref=e1824]:
+                - generic [ref=e1825] [cursor=pointer]: 本公司
+                - generic [ref=e1826] [cursor=pointer]: 总公司及分支机构
+                - generic [ref=e1827] [cursor=pointer]: 集团
+              - generic [ref=e1836]: 社保人数：37人 (2024)
+            - generic [ref=e1838]: 注：社保人数数据来源于企业年报，企业年报未及时更新或年报内未披露社保人数可能造成数据缺失
+          - generic [ref=e1839]:
+            - generic [ref=e1840]:
+              - generic [ref=e1841]:
+                - heading "关联企业/人员 " [level=3] [ref=e1842]:
+                  - generic [ref=e1843]: 关联企业/人员
+                  - generic [ref=e1844]: 
+                - link " 关联方认定图" [ref=e1845] [cursor=pointer]:
+                  - /url: /detail/company/chart/related-identify/534472fd-7d53-4958-8132-d6a6242423d8
+                  - generic [ref=e1846]: 
+                  - text: 关联方认定图
+              - generic [ref=e1847]:
+                - link "text":
+                  - /url: /
+                  - img "text"
+            - generic [ref=e1849]:
+              - generic [ref=e1850] [cursor=pointer]: 全部
+              - generic [ref=e1851] [cursor=pointer]: 企业
+              - generic [ref=e1852] [cursor=pointer]: 个人
+            - generic [ref=e1857]:
+              - link "全部特权 " [ref=e1858] [cursor=pointer]:
+                - /url: /pay/vip
+                - text: 全部特权
+                - generic [ref=e1859]: 
+              - generic [ref=e1861]:
+                - generic [ref=e1862]:
+                  - text: 开通
+                  - img [ref=e1863]
+                  - generic [ref=e1864]: ·
+                  - text: 查看企业关联方
+                - generic [ref=e1865]: 深度挖掘企业关联方数据
+              - generic [ref=e1866]:
+                - generic [ref=e1867] [cursor=pointer]:
+                  - generic [ref=e1870]:
+                    - img [ref=e1871]
+                    - text: VIP会员
+                  - generic [ref=e1873]:
+                    - img [ref=e1874]
+                    - text: SVIP会员
+                - generic [ref=e1876]:
+                  - generic [ref=e1877]:
+                    - generic [ref=e1879] [cursor=pointer]:
+                      - generic [ref=e1880]: 送30天VIP
+                      - generic [ref=e1881]: 半年VIP
+                      - generic [ref=e1882]: ¥198
+                      - generic [ref=e1884]: 低至¥1.0/天
+                    - generic [ref=e1886] [cursor=pointer]:
+                      - generic [ref=e1887]: 1年VIP
+                      - generic [ref=e1888]: ¥366
+                      - generic [ref=e1890]: 低至¥1.0/天
+                    - generic [ref=e1892] [cursor=pointer]:
+                      - generic [ref=e1893]: 2年VIP
+                      - generic [ref=e1894]: ¥596
+                      - generic [ref=e1896]: 低至¥0.8/天
+                    - generic [ref=e1898] [cursor=pointer]:
+                      - generic [ref=e1899]: 送18个月VIP
+                      - generic [ref=e1900]: 3年VIP
+                      - generic [ref=e1901]: ¥780
+                      - generic [ref=e1903]: 低至¥0.9/天
+                      - img [ref=e1905]
+                  - generic [ref=e1908]:
+                    - generic [ref=e1909]: 赠 18个月启信宝VIP
+                    - generic [ref=e1910]: 5.1~5.31，新用户买3年VIP送18个月VIP，支付后自动到账。
+                  - generic [ref=e1911]:
+                    - generic [ref=e1913]:
+                      - generic [ref=e1914]:
+                        - text: 实付金额：
+                        - generic [ref=e1915]: ¥780
+                      - generic [ref=e1916]:
+                        - text: 开通前请阅读
+                        - link "《会员服务协议》" [ref=e1917] [cursor=pointer]:
+                          - /url: https://static-cdn-p.qixin.com/policy/qixinbao_Web/member_service_zh-cn.html
+                      - generic [ref=e1918]: 支付成功后可在【个人中心-我的订单】中申请开票
+                      - generic [ref=e1919]: 会员权益将在支付完成后5分钟内生效
+                    - generic [ref=e1922]:
+                      - generic [ref=e1923]: 使用
+                      - img "ali-pay" [ref=e1924]
+                      - img "wx-pay" [ref=e1925]
+                      - generic [ref=e1926]: 扫码支付
+              - img "example" [ref=e1928]
+              - text: 
+          - generic [ref=e1929]:
+            - generic [ref=e1930]:
+              - heading "协同股东" [level=3] [ref=e1932]:
+                - generic [ref=e1933]: 协同股东
+              - generic [ref=e1934]:
+                - link "text":
+                  - /url: /
+                  - img "text"
+            - generic [ref=e1939]:
+              - link "全部特权 " [ref=e1940] [cursor=pointer]:
+                - /url: /pay/vip
+                - text: 全部特权
+                - generic [ref=e1941]: 
+              - generic [ref=e1943]:
+                - generic [ref=e1944]:
+                  - text: 开通
+                  - img [ref=e1945]
+                  - generic [ref=e1946]: ·
+                  - text: 查看协同股东
+                - generic [ref=e1947]: 不限次数查看协同股东信息
+              - generic [ref=e1948]:
+                - generic [ref=e1949] [cursor=pointer]:
+                  - generic [ref=e1952]:
+                    - img [ref=e1953]
+                    - text: VIP会员
+                  - generic [ref=e1955]:
+                    - img [ref=e1956]
+                    - text: SVIP会员
+                - generic [ref=e1958]:
+                  - generic [ref=e1959]:
+                    - generic [ref=e1961] [cursor=pointer]:
+                      - generic [ref=e1962]: 送30天VIP
+                      - generic [ref=e1963]: 半年VIP
+                      - generic [ref=e1964]: ¥198
+                      - generic [ref=e1966]: 低至¥1.0/天
+                    - generic [ref=e1968] [cursor=pointer]:
+                      - generic [ref=e1969]: 1年VIP
+                      - generic [ref=e1970]: ¥366
+                      - generic [ref=e1972]: 低至¥1.0/天
+                    - generic [ref=e1974] [cursor=pointer]:
+                      - generic [ref=e1975]: 2年VIP
+                      - generic [ref=e1976]: ¥596
+                      - generic [ref=e1978]: 低至¥0.8/天
+                    - generic [ref=e1980] [cursor=pointer]:
+                      - generic [ref=e1981]: 送18个月VIP
+                      - generic [ref=e1982]: 3年VIP
+                      - generic [ref=e1983]: ¥780
+                      - generic [ref=e1985]: 低至¥0.9/天
+                      - img [ref=e1987]
+                  - generic [ref=e1990]:
+                    - generic [ref=e1991]: 赠 18个月启信宝VIP
+                    - generic [ref=e1992]: 5.1~5.31，新用户买3年VIP送18个月VIP，支付后自动到账。
+                  - generic [ref=e1993]:
+                    - generic [ref=e1995]:
+                      - generic [ref=e1996]:
+                        - text: 实付金额：
+                        - generic [ref=e1997]: ¥780
+                      - generic [ref=e1998]:
+                        - text: 开通前请阅读
+                        - link "《会员服务协议》" [ref=e1999] [cursor=pointer]:
+                          - /url: https://static-cdn-p.qixin.com/policy/qixinbao_Web/member_service_zh-cn.html
+                      - generic [ref=e2000]: 支付成功后可在【个人中心-我的订单】中申请开票
+                      - generic [ref=e2001]: 会员权益将在支付完成后5分钟内生效
+                    - generic [ref=e2004]:
+                      - generic [ref=e2005]: 使用
+                      - img "ali-pay" [ref=e2006]
+                      - img "wx-pay" [ref=e2007]
+                      - generic [ref=e2008]: 扫码支付
+              - img "example" [ref=e2010]
+              - text: 
+          - generic [ref=e2011]:
+            - generic [ref=e2012]:
+              - heading "疑似实控人 " [level=3] [ref=e2014]:
+                - generic [ref=e2015]: 疑似实控人
+                - generic [ref=e2016]: 
+              - generic [ref=e2017]:
+                - link "text":
+                  - /url: /
+                  - img "text"
+            - generic [ref=e2022]:
+              - link "全部特权 " [ref=e2023] [cursor=pointer]:
+                - /url: /pay/vip
+                - text: 全部特权
+                - generic [ref=e2024]: 
+              - generic [ref=e2026]:
+                - generic [ref=e2027]:
+                  - text: 开通
+                  - img [ref=e2028]
+                  - generic [ref=e2029]: ·
+                  - text: 查看疑似实控人
+                - generic [ref=e2030]: 深挖股权结构，发现疑似实控人
+              - generic [ref=e2031]:
+                - generic [ref=e2032] [cursor=pointer]:
+                  - generic [ref=e2035]:
+                    - img [ref=e2036]
+                    - text: VIP会员
+                  - generic [ref=e2038]:
+                    - img [ref=e2039]
+                    - text: SVIP会员
+                - generic [ref=e2041]:
+                  - generic [ref=e2042]:
+                    - generic [ref=e2044] [cursor=pointer]:
+                      - generic [ref=e2045]: 送30天VIP
+                      - generic [ref=e2046]: 半年VIP
+                      - generic [ref=e2047]: ¥198
+                      - generic [ref=e2049]: 低至¥1.0/天
+                    - generic [ref=e2051] [cursor=pointer]:
+                      - generic [ref=e2052]: 1年VIP
+                      - generic [ref=e2053]: ¥366
+                      - generic [ref=e2055]: 低至¥1.0/天
+                    - generic [ref=e2057] [cursor=pointer]:
+                      - generic [ref=e2058]: 2年VIP
+                      - generic [ref=e2059]: ¥596
+                      - generic [ref=e2061]: 低至¥0.8/天
+                    - generic [ref=e2063] [cursor=pointer]:
+                      - generic [ref=e2064]: 送18个月VIP
+                      - generic [ref=e2065]: 3年VIP
+                      - generic [ref=e2066]: ¥780
+                      - generic [ref=e2068]: 低至¥0.9/天
+                      - img [ref=e2070]
+                  - generic [ref=e2073]:
+                    - generic [ref=e2074]: 赠 18个月启信宝VIP
+                    - generic [ref=e2075]: 5.1~5.31，新用户买3年VIP送18个月VIP，支付后自动到账。
+                  - generic [ref=e2076]:
+                    - generic [ref=e2078]:
+                      - generic [ref=e2079]:
+                        - text: 实付金额：
+                        - generic [ref=e2080]: ¥780
+                      - generic [ref=e2081]:
+                        - text: 开通前请阅读
+                        - link "《会员服务协议》" [ref=e2082] [cursor=pointer]:
+                          - /url: https://static-cdn-p.qixin.com/policy/qixinbao_Web/member_service_zh-cn.html
+                      - generic [ref=e2083]: 支付成功后可在【个人中心-我的订单】中申请开票
+                      - generic [ref=e2084]: 会员权益将在支付完成后5分钟内生效
+                    - generic [ref=e2087]:
+                      - generic [ref=e2088]: 使用
+                      - img "ali-pay" [ref=e2089]
+                      - img "wx-pay" [ref=e2090]
+                      - generic [ref=e2091]: 扫码支付
+              - img "example" [ref=e2093]
+              - text: 
+          - generic [ref=e2094]:
+            - generic [ref=e2095]:
+              - generic [ref=e2096]:
+                - heading "最终受益人 " [level=3] [ref=e2097]:
+                  - generic [ref=e2098]: 最终受益人
+                  - generic [ref=e2099]: 
+                - link " 企业受益股东图谱" [ref=e2100] [cursor=pointer]:
+                  - /url: /detail/company/chart/beneficiary/534472fd-7d53-4958-8132-d6a6242423d8
+                  - generic [ref=e2101]: 
+                  - text: 企业受益股东图谱
+              - generic [ref=e2102]:
+                - link "text":
+                  - /url: /
+                  - img "text"
+            - generic [ref=e2103]:
+              - generic [ref=e2104]:
+                - generic [ref=e2105] [cursor=pointer]: 235、164号文版
+                - generic [ref=e2106] [cursor=pointer]:
+                  - text: 3、12号令版
+                  - img [ref=e2107]
+              - generic [ref=e2108] [cursor=pointer]:
+                - generic [ref=e2109]: 
+                - generic [ref=e2110]: 导出
+            - text:  赠 
+            - generic [ref=e2116]:
+              - link "全部特权 " [ref=e2117] [cursor=pointer]:
+                - /url: /pay/vip?tab=svip
+                - text: 全部特权
+                - generic [ref=e2118]: 
+              - generic [ref=e2120]:
+                - generic [ref=e2121]:
+                  - text: 开通
+                  - img [ref=e2122]
+                  - generic [ref=e2123]: ·
+                  - text: 查看最终受益人
+                - generic [ref=e2124]: 层层穿透，高效获取最终受益人【3、12号令版】
+              - generic [ref=e2125]:
+                - generic [ref=e2126] [cursor=pointer]:
+                  - generic [ref=e2128]:
+                    - img [ref=e2129]
+                    - text: VIP会员
+                  - generic [ref=e2132]:
+                    - img [ref=e2133]
+                    - text: SVIP会员
+                - generic [ref=e2135]:
+                  - generic [ref=e2136]:
+                    - generic [ref=e2138] [cursor=pointer]:
+                      - generic [ref=e2139]: 1年SVIP
+                      - generic [ref=e2140]: ¥1600
+                      - generic [ref=e2142]: 低至￥4.4/天
+                    - generic [ref=e2144] [cursor=pointer]:
+                      - generic [ref=e2145]: 2年SVIP
+                      - generic [ref=e2146]: ¥3200
+                      - generic [ref=e2148]: 低至￥4.4/天
+                    - generic [ref=e2150] [cursor=pointer]:
+                      - generic [ref=e2151]: 送12个月SVIP
+                      - generic [ref=e2152]: 3年SVIP
+                      - generic [ref=e2153]: ¥3200
+                      - generic [ref=e2155]: 低至￥2.2/天
+                      - img [ref=e2157]
+                  - generic [ref=e2159]:
+                    - generic [ref=e2160]: 赠 12个月启信宝SVIP
+                    - generic [ref=e2161]: 5.1~5.31，买3年SVIP送12个月SVIP，支付后自动到账。
+                  - generic [ref=e2162]:
+                    - generic [ref=e2164]:
+                      - generic [ref=e2165]:
+                        - text: 实付金额：
+                        - generic [ref=e2166]: ¥3200
+                      - generic [ref=e2167]:
+                        - text: 开通前请阅读
+                        - link "《会员服务协议》" [ref=e2168] [cursor=pointer]:
+                          - /url: https://static-cdn-p.qixin.com/policy/qixinbao_Web/member_service_zh-cn.html
+                      - generic [ref=e2169]: 支付成功后可在【个人中心-我的订单】中申请开票
+                      - generic [ref=e2170]: 会员权益将在支付完成后5分钟内生效
+                    - generic [ref=e2173]:
+                      - generic [ref=e2174]: 使用
+                      - img "ali-pay" [ref=e2175]
+                      - img "wx-pay" [ref=e2176]
+                      - generic [ref=e2177]: 扫码支付
+              - img "example" [ref=e2179]
+              - text: 
+          - generic [ref=e2180]:
+            - generic [ref=e2181]:
+              - generic [ref=e2182]:
+                - heading "实际控制企业 46" [level=3] [ref=e2183]:
+                  - generic [ref=e2184]: 实际控制企业
+                  - generic [ref=e2185]: "46"
+                - link " 股权穿透图" [ref=e2186] [cursor=pointer]:
+                  - /url: /detail/company/chart/equity-penetration/534472fd-7d53-4958-8132-d6a6242423d8
+                  - generic [ref=e2187]: 
+                  - text: 股权穿透图
+              - generic [ref=e2188]:
+                - generic [ref=e2189]:
+                  - generic [ref=e2190]: 
+                  - generic [ref=e2191]: 导出
+                - link "text":
+                  - /url: /
+                  - img "text"
+            - generic [ref=e2196]:
+              - link "全部特权 " [ref=e2197] [cursor=pointer]:
+                - /url: /pay/vip
+                - text: 全部特权
+                - generic [ref=e2198]: 
+              - generic [ref=e2200]:
+                - generic [ref=e2201]:
+                  - text: 开通
+                  - img [ref=e2202]
+                  - generic [ref=e2203]: ·
+                  - text: 查看实际控制企业
+                - generic [ref=e2204]: 深挖股权路径，发现实际控制企业
+              - generic [ref=e2205]:
+                - generic [ref=e2206] [cursor=pointer]:
+                  - generic [ref=e2209]:
+                    - img [ref=e2210]
+                    - text: VIP会员
+                  - generic [ref=e2212]:
+                    - img [ref=e2213]
+                    - text: SVIP会员
+                - generic [ref=e2215]:
+                  - generic [ref=e2216]:
+                    - generic [ref=e2218] [cursor=pointer]:
+                      - generic [ref=e2219]: 送30天VIP
+                      - generic [ref=e2220]: 半年VIP
+                      - generic [ref=e2221]: ¥198
+                      - generic [ref=e2223]: 低至¥1.0/天
+                    - generic [ref=e2225] [cursor=pointer]:
+                      - generic [ref=e2226]: 1年VIP
+                      - generic [ref=e2227]: ¥366
+                      - generic [ref=e2229]: 低至¥1.0/天
+                    - generic [ref=e2231] [cursor=pointer]:
+                      - generic [ref=e2232]: 2年VIP
+                      - generic [ref=e2233]: ¥596
+                      - generic [ref=e2235]: 低至¥0.8/天
+                    - generic [ref=e2237] [cursor=pointer]:
+                      - generic [ref=e2238]: 送18个月VIP
+                      - generic [ref=e2239]: 3年VIP
+                      - generic [ref=e2240]: ¥780
+                      - generic [ref=e2242]: 低至¥0.9/天
+                      - img [ref=e2244]
+                  - generic [ref=e2247]:
+                    - generic [ref=e2248]: 赠 18个月启信宝VIP
+                    - generic [ref=e2249]: 5.1~5.31，新用户买3年VIP送18个月VIP，支付后自动到账。
+                  - generic [ref=e2250]:
+                    - generic [ref=e2252]:
+                      - generic [ref=e2253]:
+                        - text: 实付金额：
+                        - generic [ref=e2254]: ¥780
+                      - generic [ref=e2255]:
+                        - text: 开通前请阅读
+                        - link "《会员服务协议》" [ref=e2256] [cursor=pointer]:
+                          - /url: https://static-cdn-p.qixin.com/policy/qixinbao_Web/member_service_zh-cn.html
+                      - generic [ref=e2257]: 支付成功后可在【个人中心-我的订单】中申请开票
+                      - generic [ref=e2258]: 会员权益将在支付完成后5分钟内生效
+                    - generic [ref=e2261]:
+                      - generic [ref=e2262]: 使用
+                      - img "ali-pay" [ref=e2263]
+                      - img "wx-pay" [ref=e2264]
+                      - generic [ref=e2265]: 扫码支付
+              - img "example" [ref=e2267]
+              - text: 
+          - generic [ref=e2268]:
+            - generic [ref=e2269]:
+              - heading "集团/族群" [level=3] [ref=e2271]:
+                - generic [ref=e2272]: 集团/族群
+              - generic [ref=e2273]:
+                - link "text":
+                  - /url: /
+                  - img "text"
+            - table [ref=e2274]:
+              - rowgroup [ref=e2275]:
+                - row "序号 集团/族群名称 主公司 成员企业 注册资本总和 社保人数总和 集团风险 操作" [ref=e2276]:
+                  - columnheader "序号" [ref=e2277]
+                  - columnheader "集团/族群名称" [ref=e2278]
+                  - columnheader "主公司" [ref=e2279]
+                  - columnheader "成员企业" [ref=e2280]
+                  - columnheader "注册资本总和" [ref=e2281]
+                  - columnheader "社保人数总和" [ref=e2282]
+                  - columnheader "集团风险" [ref=e2283]
+                  - columnheader "操作" [ref=e2284]
+              - rowgroup [ref=e2285]:
+                - row "1 小米 集团 小米科技有限责任公司 152 2745279.10万人民币 5092人 2153 详情" [ref=e2286]:
+                  - cell "1" [ref=e2287]
+                  - cell "小米 集团" [ref=e2288]:
+                    - generic [ref=e2289]:
+                      - generic [ref=e2290]: 小米
+                      - generic [ref=e2291]: 集团
+                  - cell "小米科技有限责任公司" [ref=e2292]:
+                    - link "小米科技有限责任公司" [ref=e2293] [cursor=pointer]:
+                      - /url: https://www.qixin.com/company/534472fd-7d53-4958-8132-d6a6242423d8
+                  - cell "152" [ref=e2294]
+                  - cell "2745279.10万人民币" [ref=e2295]
+                  - cell "5092人" [ref=e2296]
+                  - cell "2153" [ref=e2297]
+                  - cell "详情" [ref=e2298]:
+                    - link "详情" [ref=e2299] [cursor=pointer]:
+                      - /url: /group/info/534472fd-7d53-4958-8132-d6a6242423d8
+          - generic [ref=e2300]:
+            - generic [ref=e2301]:
+              - heading "同业分析" [level=3] [ref=e2303]:
+                - generic [ref=e2304]: 同业分析
+              - generic [ref=e2305]:
+                - link "text":
+                  - /url: /
+                  - img "text"
+            - generic [ref=e2310]:
+              - link "全部特权 " [ref=e2311] [cursor=pointer]:
+                - /url: /pay/vip
+                - text: 全部特权
+                - generic [ref=e2312]: 
+              - generic [ref=e2314]:
+                - generic [ref=e2315]:
+                  - text: 开通
+                  - img [ref=e2316]
+                  - generic [ref=e2317]: ·
+                  - text: 查看同业分析
+                - generic [ref=e2318]: 深入研究企业，先看同业水平
+              - generic [ref=e2319]:
+                - generic [ref=e2320] [cursor=pointer]:
+                  - generic [ref=e2323]:
+                    - img [ref=e2324]
+                    - text: VIP会员
+                  - generic [ref=e2326]:
+                    - img [ref=e2327]
+                    - text: SVIP会员
+                - generic [ref=e2329]:
+                  - generic [ref=e2330]:
+                    - generic [ref=e2332] [cursor=pointer]:
+                      - generic [ref=e2333]: 送30天VIP
+                      - generic [ref=e2334]: 半年VIP
+                      - generic [ref=e2335]: ¥198
+                      - generic [ref=e2337]: 低至¥1.0/天
+                    - generic [ref=e2339] [cursor=pointer]:
+                      - generic [ref=e2340]: 1年VIP
+                      - generic [ref=e2341]: ¥366
+                      - generic [ref=e2343]: 低至¥1.0/天
+                    - generic [ref=e2345] [cursor=pointer]:
+                      - generic [ref=e2346]: 2年VIP
+                      - generic [ref=e2347]: ¥596
+                      - generic [ref=e2349]: 低至¥0.8/天
+                    - generic [ref=e2351] [cursor=pointer]:
+                      - generic [ref=e2352]: 送18个月VIP
+                      - generic [ref=e2353]: 3年VIP
+                      - generic [ref=e2354]: ¥780
+                      - generic [ref=e2356]: 低至¥0.9/天
+                      - img [ref=e2358]
+                  - generic [ref=e2361]:
+                    - generic [ref=e2362]: 赠 18个月启信宝VIP
+                    - generic [ref=e2363]: 5.1~5.31，新用户买3年VIP送18个月VIP，支付后自动到账。
+                  - generic [ref=e2364]:
+                    - generic [ref=e2366]:
+                      - generic [ref=e2367]:
+                        - text: 实付金额：
+                        - generic [ref=e2368]: ¥780
+                      - generic [ref=e2369]:
+                        - text: 开通前请阅读
+                        - link "《会员服务协议》" [ref=e2370] [cursor=pointer]:
+                          - /url: https://static-cdn-p.qixin.com/policy/qixinbao_Web/member_service_zh-cn.html
+                      - generic [ref=e2371]: 支付成功后可在【个人中心-我的订单】中申请开票
+                      - generic [ref=e2372]: 会员权益将在支付完成后5分钟内生效
+                    - generic [ref=e2375]:
+                      - generic [ref=e2376]: 使用
+                      - img "ali-pay" [ref=e2377]
+                      - img "wx-pay" [ref=e2378]
+                      - generic [ref=e2379]: 扫码支付
+              - img "example" [ref=e2381]
+              - text: 
+            - generic [ref=e2382] [cursor=pointer]: 同业财务指标数据对比>>
+          - generic [ref=e2383]:
+            - generic [ref=e2384]:
+              - heading "疑似关系 64" [level=3] [ref=e2386]:
+                - generic [ref=e2387]: 疑似关系
+                - generic [ref=e2388]: "64"
+              - generic [ref=e2389]:
+                - generic [ref=e2390]:
+                  - generic [ref=e2391]: 
+                  - generic [ref=e2392]: 导出
+                - link "text":
+                  - /url: /
+                  - img "text"
+            - generic [ref=e2397]:
+              - link "全部特权 " [ref=e2398] [cursor=pointer]:
+                - /url: /pay/vip
+                - text: 全部特权
+                - generic [ref=e2399]: 
+              - generic [ref=e2401]:
+                - generic [ref=e2402]:
+                  - text: 开通
+                  - img [ref=e2403]
+                  - generic [ref=e2404]: ·
+                  - text: 查看疑似关联关系挖掘
+                - generic [ref=e2405]: 基于AI算法，挖掘目标企业的疑似关联企业
+              - generic [ref=e2406]:
+                - generic [ref=e2407] [cursor=pointer]:
+                  - generic [ref=e2410]:
+                    - img [ref=e2411]
+                    - text: VIP会员
+                  - generic [ref=e2413]:
+                    - img [ref=e2414]
+                    - text: SVIP会员
+                - generic [ref=e2416]:
+                  - generic [ref=e2417]:
+                    - generic [ref=e2419] [cursor=pointer]:
+                      - generic [ref=e2420]: 送30天VIP
+                      - generic [ref=e2421]: 半年VIP
+                      - generic [ref=e2422]: ¥198
+                      - generic [ref=e2424]: 低至¥1.0/天
+                    - generic [ref=e2426] [cursor=pointer]:
+                      - generic [ref=e2427]: 1年VIP
+                      - generic [ref=e2428]: ¥366
+                      - generic [ref=e2430]: 低至¥1.0/天
+                    - generic [ref=e2432] [cursor=pointer]:
+                      - generic [ref=e2433]: 2年VIP
+                      - generic [ref=e2434]: ¥596
+                      - generic [ref=e2436]: 低至¥0.8/天
+                    - generic [ref=e2438] [cursor=pointer]:
+                      - generic [ref=e2439]: 送18个月VIP
+                      - generic [ref=e2440]: 3年VIP
+                      - generic [ref=e2441]: ¥780
+                      - generic [ref=e2443]: 低至¥0.9/天
+                      - img [ref=e2445]
+                  - generic [ref=e2448]:
+                    - generic [ref=e2449]: 赠 18个月启信宝VIP
+                    - generic [ref=e2450]: 5.1~5.31，新用户买3年VIP送18个月VIP，支付后自动到账。
+                  - generic [ref=e2451]:
+                    - generic [ref=e2453]:
+                      - generic [ref=e2454]:
+                        - text: 实付金额：
+                        - generic [ref=e2455]: ¥780
+                      - generic [ref=e2456]:
+                        - text: 开通前请阅读
+                        - link "《会员服务协议》" [ref=e2457] [cursor=pointer]:
+                          - /url: https://static-cdn-p.qixin.com/policy/qixinbao_Web/member_service_zh-cn.html
+                      - generic [ref=e2458]: 支付成功后可在【个人中心-我的订单】中申请开票
+                      - generic [ref=e2459]: 会员权益将在支付完成后5分钟内生效
+                    - generic [ref=e2462]:
+                      - generic [ref=e2463]: 使用
+                      - img "ali-pay" [ref=e2464]
+                      - img "wx-pay" [ref=e2465]
+                      - generic [ref=e2466]: 扫码支付
+              - img "example" [ref=e2468]
+              - text: 
+          - generic [ref=e2469]:
+            - generic [ref=e2470]:
+              - generic [ref=e2471]:
+                - heading "多证合一 1" [level=3] [ref=e2472]:
+                  - generic [ref=e2473]: 多证合一
+                  - generic [ref=e2474]: "1"
+                - generic [ref=e2475]: 下列证件事项通过“多证合一”已整合至该企业营业执照
+              - generic [ref=e2476]:
+                - link "text":
+                  - /url: /
+                  - img "text"
+            - table [ref=e2477]:
+              - rowgroup [ref=e2478]:
+                - row "序号 证件名称" [ref=e2479]:
+                  - columnheader "序号" [ref=e2480]
+                  - columnheader "证件名称" [ref=e2481]
+              - rowgroup [ref=e2482]:
+                - row "1 食品经营（仅销售预包装食品）备案" [ref=e2483]:
+                  - cell "1" [ref=e2484]
+                  - cell "食品经营（仅销售预包装食品）备案" [ref=e2485]
+        - generic [ref=e2486]:
+          - generic [ref=e2487]:
+            - heading "全部维度" [level=3] [ref=e2488]
+            - generic [ref=e2489] [cursor=pointer]:
+              - generic [ref=e2490]: 收起
+              - generic [ref=e2491]: 
+          - generic [ref=e2492]:
+            - generic [ref=e2493]:
+              - link "上市信息" [ref=e2494] [cursor=pointer]:
+                - /url: /publiclyHk/534472fd-7d53-4958-8132-d6a6242423d8
+              - generic [ref=e2495]:
+                - link "企业概况" [ref=e2496] [cursor=pointer]:
+                  - /url: /publiclyHk/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "主要股东" [ref=e2497] [cursor=pointer]:
+                  - /url: /publiclyHk/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "高管信息16" [ref=e2498] [cursor=pointer]:
+                  - /url: /publiclyHk/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "股东股本" [ref=e2499] [cursor=pointer]:
+                  - /url: /publiclyHk/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "财务数据" [ref=e2500] [cursor=pointer]:
+                  - /url: /publiclyHk/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "企业公告99+" [ref=e2501] [cursor=pointer]:
+                  - /url: /publiclyHk/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "董秘互动" [ref=e2502]:
+                  - /url: javascript:void(0);
+            - generic [ref=e2503]:
+              - link "基本信息" [ref=e2504] [cursor=pointer]:
+                - /url: /company/534472fd-7d53-4958-8132-d6a6242423d8
+              - generic [ref=e2505]:
+                - link "启信图谱" [ref=e2506] [cursor=pointer]:
+                  - /url: /company/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "工商信息" [ref=e2507] [cursor=pointer]:
+                  - /url: /company/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "股东信息2" [ref=e2508] [cursor=pointer]:
+                  - /url: /company/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "间接股东" [ref=e2509]:
+                  - /url: javascript:void(0);
+                - link "主要人员5" [ref=e2510] [cursor=pointer]:
+                  - /url: /company/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "分支机构32" [ref=e2511] [cursor=pointer]:
+                  - /url: /company/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "变更记录13" [ref=e2512] [cursor=pointer]:
+                  - /url: /company/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "企业年报12" [ref=e2513] [cursor=pointer]:
+                  - /url: /company/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "财务数据" [ref=e2514] [cursor=pointer]:
+                  - /url: /company/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "社保人数" [ref=e2515] [cursor=pointer]:
+                  - /url: /company/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "关联企业/人员" [ref=e2516] [cursor=pointer]:
+                  - /url: /company/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "协同股东23" [ref=e2517] [cursor=pointer]:
+                  - /url: /company/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "疑似实控人" [ref=e2518] [cursor=pointer]:
+                  - /url: /company/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "最终受益人" [ref=e2519] [cursor=pointer]:
+                  - /url: /company/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "实际控制企业46" [ref=e2520] [cursor=pointer]:
+                  - /url: /company/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "集团/族群" [ref=e2521] [cursor=pointer]:
+                  - /url: /company/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "同业分析" [ref=e2522] [cursor=pointer]:
+                  - /url: /company/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "疑似关系64" [ref=e2523] [cursor=pointer]:
+                  - /url: /company/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "多证合一1" [ref=e2524] [cursor=pointer]:
+                  - /url: /company/534472fd-7d53-4958-8132-d6a6242423d8
+            - generic [ref=e2525]:
+              - link "司法涉诉" [ref=e2526] [cursor=pointer]:
+                - /url: /risk/534472fd-7d53-4958-8132-d6a6242423d8
+              - generic [ref=e2527]:
+                - link "司法案件99+" [ref=e2528] [cursor=pointer]:
+                  - /url: /risk/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "涉诉关系99+" [ref=e2529] [cursor=pointer]:
+                  - /url: /risk/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "合同违约指数" [ref=e2530] [cursor=pointer]:
+                  - /url: /risk/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "立案信息99+" [ref=e2531] [cursor=pointer]:
+                  - /url: /risk/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "开庭公告99+" [ref=e2532] [cursor=pointer]:
+                  - /url: /risk/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "法院公告99+" [ref=e2533] [cursor=pointer]:
+                  - /url: /risk/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "送达公告99+" [ref=e2534] [cursor=pointer]:
+                  - /url: /risk/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "法律文书99+" [ref=e2535] [cursor=pointer]:
+                  - /url: /risk/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "被执行人" [ref=e2536]:
+                  - /url: javascript:void(0);
+                - link "失信被执行人" [ref=e2537]:
+                  - /url: javascript:void(0);
+                - link "终本案件" [ref=e2538]:
+                  - /url: javascript:void(0);
+                - link "限制高消费" [ref=e2539]:
+                  - /url: javascript:void(0);
+                - link "限制招投标" [ref=e2540]:
+                  - /url: javascript:void(0);
+                - link "股权冻结" [ref=e2541]:
+                  - /url: javascript:void(0);
+                - link "破产案件" [ref=e2542]:
+                  - /url: javascript:void(0);
+                - link "询价评估" [ref=e2543]:
+                  - /url: javascript:void(0);
+                - link "司法拍卖" [ref=e2544]:
+                  - /url: javascript:void(0);
+                - link "司法协助" [ref=e2545]:
+                  - /url: javascript:void(0);
+            - generic [ref=e2546]:
+              - link "投融资" [ref=e2547] [cursor=pointer]:
+                - /url: /financing/534472fd-7d53-4958-8132-d6a6242423d8
+              - generic [ref=e2548]:
+                - link "对外投资53" [ref=e2549] [cursor=pointer]:
+                  - /url: /financing/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "间接投资99+" [ref=e2550] [cursor=pointer]:
+                  - /url: /financing/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "融资历程7" [ref=e2551] [cursor=pointer]:
+                  - /url: /financing/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "债券信息" [ref=e2552]:
+                  - /url: javascript:void(0);
+                - link "DCM注册额度" [ref=e2553]:
+                  - /url: javascript:void(0);
+                - link "担保信息" [ref=e2554]:
+                  - /url: javascript:void(0);
+                - link "私募基金" [ref=e2555]:
+                  - /url: javascript:void(0);
+                - link "授信额度" [ref=e2556]:
+                  - /url: javascript:void(0);
+                - link "股权出质5" [ref=e2557] [cursor=pointer]:
+                  - /url: /financing/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "股权质押" [ref=e2558]:
+                  - /url: javascript:void(0);
+                - link "土地抵押" [ref=e2559]:
+                  - /url: javascript:void(0);
+                - link "动产抵押" [ref=e2560]:
+                  - /url: javascript:void(0);
+                - link "动产融资" [ref=e2561]:
+                  - /url: javascript:void(0);
+                - link "知识产权出质1" [ref=e2562] [cursor=pointer]:
+                  - /url: /financing/534472fd-7d53-4958-8132-d6a6242423d8
+            - generic [ref=e2563]:
+              - link "经营风险" [ref=e2564] [cursor=pointer]:
+                - /url: /warn/534472fd-7d53-4958-8132-d6a6242423d8
+              - generic [ref=e2565]:
+                - link "债务分析" [ref=e2566] [cursor=pointer]:
+                  - /url: /warn/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "经营异常" [ref=e2567]:
+                  - /url: javascript:void(0);
+                - link "行政处罚" [ref=e2568]:
+                  - /url: javascript:void(0);
+                - link "环保处罚" [ref=e2569]:
+                  - /url: javascript:void(0);
+                - link "黑名单" [ref=e2570]:
+                  - /url: javascript:void(0);
+                - link "税务异常" [ref=e2571]:
+                  - /url: javascript:void(0);
+                - link "劳动仲裁" [ref=e2572]:
+                  - /url: javascript:void(0);
+                - link "严重违法失信" [ref=e2573]:
+                  - /url: javascript:void(0);
+                - link "产品召回" [ref=e2574]:
+                  - /url: javascript:void(0);
+                - link "未准入境" [ref=e2575]:
+                  - /url: javascript:void(0);
+                - link "债券违约" [ref=e2576]:
+                  - /url: javascript:void(0);
+                - link "票据违约" [ref=e2577]:
+                  - /url: javascript:void(0);
+                - link "违法违规建设" [ref=e2578]:
+                  - /url: javascript:void(0);
+                - link "简易注销公告" [ref=e2579]:
+                  - /url: javascript:void(0);
+                - link "注销备案" [ref=e2580]:
+                  - /url: javascript:void(0);
+                - link "清算信息" [ref=e2581]:
+                  - /url: javascript:void(0);
+                - link "涉嫌冒用身份" [ref=e2582]:
+                  - /url: javascript:void(0);
+                - link "软件违规1" [ref=e2583] [cursor=pointer]:
+                  - /url: /warn/534472fd-7d53-4958-8132-d6a6242423d8
+            - generic [ref=e2584]:
+              - link "经营信息" [ref=e2585] [cursor=pointer]:
+                - /url: /operation/534472fd-7d53-4958-8132-d6a6242423d8
+              - generic [ref=e2586]:
+                - link "招投标99+" [ref=e2587] [cursor=pointer]:
+                  - /url: /operation/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "产品和服务2" [ref=e2588] [cursor=pointer]:
+                  - /url: /operation/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "商业合作44" [ref=e2589] [cursor=pointer]:
+                  - /url: /operation/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "竞争对手99+" [ref=e2590] [cursor=pointer]:
+                  - /url: /operation/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "企业公告" [ref=e2591]:
+                  - /url: javascript:void(0);
+                - link "相关公告99+" [ref=e2592] [cursor=pointer]:
+                  - /url: /operation/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "电力信用" [ref=e2593]:
+                  - /url: javascript:void(0);
+                - link "主体信用评级" [ref=e2594]:
+                  - /url: javascript:void(0);
+                - link "环境信用" [ref=e2595]:
+                  - /url: javascript:void(0);
+                - link "资质认证42" [ref=e2596] [cursor=pointer]:
+                  - /url: /operation/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "行政许可80" [ref=e2597] [cursor=pointer]:
+                  - /url: /operation/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "税务资质" [ref=e2598] [cursor=pointer]:
+                  - /url: /operation/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "电信许可3" [ref=e2599] [cursor=pointer]:
+                  - /url: /operation/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "排污许可" [ref=e2600]:
+                  - /url: javascript:void(0);
+                - link "进出口资质1" [ref=e2601] [cursor=pointer]:
+                  - /url: /operation/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "新闻舆情99+" [ref=e2602] [cursor=pointer]:
+                  - /url: /operation/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "招聘信息1" [ref=e2603] [cursor=pointer]:
+                  - /url: /operation/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "核心团队16" [ref=e2604] [cursor=pointer]:
+                  - /url: /operation/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "土地信息2" [ref=e2605] [cursor=pointer]:
+                  - /url: /operation/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "抽查检查" [ref=e2606]:
+                  - /url: javascript:void(0);
+                - link "产品质量抽查1" [ref=e2607] [cursor=pointer]:
+                  - /url: /operation/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "双随机抽查6" [ref=e2608] [cursor=pointer]:
+                  - /url: /operation/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "竞品信息59" [ref=e2609] [cursor=pointer]:
+                  - /url: /operation/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "微信公众号34" [ref=e2610] [cursor=pointer]:
+                  - /url: /operation/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "荣誉资质" [ref=e2611]:
+                  - /url: javascript:void(0);
+                - link "游戏审批4" [ref=e2612] [cursor=pointer]:
+                  - /url: /operation/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "食品安全" [ref=e2613]:
+                  - /url: javascript:void(0);
+            - generic [ref=e2614]:
+              - link "知识产权" [ref=e2615] [cursor=pointer]:
+                - /url: /ability/534472fd-7d53-4958-8132-d6a6242423d8
+              - generic [ref=e2616]:
+                - link "科创能力" [ref=e2617] [cursor=pointer]:
+                  - /url: /ability/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "科研团队99+" [ref=e2618] [cursor=pointer]:
+                  - /url: /ability/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "专利99+" [ref=e2619] [cursor=pointer]:
+                  - /url: /ability/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "国际专利99+" [ref=e2620] [cursor=pointer]:
+                  - /url: /ability/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "商标99+" [ref=e2621] [cursor=pointer]:
+                  - /url: /ability/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "商标文书99+" [ref=e2622] [cursor=pointer]:
+                  - /url: /ability/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "著作权99+" [ref=e2623] [cursor=pointer]:
+                  - /url: /ability/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "网络服务备案99+" [ref=e2624] [cursor=pointer]:
+                  - /url: /ability/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "集成电路布图" [ref=e2625]:
+                  - /url: javascript:void(0);
+                - link "上榜榜单99+" [ref=e2626] [cursor=pointer]:
+                  - /url: /ability/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "政府奖励项目3" [ref=e2627] [cursor=pointer]:
+                  - /url: /ability/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "标准制定84" [ref=e2628] [cursor=pointer]:
+                  - /url: /ability/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "数据产品知识产权" [ref=e2629]:
+                  - /url: javascript:void(0);
+            - generic [ref=e2630]:
+              - link "历史信息" [ref=e2631] [cursor=pointer]:
+                - /url: /history/534472fd-7d53-4958-8132-d6a6242423d8
+              - generic [ref=e2632]:
+                - link "工商信息" [ref=e2633] [cursor=pointer]:
+                  - /url: /history/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "股东信息2" [ref=e2634] [cursor=pointer]:
+                  - /url: /history/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "主要人员3" [ref=e2635] [cursor=pointer]:
+                  - /url: /history/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "变更记录21" [ref=e2636] [cursor=pointer]:
+                  - /url: /history/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "减资公告" [ref=e2637]:
+                  - /url: javascript:void(0);
+                - link "立案信息1" [ref=e2638] [cursor=pointer]:
+                  - /url: /history/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "开庭公告99+" [ref=e2639] [cursor=pointer]:
+                  - /url: /history/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "法院公告" [ref=e2640]:
+                  - /url: javascript:void(0);
+                - link "送达公告" [ref=e2641]:
+                  - /url: javascript:void(0);
+                - link "法律文书2" [ref=e2642] [cursor=pointer]:
+                  - /url: /history/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "被执行人99+" [ref=e2643] [cursor=pointer]:
+                  - /url: /history/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "失信被执行人" [ref=e2644]:
+                  - /url: javascript:void(0);
+                - link "终本案件" [ref=e2645]:
+                  - /url: javascript:void(0);
+                - link "限制高消费" [ref=e2646]:
+                  - /url: javascript:void(0);
+                - link "限制招投标" [ref=e2647]:
+                  - /url: javascript:void(0);
+                - link "股权冻结" [ref=e2648]:
+                  - /url: javascript:void(0);
+                - link "破产案件" [ref=e2649]:
+                  - /url: javascript:void(0);
+                - link "司法协助" [ref=e2650]:
+                  - /url: javascript:void(0);
+                - link "对外投资15" [ref=e2651] [cursor=pointer]:
+                  - /url: /history/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "股权出质39" [ref=e2652] [cursor=pointer]:
+                  - /url: /history/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "动产抵押" [ref=e2653]:
+                  - /url: javascript:void(0);
+                - link "动产融资" [ref=e2654]:
+                  - /url: javascript:void(0);
+                - link "知识产权出质" [ref=e2655]:
+                  - /url: javascript:void(0);
+                - link "经营异常" [ref=e2656]:
+                  - /url: javascript:void(0);
+                - link "行政处罚" [ref=e2657]:
+                  - /url: javascript:void(0);
+                - link "环保处罚" [ref=e2658]:
+                  - /url: javascript:void(0);
+                - link "黑名单" [ref=e2659]:
+                  - /url: javascript:void(0);
+                - link "税务异常" [ref=e2660]:
+                  - /url: javascript:void(0);
+                - link "严重违法失信" [ref=e2661]:
+                  - /url: javascript:void(0);
+                - link "票据违约" [ref=e2662]:
+                  - /url: javascript:void(0);
+                - link "简易注销公告" [ref=e2663]:
+                  - /url: javascript:void(0);
+                - link "注销备案" [ref=e2664]:
+                  - /url: javascript:void(0);
+                - link "涉嫌冒用身份" [ref=e2665]:
+                  - /url: javascript:void(0);
+                - link "资质认证99+" [ref=e2666] [cursor=pointer]:
+                  - /url: /history/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "行政许可29" [ref=e2667] [cursor=pointer]:
+                  - /url: /history/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "排污许可" [ref=e2668]:
+                  - /url: javascript:void(0);
+                - link "招聘信息99+" [ref=e2669] [cursor=pointer]:
+                  - /url: /history/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "抽查检查9" [ref=e2670] [cursor=pointer]:
+                  - /url: /history/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "双随机抽查" [ref=e2671]:
+                  - /url: javascript:void(0);
+                - link "荣誉资质4" [ref=e2672] [cursor=pointer]:
+                  - /url: /history/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "游戏审批" [ref=e2673]:
+                  - /url: javascript:void(0);
+                - link "食品安全" [ref=e2674]:
+                  - /url: javascript:void(0);
+                - link "专利57" [ref=e2675] [cursor=pointer]:
+                  - /url: /history/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "商标99+" [ref=e2676] [cursor=pointer]:
+                  - /url: /history/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "著作权" [ref=e2677]:
+                  - /url: javascript:void(0);
+                - link "网络服务备案5" [ref=e2678] [cursor=pointer]:
+                  - /url: /history/534472fd-7d53-4958-8132-d6a6242423d8
+                - link "数据产品知识产权" [ref=e2679]:
+                  - /url: javascript:void(0);
+        - generic [ref=e2680]:
+          - generic [ref=e2681]:
+            - generic [ref=e2682]: 
+            - text: 推荐企业
+          - generic [ref=e2683]:
+            - generic [ref=e2685]:
+              - img "小米汽车有限公司" [ref=e2688]
+              - generic [ref=e2689]:
+                - link "小米汽车有限公司" [ref=e2690] [cursor=pointer]:
+                  - /url: https://www.qixin.com/company/a1a56ca3-0337-4fca-a61c-c1090daba1e1
+                - generic [ref=e2691]: 看了又看的企业
+            - generic [ref=e2693]:
+              - img "飞狐信息技术（天津）有限公司" [ref=e2696]
+              - generic [ref=e2697]:
+                - link "飞狐信息技术（天津）有限公司" [ref=e2698] [cursor=pointer]:
+                  - /url: https://www.qixin.com/company/62f7af6f-370b-4650-a303-b6a5557875cd
+                - generic [ref=e2699]: 同行企业
+            - generic [ref=e2701]:
+              - img "南京国博电子股份有限公司" [ref=e2704]
+              - generic [ref=e2705]:
+                - link "南京国博电子股份有限公司" [ref=e2706] [cursor=pointer]:
+                  - /url: https://www.qixin.com/company/5a5d1438-7204-433b-aabf-79f62bb47792
+                - generic [ref=e2707]: 热门企业
+            - generic [ref=e2709]:
+              - img "恒大地产集团有限公司" [ref=e2712]
+              - generic [ref=e2713]:
+                - link "恒大地产集团有限公司" [ref=e2714] [cursor=pointer]:
+                  - /url: https://www.qixin.com/company/5cc0ecc5-0920-4e9e-ae89-d8d5043e3da0
+                - generic [ref=e2715]: 看了又看的企业
+            - generic [ref=e2717]:
+              - img "北京花房科技有限公司" [ref=e2720]
+              - generic [ref=e2721]:
+                - link "北京花房科技有限公司" [ref=e2722] [cursor=pointer]:
+                  - /url: https://www.qixin.com/company/c2979ef9-974e-4105-a4ec-c699d48057ae
+                - generic [ref=e2723]: 同行企业
+            - generic [ref=e2725]:
+              - img "中重科技（天津）股份有限公司" [ref=e2728]
+              - generic [ref=e2729]:
+                - link "中重科技（天津）股份有限公司" [ref=e2730] [cursor=pointer]:
+                  - /url: https://www.qixin.com/company/d71b30b0-888a-4b2d-9d4c-740264cf8306
+                - generic [ref=e2731]: 热门企业
+            - generic [ref=e2733]:
+              - img "国务院国有资产监督管理委员会" [ref=e2736]
+              - generic [ref=e2737]:
+                - link "国务院国有资产监督管理委员会" [ref=e2738] [cursor=pointer]:
+                  - /url: https://www.qixin.com/company/923bc202-4191-11e9-bf2b-00163e0f05e7
+                - generic [ref=e2739]: 看了又看的企业
+            - generic [ref=e2741]:
+              - img "上海宽娱数码科技有限公司" [ref=e2744]
+              - generic [ref=e2745]:
+                - link "上海宽娱数码科技有限公司" [ref=e2746] [cursor=pointer]:
+                  - /url: https://www.qixin.com/company/8d12a705-99fb-49d0-bd3a-c4fa1c7daf0e
+                - generic [ref=e2747]: 同行企业
+    - contentinfo [ref=e2748]:
+      - generic [ref=e2749]:
+        - generic [ref=e2750]:
+          - generic [ref=e2751]:
+            - link "text-url-reverse":
+              - /url: /
+              - img "text-url-reverse"
+            - img "brand" [ref=e2752]
+          - generic [ref=e2753]:
+            - heading "快速导航" [level=4] [ref=e2754]
+            - generic [ref=e2755]:
+              - link "地区导航" [ref=e2756] [cursor=pointer]:
+                - /url: https://www.qixin.com/area-nav
+              - link "行业导航" [ref=e2757] [cursor=pointer]:
+                - /url: https://www.qixin.com/industry-nav
+              - link "热门搜索" [ref=e2758] [cursor=pointer]:
+                - /url: https://www.qixin.com/hot
+              - link "人员名录" [ref=e2759] [cursor=pointer]:
+                - /url: https://www.qixin.com/people-nav
+              - link "年报查询" [ref=e2760] [cursor=pointer]:
+                - /url: https://www.qixin.com/report
+              - link "品牌名录" [ref=e2761] [cursor=pointer]:
+                - /url: https://www.qixin.com/brand-nav
+              - link "企业查询" [ref=e2762] [cursor=pointer]:
+                - /url: /search?key=小米
+              - link "老板查询" [ref=e2763] [cursor=pointer]:
+                - /url: /search/people?key=雷军
+              - link "商标查询" [ref=e2764] [cursor=pointer]:
+                - /url: /search/trademark?key=小米
+              - link "融资查询" [ref=e2765] [cursor=pointer]:
+                - /url: /search/financing
+              - link "关系查询" [ref=e2766] [cursor=pointer]:
+                - /url: https://www.qixin.com/search/find-relation
+              - link "招标查询" [ref=e2767] [cursor=pointer]:
+                - /url: https://zhaobiao.qixin.com/bidding
+              - link "批量查询" [ref=e2768] [cursor=pointer]:
+                - /url: https://www.qixin.com/batch/search
+              - link "版权查询" [ref=e2769] [cursor=pointer]:
+                - /url: https://www.qixin.com/copy-right
+              - link "姓氏大全" [ref=e2770] [cursor=pointer]:
+                - /url: https://www.qixin.com/names
+              - link "企业版" [ref=e2771] [cursor=pointer]:
+                - /url: https://b.qixin.com/?from=index
+              - link "招聘查询" [ref=e2772] [cursor=pointer]:
+                - /url: https://www.qixin.com/job
+              - link "守护个人信息安全" [ref=e2773] [cursor=pointer]:
+                - /url: https://www.qixin.com/network-case
+              - link "藏蓝青春 “键”指河山" [ref=e2774] [cursor=pointer]:
+                - /url: https://www.qixin.com/network-youth
+              - link "守护“数字世界身份信息”" [ref=e2775] [cursor=pointer]:
+                - /url: https://www.qixin.com/network-number
+          - generic [ref=e2776]:
+            - heading "关于启信宝" [level=4] [ref=e2777]
+            - generic [ref=e2778]:
+              - link "关于我们" [ref=e2779] [cursor=pointer]:
+                - /url: /other/about
+              - link "常见问题" [ref=e2780] [cursor=pointer]:
+                - /url: https://www.qixin.com/customer-service
+              - generic [ref=e2781] [cursor=pointer]: 意见反馈
+              - link "服务协议" [ref=e2782] [cursor=pointer]:
+                - /url: /other/about/terms
+              - link "隐私政策" [ref=e2783] [cursor=pointer]:
+                - /url: /other/about/privacy
+              - link "儿童隐私" [ref=e2784] [cursor=pointer]:
+                - /url: https://static-cdn-p.qixin.com/policy/qixinbao_Web/children_zh-cn.html
+          - generic [ref=e2785]:
+            - heading "联系方式" [level=4] [ref=e2786]
+            - generic [ref=e2787]:
+              - link "在线咨询" [ref=e2788] [cursor=pointer]:
+                - /url: https://www.qixin.com/customer-service
+              - generic [ref=e2789]:
+                - text: 企业邮箱：
+                - link "kefu@qixin.com" [ref=e2790] [cursor=pointer]:
+                  - /url: mailto:kefu@qixin.com
+              - generic [ref=e2791]: 客服电话：400-6383-888
+              - generic [ref=e2792]: 工作时间：工作日9:30-19:00
+          - generic [ref=e2793]:
+            - generic [ref=e2794]:
+              - img "启信宝APP" [ref=e2795]
+              - generic [ref=e2796]: 扫码下载APP
+            - generic [ref=e2797]:
+              - img "启信宝小程序" [ref=e2798]
+              - generic [ref=e2799]: 启信宝小程序
+        - generic [ref=e2800]: 数据来源：全国企业信用信息公示系统国家知识产权局商标局版权局
+        - generic [ref=e2801]:
+          - text: 友情链接：
+          - link "合合信息" [ref=e2802] [cursor=pointer]:
+            - /url: https://www.intsig.com
+          - link "名片全能王" [ref=e2803] [cursor=pointer]:
+            - /url: https://www.camcard.com
+          - link "扫描全能王" [ref=e2804] [cursor=pointer]:
+            - /url: https://www.camscanner.com
+          - link "开放平台" [ref=e2805] [cursor=pointer]:
+            - /url: https://data.qixin.com/?from=footer_link
+          - link "国务院发展研究中心信息网" [ref=e2806] [cursor=pointer]:
+            - /url: http://www.drcnet.com.cn
+          - link "蝉大师" [ref=e2807] [cursor=pointer]:
+            - /url: https://chandashi.com
+          - link "权大师" [ref=e2808] [cursor=pointer]:
+            - /url: https://www.quandashi.com
+          - link "中国比地招标网" [ref=e2809] [cursor=pointer]:
+            - /url: http://www.bidizhaobiao.com
+          - link "网络非法金融信息举报专区" [ref=e2810] [cursor=pointer]:
+            - /url: http://www.js12377.cn/wyjb/index.jhtml?reportNext=1&reportClass=2&harmType=2
+          - link "建设招标网" [ref=e2811] [cursor=pointer]:
+            - /url: https://www.jszhaobiao.com
+          - link "蔚蓝地图" [ref=e2812] [cursor=pointer]:
+            - /url: https://www.ipe.org.cn
+          - link "洞见研报" [ref=e2813] [cursor=pointer]:
+            - /url: https://www.djyanbao.com/index
+          - link "猪八戒网" [ref=e2814] [cursor=pointer]:
+            - /url: https://suzhou.zbj.com
+          - link "小程序商城系统" [ref=e2815] [cursor=pointer]:
+            - /url: https://www.youzan.com
+        - generic [ref=e2816]:
+          - generic [ref=e2817]:
+            - generic [ref=e2818]:
+              - link "沪公网安备 31010602003968号" [ref=e2819] [cursor=pointer]:
+                - /url: http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010602003968
+              - text: 上海生腾数据科技有限公司，版权所有©2014 - 2026
+              - link "沪ICP备18033674号-2" [ref=e2820] [cursor=pointer]:
+                - /url: https://beian.miit.gov.cn
+            - generic [ref=e2821]:
+              - generic [ref=e2822]:
+                - text: 增值电信业务经营许可证：
+                - link "沪B2-20200755" [ref=e2823] [cursor=pointer]:
+                  - /url: https://beian.miit.gov.cn
+              - text: 公司地址：上海市静安区万荣路1268号云立方A座11层
+          - generic [ref=e2824]:
+            - img "营业执照" [ref=e2825]
+            - link "工商网监" [ref=e2826] [cursor=pointer]:
+              - /url: http://scjgj.sh.gov.cn
+              - img "工商网监" [ref=e2827]
+            - link "上海市互联网违法和不良信息举报中心" [ref=e2828] [cursor=pointer]:
+              - /url: http://www.shjbzx.cn
+              - img "上海市互联网违法和不良信息举报中心" [ref=e2829]
+            - link "中央网信办违法和不良信息举报中心" [ref=e2830] [cursor=pointer]:
+              - /url: https://www.12377.cn
+              - img "中央网信办违法和不良信息举报中心" [ref=e2831]
+          - generic [ref=e2832]:
+            - generic [ref=e2833]: 不良信息举报电话：400-6383-888
+            - generic [ref=e2834]: 举报邮箱：
+            - link "kefu@qixin.com" [ref=e2835] [cursor=pointer]:
+              - /url: mailto:kefu@qixin.com
+    - generic [ref=e2836]:
+      - generic [ref=e2837]:
+        - generic [ref=e2838]: 
+        - generic [ref=e2839]: 小程序
+      - generic [ref=e2840]:
+        - generic [ref=e2841]: 
+        - generic [ref=e2842]: APP
+      - generic [ref=e2843]:
+        - generic [ref=e2844]: 
+        - generic [ref=e2845]: 微信
+      - generic [ref=e2846] [cursor=pointer]:
+        - generic [ref=e2847]: 
+        - generic [ref=e2848]: 反馈
+      - generic [ref=e2849] [cursor=pointer]:
+        - generic [ref=e2850]: 
+        - generic [ref=e2851]: 客服中心
+      - generic [ref=e2852] [cursor=pointer]:
+        - generic [ref=e2853]: 
+        - generic [ref=e2854]: 回到顶部
+      - generic [ref=e2856] [cursor=pointer]: 
+    - generic:
+      - generic:
+        - img "negative" [ref=e2857]
+        - generic [ref=e2858]:
+          - generic [ref=e2859] [cursor=pointer]:
+            - img "left" [ref=e2860]
+            - img "right" [ref=e2861]
+            - img "qrcode" [ref=e2862]
+          - generic [ref=e2863] [cursor=pointer]: 
+    - generic [ref=e2864]:
+      - img [ref=e2865] [cursor=pointer]
+      - img "close" [ref=e2866] [cursor=pointer]

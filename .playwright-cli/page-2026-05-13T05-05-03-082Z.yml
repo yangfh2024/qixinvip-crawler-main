@@ -1,0 +1,974 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e8]:
+        - link "text-url" [ref=e9] [cursor=pointer]:
+          - /url: /
+          - img "text-url" [ref=e10]
+        - img "credential-title" [ref=e12]
+        - generic [ref=e13]:
+          - generic [ref=e14]:
+            - generic [ref=e15]:
+              - textbox "请输入企业名、人名、产品名等关键词" [ref=e16]: 小米科技有限责任公司
+              - generic [ref=e17] [cursor=pointer]: 
+            - generic [ref=e18] [cursor=pointer]:
+              - generic [ref=e19]: 
+              - generic [ref=e20]: 搜索
+          - generic [ref=e21] [cursor=pointer]: 企业版
+          - generic [ref=e23] [cursor=pointer]: 数据服务
+          - generic [ref=e25] [cursor=pointer]: 合作入口
+          - generic [ref=e27] [cursor=pointer]: 应用
+        - generic [ref=e28]:
+          - link "vip 成为VIP" [ref=e29] [cursor=pointer]:
+            - /url: /pay/vip
+            - img "vip" [ref=e30]
+            - generic [ref=e31]: 成为VIP
+          - img "backup-avatar" [ref=e36] [cursor=pointer]
+      - generic [ref=e39]:
+        - generic [ref=e40] [cursor=pointer]: 企业
+        - link "老板" [ref=e41] [cursor=pointer]:
+          - /url: /search/people?key=%E5%B0%8F%E7%B1%B3%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E8%B4%A3%E4%BB%BB%E5%85%AC%E5%8F%B8
+        - link "风险" [ref=e42] [cursor=pointer]:
+          - /url: /search/risk?key=%E5%B0%8F%E7%B1%B3%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E8%B4%A3%E4%BB%BB%E5%85%AC%E5%8F%B8
+        - link "商标" [ref=e43] [cursor=pointer]:
+          - /url: /search/trademark?key=%E5%B0%8F%E7%B1%B3%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E8%B4%A3%E4%BB%BB%E5%85%AC%E5%8F%B8
+        - link "专利" [ref=e44] [cursor=pointer]:
+          - /url: /search/patent?key=%E5%B0%8F%E7%B1%B3%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E8%B4%A3%E4%BB%BB%E5%85%AC%E5%8F%B8
+        - link "著作权" [ref=e45] [cursor=pointer]:
+          - /url: /search/copyright?key=%E5%B0%8F%E7%B1%B3%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E8%B4%A3%E4%BB%BB%E5%85%AC%E5%8F%B8
+        - link "招投标" [ref=e46] [cursor=pointer]:
+          - /url: https://zhaobiao.qixin.com/bidding?key=%E5%B0%8F%E7%B1%B3%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E8%B4%A3%E4%BB%BB%E5%85%AC%E5%8F%B8
+        - link "高级搜索" [ref=e47] [cursor=pointer]:
+          - /url: /search/advance
+    - generic [ref=e48]:
+      - generic [ref=e49]:
+        - generic [ref=e51]:
+          - emphasis [ref=e52]: "1"
+          - text: 家集团/
+          - emphasis [ref=e53]: "0"
+          - text: 个品牌产品/
+          - emphasis [ref=e54]: "0"
+          - text: 家投资机构
+        - generic [ref=e56]:
+          - img [ref=e57]
+          - link "小米 小米 集团/族群 成员企业：152 主公司：小米科技有限责任公司" [ref=e61] [cursor=pointer]:
+            - /url: /group/info/534472fd-7d53-4958-8132-d6a6242423d8
+            - generic [ref=e62]:
+              - generic [ref=e63]:
+                - img "小米" [ref=e66]
+                - generic [ref=e67]:
+                  - generic [ref=e68]:
+                    - generic [ref=e69]: 小米
+                    - generic [ref=e70]: 集团/族群
+                  - generic [ref=e71]: 成员企业：152
+              - generic [ref=e72]:
+                - text: 主公司：
+                - link "小米科技有限责任公司" [ref=e74]:
+                  - /url: https://www.qixin.com/company/534472fd-7d53-4958-8132-d6a6242423d8
+                  - generic [ref=e75]:
+                    - emphasis [ref=e76]: 小米科技有限责任
+                    - text: 公司
+          - img [ref=e77]
+      - generic [ref=e78]:
+        - generic [ref=e79]:
+          - generic [ref=e80]: 筛选条件
+          - generic [ref=e81]:
+            - text: 更多筛选条件，试试
+            - link "search 高级搜索 " [ref=e82] [cursor=pointer]:
+              - /url: /search/advance?keyword=%E5%B0%8F%E7%B1%B3%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E8%B4%A3%E4%BB%BB%E5%85%AC%E5%8F%B8
+              - img "search" [ref=e83]
+              - generic [ref=e84]: 高级搜索
+              - generic [ref=e85]: 
+        - generic [ref=e86]:
+          - generic [ref=e87]: 搜索范围
+          - generic [ref=e90]:
+            - generic [ref=e91] [cursor=pointer]: 企业名称
+            - generic [ref=e92] [cursor=pointer]: 股东
+            - generic [ref=e93] [cursor=pointer]: 法人
+            - generic [ref=e94] [cursor=pointer]: 高管
+            - generic [ref=e95] [cursor=pointer]: 地址电话
+            - generic [ref=e96] [cursor=pointer]: 经营范围
+            - generic [ref=e97] [cursor=pointer]: 商标
+            - generic [ref=e98] [cursor=pointer]: 专利
+            - generic [ref=e99] [cursor=pointer]: 作品著作权
+            - generic [ref=e100] [cursor=pointer]: 软件著作权
+            - generic [ref=e101] [cursor=pointer]: 品牌/产品
+        - generic [ref=e102]:
+          - generic [ref=e103]: 成立年限
+          - generic [ref=e106]:
+            - generic [ref=e107] [cursor=pointer]: 1年内
+            - generic [ref=e108] [cursor=pointer]: 1-5年
+            - generic [ref=e109] [cursor=pointer]: 5-10年
+            - generic [ref=e110] [cursor=pointer]: 10-15年
+            - generic [ref=e111] [cursor=pointer]: 15年以上
+            - generic [ref=e112] [cursor=pointer]: 自定义
+            - generic [ref=e114]:
+              - combobox [ref=e115]
+              - generic [ref=e116]: 至
+              - combobox [ref=e117]
+        - generic [ref=e119]:
+          - generic [ref=e120]: 注册资本
+          - generic [ref=e123]:
+            - generic [ref=e124] [cursor=pointer]: 0万 - 100万
+            - generic [ref=e125] [cursor=pointer]: 100万 - 200万
+            - generic [ref=e126] [cursor=pointer]: 200万 - 500万
+            - generic [ref=e127] [cursor=pointer]: 500万 - 1000万
+            - generic [ref=e128] [cursor=pointer]: 1000万以上
+            - generic [ref=e129] [cursor=pointer]: 自定义
+        - generic [ref=e131]:
+          - generic [ref=e132]: 省份地区
+          - generic [ref=e135]:
+            - generic [ref=e136] [cursor=pointer]: 北京
+            - generic [ref=e137] [cursor=pointer]: 天津
+            - generic [ref=e138] [cursor=pointer]: 河北
+            - generic [ref=e139] [cursor=pointer]: 山西
+            - generic [ref=e140] [cursor=pointer]: 内蒙古
+            - generic [ref=e141] [cursor=pointer]: 辽宁
+            - generic [ref=e142] [cursor=pointer]: 吉林
+            - generic [ref=e143] [cursor=pointer]: 黑龙江
+            - generic [ref=e144] [cursor=pointer]: 上海
+            - generic [ref=e145] [cursor=pointer]: 江苏
+            - generic [ref=e146] [cursor=pointer]: 浙江
+            - generic [ref=e147] [cursor=pointer]: 安徽
+            - generic [ref=e148] [cursor=pointer]: 福建
+            - generic [ref=e149] [cursor=pointer]: 江西
+            - generic [ref=e150] [cursor=pointer]: 山东
+            - generic [ref=e151] [cursor=pointer]: 河南
+            - generic [ref=e152] [cursor=pointer]: 湖北
+            - generic [ref=e153] [cursor=pointer]: 湖南
+            - generic [ref=e154] [cursor=pointer]: 广东
+            - generic [ref=e155] [cursor=pointer]: 广西
+            - generic [ref=e156] [cursor=pointer]: 海南
+            - generic [ref=e157] [cursor=pointer]: 重庆
+            - generic [ref=e158] [cursor=pointer]: 四川
+            - generic [ref=e159] [cursor=pointer]: 贵州
+            - generic [ref=e160] [cursor=pointer]: 云南
+            - generic [ref=e161] [cursor=pointer]: 西藏
+            - generic [ref=e162] [cursor=pointer]: 陕西
+            - generic [ref=e163] [cursor=pointer]: 甘肃
+            - generic [ref=e164] [cursor=pointer]: 青海
+            - generic [ref=e165] [cursor=pointer]: 宁夏
+            - generic [ref=e166] [cursor=pointer]: 新疆
+          - generic [ref=e168] [cursor=pointer]:
+            - text: 更多
+            - generic [ref=e169]: 
+        - generic [ref=e170]:
+          - generic [ref=e171]: 行业分类
+          - generic [ref=e174]:
+            - generic [ref=e175] [cursor=pointer]: 居民服务、修理和其他服务业
+            - generic [ref=e176] [cursor=pointer]: 交通运输、仓储和邮政业
+            - generic [ref=e177] [cursor=pointer]: 水利、环境和公共设施管理业
+            - generic [ref=e178] [cursor=pointer]: 教育
+            - generic [ref=e179] [cursor=pointer]: 批发和零售业
+            - generic [ref=e180] [cursor=pointer]: 国际组织
+            - generic [ref=e181] [cursor=pointer]: 信息传输、软件和信息技术服务业
+            - generic [ref=e182] [cursor=pointer]: 电力、热力、燃气及水生产和供应业
+            - generic [ref=e183] [cursor=pointer]: 公共管理、社会保障和社会组织
+            - generic [ref=e184] [cursor=pointer]: 采矿业
+            - generic [ref=e185] [cursor=pointer]: 制造业
+            - generic [ref=e186] [cursor=pointer]: 金融业
+            - generic [ref=e187] [cursor=pointer]: 科学研究和技术服务业
+            - generic [ref=e188] [cursor=pointer]: 农、林、牧、渔业
+            - generic [ref=e189] [cursor=pointer]: 住宿和餐饮业
+            - generic [ref=e190] [cursor=pointer]: 房地产业
+            - generic [ref=e191] [cursor=pointer]: 文化、体育和娱乐业
+            - generic [ref=e192] [cursor=pointer]: 租赁和商务服务业
+            - generic [ref=e193] [cursor=pointer]: 建筑业
+            - generic [ref=e194] [cursor=pointer]: 卫生和社会工作
+          - generic [ref=e196] [cursor=pointer]:
+            - text: 更多
+            - generic [ref=e197]: 
+        - generic [ref=e201]:
+          - generic [ref=e202]:
+            - text: 企业相关
+            - img "vip" [ref=e203]
+          - generic [ref=e206]:
+            - button "企业规模" [ref=e209] [cursor=pointer]: 企业规模
+            - button "实缴资本" [ref=e213] [cursor=pointer]: 实缴资本
+            - button "经营状态" [ref=e217] [cursor=pointer]: 经营状态
+            - button "公司类型" [ref=e221] [cursor=pointer]: 公司类型
+            - button "分支机构" [ref=e225] [cursor=pointer]: 分支机构
+            - button "组织类型" [ref=e229] [cursor=pointer]: 组织类型
+            - button "地址信息" [ref=e233] [cursor=pointer]: 地址信息
+            - button "货币类型" [ref=e237] [cursor=pointer]: 货币类型
+        - generic [ref=e241] [cursor=pointer]: 
+      - generic [ref=e244]:
+        - generic [ref=e245]:
+          - generic [ref=e246]:
+            - text: 启信宝为您找到
+            - emphasis [ref=e247]: "111"
+            - text: 条相关结果，用时 0.05 秒
+          - generic [ref=e248] [cursor=pointer]:
+            - img "message" [ref=e249]
+            - text: 仅展示40条，
+            - generic [ref=e250]: 开通会员
+            - text: 查看更多
+        - generic [ref=e252]:
+          - button "默认排序" [ref=e254] [cursor=pointer]:
+            - generic [ref=e256]: 默认排序
+          - generic [ref=e258] [cursor=pointer]:
+            - generic [ref=e259]: 
+            - text: 数据导出
+      - generic [ref=e261]:
+        - generic [ref=e262]:
+          - img "小米科技" [ref=e266]
+          - generic [ref=e267]:
+            - generic [ref=e268]:
+              - generic [ref=e269]:
+                - generic [ref=e270]:
+                  - link "小米科技有限责任公司" [ref=e272] [cursor=pointer]:
+                    - /url: /company/534472fd-7d53-4958-8132-d6a6242423d8
+                    - emphasis [ref=e275]: 小米科技有限责任公司
+                  - generic [ref=e276]:
+                    - generic [ref=e277]: 存续
+                    - generic [ref=e278]: 2020年税务信用A级
+                    - generic [ref=e279]: 小微企业
+                - generic [ref=e280]:
+                  - generic [ref=e281] [cursor=pointer]:
+                    - generic [ref=e282]: 
+                    - generic [ref=e283]: 笔记
+                  - generic [ref=e284] [cursor=pointer]:
+                    - generic [ref=e285]: 
+                    - generic [ref=e286]: 联系
+                  - generic [ref=e288] [cursor=pointer]:
+                    - generic [ref=e289]: 
+                    - generic [ref=e290]: 监控
+              - generic [ref=e291]:
+                - generic [ref=e292]:
+                  - text: 法定代表人：
+                  - link "雷军" [ref=e297] [cursor=pointer]:
+                    - /url: https://www.qixin.com/people/info/02ad6587897a976a793aa72ead924a47
+                    - generic [ref=e298]: 雷军
+                - generic [ref=e300]: 注册资本：147652.5441万元
+                - generic [ref=e301]: 成立日期：2010-03-03
+                - generic [ref=e302]: 统一社会信用代码：91110108551385082Q
+              - generic [ref=e303]:
+                - generic [ref=e304]:
+                  - text: 邮箱：
+                  - link "legal-corpstru@xiaomi.com" [ref=e305] [cursor=pointer]:
+                    - /url: mailto:legal-corpstru@xiaomi.com
+                - generic [ref=e306]:
+                  - text: 电话：
+                  - generic [ref=e307] [cursor=pointer]: 167********
+                - generic [ref=e308] [cursor=pointer]:
+                  - text: 更多
+                  - generic [ref=e309]: "5"
+                - generic [ref=e311]:
+                  - generic [ref=e312]: 官网：
+                  - img "website" [ref=e313]
+                  - generic [ref=e314] [cursor=pointer]: mi.com
+                  - generic [ref=e315] [cursor=pointer]: 更多
+              - generic [ref=e318]:
+                - text: 地址：北京市海淀区西二旗中路33号院6号楼6层006号
+                - generic [ref=e319] [cursor=pointer]: 地图显示
+                - generic [ref=e321] [cursor=pointer]: 通信地址
+              - link "| 999+ 条自身风险 999+ 条提示信息 999+ 条关联风险" [ref=e323] [cursor=pointer]:
+                - /url: /detail/company/qx-risk/534472fd-7d53-4958-8132-d6a6242423d8
+                - img [ref=e324]
+                - generic [ref=e325]: "|"
+                - generic [ref=e326]: 999+ 条自身风险
+                - generic [ref=e327]: 999+ 条提示信息
+                - generic [ref=e328]: 999+ 条关联风险
+              - generic [ref=e331]:
+                - generic [ref=e332]: 
+                - generic [ref=e333]:
+                  - text: 历史名称：
+                  - generic [ref=e335]:
+                    - text: 北京
+                    - emphasis [ref=e336]: 小米科技有限责任公司
+            - img [ref=e338]
+        - generic [ref=e339]:
+          - img "小米科技" [ref=e343]
+          - generic [ref=e344]:
+            - generic [ref=e345]:
+              - generic [ref=e346]:
+                - generic [ref=e347]:
+                  - link "广东小米科技有限责任公司" [ref=e349] [cursor=pointer]:
+                    - /url: /company/d5365cd9-42ec-4f56-a5e7-c94cfc51dae4
+                    - generic [ref=e351]:
+                      - text: 广东
+                      - emphasis [ref=e352]: 小米科技有限责任公司
+                  - generic [ref=e353]:
+                    - generic [ref=e354]: 存续
+                    - generic [ref=e355]: 小微企业
+                    - generic [ref=e356]: 港澳台背景
+                - generic [ref=e357]:
+                  - generic [ref=e358] [cursor=pointer]:
+                    - generic [ref=e359]: 
+                    - generic [ref=e360]: 笔记
+                  - generic [ref=e361] [cursor=pointer]:
+                    - generic [ref=e362]: 
+                    - generic [ref=e363]: 联系
+                  - generic [ref=e365] [cursor=pointer]:
+                    - generic [ref=e366]: 
+                    - generic [ref=e367]: 监控
+              - generic [ref=e368]:
+                - generic [ref=e369]:
+                  - text: 法定代表人：
+                  - link "张剑慧" [ref=e374] [cursor=pointer]:
+                    - /url: https://www.qixin.com/people/info/0014cde6c55a19257511d6524e6e4997
+                    - generic [ref=e375]: 张剑慧
+                - generic [ref=e377]: 注册资本：100000万元
+                - generic [ref=e378]: 成立日期：2015-09-21
+                - generic [ref=e379]: 统一社会信用代码：91440101MA59A5P606
+              - generic [ref=e380]:
+                - generic [ref=e381]:
+                  - text: 邮箱：
+                  - link "liaofengzhou@xiaomi.com" [ref=e382] [cursor=pointer]:
+                    - /url: mailto:liaofengzhou@xiaomi.com
+                - generic [ref=e383]:
+                  - text: 电话：
+                  - generic [ref=e384] [cursor=pointer]: 010********
+              - generic [ref=e385]:
+                - text: 地址：广州市海珠区聚新街31号1101室（仅限办公）
+                - generic [ref=e386] [cursor=pointer]: 地图显示
+                - generic [ref=e388] [cursor=pointer]: 通信地址
+              - link "| 5 条自身风险 8 条提示信息 999+ 条关联风险" [ref=e390] [cursor=pointer]:
+                - /url: /detail/company/qx-risk/d5365cd9-42ec-4f56-a5e7-c94cfc51dae4
+                - img [ref=e391]
+                - generic [ref=e392]: "|"
+                - generic [ref=e393]: 5 条自身风险
+                - generic [ref=e394]: 8 条提示信息
+                - generic [ref=e395]: 999+ 条关联风险
+            - img [ref=e398]
+        - generic [ref=e399]:
+          - img "小米科技" [ref=e403]
+          - generic [ref=e404]:
+            - generic [ref=e405]:
+              - generic [ref=e406]:
+                - generic [ref=e407]:
+                  - link "小米科技有限责任公司郑州分公司" [ref=e409] [cursor=pointer]:
+                    - /url: /company/aa328bd3-48a8-49b6-92a1-c53c1ef0b1c6
+                    - generic [ref=e411]:
+                      - emphasis [ref=e412]: 小米科技有限责任公司
+                      - text: 郑州分公司
+                  - generic [ref=e414]: 存续
+                - generic [ref=e415]:
+                  - generic [ref=e416] [cursor=pointer]:
+                    - generic [ref=e417]: 
+                    - generic [ref=e418]: 笔记
+                  - generic [ref=e419] [cursor=pointer]:
+                    - generic [ref=e420]: 
+                    - generic [ref=e421]: 联系
+                  - generic [ref=e423] [cursor=pointer]:
+                    - generic [ref=e424]: 
+                    - generic [ref=e425]: 监控
+              - generic [ref=e426]:
+                - generic [ref=e427]:
+                  - text: 负责人：
+                  - link "王腾" [ref=e432] [cursor=pointer]:
+                    - /url: https://www.qixin.com/people/info/c5e22410009f980c0ac8af3a453996ba
+                    - generic [ref=e433]: 王腾
+                - generic [ref=e435]: 注册资本：-
+                - generic [ref=e436]: 成立日期：2012-03-08
+                - generic [ref=e437]: 统一社会信用代码：91410105593414400K
+              - generic [ref=e438]:
+                - generic [ref=e439]:
+                  - text: 邮箱：
+                  - link "luohui@xiaomi.com" [ref=e440] [cursor=pointer]:
+                    - /url: mailto:luohui@xiaomi.com
+                - generic [ref=e441]:
+                  - text: 电话：
+                  - generic [ref=e442] [cursor=pointer]: 136********
+                - generic [ref=e443] [cursor=pointer]:
+                  - text: 更多
+                  - generic [ref=e444]: "3"
+              - generic [ref=e446]:
+                - text: 地址：河南自贸试验区郑州片区（郑东）CBD商务外环与西二街世博大厦11楼1101-1102
+                - generic [ref=e447] [cursor=pointer]: 地图显示
+                - generic [ref=e449] [cursor=pointer]: 通信地址
+              - link "| 5 条自身风险 2 条提示信息 999+ 条关联风险" [ref=e451] [cursor=pointer]:
+                - /url: /detail/company/qx-risk/aa328bd3-48a8-49b6-92a1-c53c1ef0b1c6
+                - img [ref=e452]
+                - generic [ref=e453]: "|"
+                - generic [ref=e454]: 5 条自身风险
+                - generic [ref=e455]: 2 条提示信息
+                - generic [ref=e456]: 999+ 条关联风险
+              - generic [ref=e459]:
+                - generic [ref=e460]: 
+                - generic [ref=e461]:
+                  - text: 历史名称：
+                  - generic [ref=e463]:
+                    - text: 北京
+                    - emphasis [ref=e464]: 小米科技有限责任公司
+                    - text: 郑州分公司
+            - img [ref=e466]
+        - generic [ref=e467]:
+          - img "小米科技" [ref=e471]
+          - generic [ref=e472]:
+            - generic [ref=e473]:
+              - generic [ref=e474]:
+                - generic [ref=e475]:
+                  - link "小米科技有限责任公司沈阳分公司" [ref=e477] [cursor=pointer]:
+                    - /url: /company/02f235bd-0b50-40e9-a592-f746ff47828b
+                    - generic [ref=e479]:
+                      - emphasis [ref=e480]: 小米科技有限责任公司
+                      - text: 沈阳分公司
+                  - generic [ref=e482]: 存续
+                - generic [ref=e483]:
+                  - generic [ref=e484] [cursor=pointer]:
+                    - generic [ref=e485]: 
+                    - generic [ref=e486]: 笔记
+                  - generic [ref=e487] [cursor=pointer]:
+                    - generic [ref=e488]: 
+                    - generic [ref=e489]: 联系
+                  - generic [ref=e491] [cursor=pointer]:
+                    - generic [ref=e492]: 
+                    - generic [ref=e493]: 监控
+              - generic [ref=e494]:
+                - generic [ref=e495]:
+                  - text: 负责人：
+                  - link "黎万强" [ref=e500] [cursor=pointer]:
+                    - /url: https://www.qixin.com/people/info/007e105cd80818842acd7a512f26a7fe
+                    - generic [ref=e501]: 黎万强
+                - generic [ref=e503]: 注册资本：-
+                - generic [ref=e504]: 成立日期：2012-07-25
+                - generic [ref=e505]: 统一社会信用代码：91210102050759939D
+              - generic [ref=e506]:
+                - generic [ref=e507]:
+                  - text: 邮箱：
+                  - link "zhangxinyi20@xiaomi.com" [ref=e508] [cursor=pointer]:
+                    - /url: mailto:zhangxinyi20@xiaomi.com
+                - generic [ref=e509]:
+                  - text: 电话：
+                  - generic [ref=e510] [cursor=pointer]: 158********
+                - generic [ref=e511] [cursor=pointer]:
+                  - text: 更多
+                  - generic [ref=e512]: "5"
+                - generic [ref=e514]:
+                  - generic [ref=e515]: 网址：
+                  - generic [ref=e516] [cursor=pointer]: www.mi.com
+              - generic [ref=e517]:
+                - text: 地址：沈阳市和平区南堤西路369号（22门）3层A410
+                - generic [ref=e518] [cursor=pointer]: 地图显示
+                - generic [ref=e520] [cursor=pointer]: 通信地址
+              - link "| 4 条自身风险 0 条提示信息 999+ 条关联风险" [ref=e522] [cursor=pointer]:
+                - /url: /detail/company/qx-risk/02f235bd-0b50-40e9-a592-f746ff47828b
+                - img [ref=e523]
+                - generic [ref=e524]: "|"
+                - generic [ref=e525]: 4 条自身风险
+                - generic [ref=e526]: 0 条提示信息
+                - generic [ref=e527]: 999+ 条关联风险
+              - generic [ref=e530]:
+                - generic [ref=e531]: 
+                - generic [ref=e532]:
+                  - text: 历史名称：
+                  - generic [ref=e534]:
+                    - text: 北京
+                    - emphasis [ref=e535]: 小米科技有限责任公司
+                    - text: 沈阳分公司
+            - img [ref=e537]
+        - text:   
+        - generic [ref=e538]:
+          - img "小米科技" [ref=e542]
+          - generic [ref=e543]:
+            - generic [ref=e544]:
+              - generic [ref=e545]:
+                - generic [ref=e546]:
+                  - link "小米科技有限责任公司东莞分公司" [ref=e548] [cursor=pointer]:
+                    - /url: /company/b87b30f4-b949-44e3-8cb4-7a0cd7341a14
+                    - generic [ref=e550]:
+                      - emphasis [ref=e551]: 小米科技有限责任公司
+                      - text: 东莞分公司
+                  - generic [ref=e553]: 存续
+                - generic [ref=e554]:
+                  - generic [ref=e555] [cursor=pointer]:
+                    - generic [ref=e556]: 
+                    - generic [ref=e557]: 笔记
+                  - generic [ref=e558] [cursor=pointer]:
+                    - generic [ref=e559]: 
+                    - generic [ref=e560]: 联系
+                  - generic [ref=e562] [cursor=pointer]:
+                    - generic [ref=e563]: 
+                    - generic [ref=e564]: 监控
+              - generic [ref=e565]:
+                - generic [ref=e566]:
+                  - text: 负责人：
+                  - link "张健" [ref=e571] [cursor=pointer]:
+                    - /url: https://www.qixin.com/people/info/b49a05432a0a0b8948af589f661167a2
+                    - generic [ref=e572]: 张健
+                - generic [ref=e574]: 注册资本：-
+                - generic [ref=e575]: 成立日期：2013-11-26
+                - generic [ref=e576]: 统一社会信用代码：91441900084480477Y
+              - generic [ref=e577]:
+                - generic [ref=e578]:
+                  - text: 邮箱：
+                  - link "zhangxinyi20@xiaomi.com" [ref=e579] [cursor=pointer]:
+                    - /url: mailto:zhangxinyi20@xiaomi.com
+                - generic [ref=e580]:
+                  - text: 电话：
+                  - generic [ref=e581] [cursor=pointer]: 158********
+                - generic [ref=e582] [cursor=pointer]:
+                  - text: 更多
+                  - generic [ref=e583]: "3"
+              - generic [ref=e585]:
+                - text: 地址：东莞市南城街道三元里社区11号万平写字楼3楼3008室
+                - generic [ref=e586] [cursor=pointer]: 地图显示
+                - generic [ref=e588] [cursor=pointer]: 通信地址
+              - link "| 2 条自身风险 3 条提示信息 999+ 条关联风险" [ref=e590] [cursor=pointer]:
+                - /url: /detail/company/qx-risk/b87b30f4-b949-44e3-8cb4-7a0cd7341a14
+                - img [ref=e591]
+                - generic [ref=e592]: "|"
+                - generic [ref=e593]: 2 条自身风险
+                - generic [ref=e594]: 3 条提示信息
+                - generic [ref=e595]: 999+ 条关联风险
+            - img [ref=e598]
+        - generic [ref=e599]:
+          - img "小米科技" [ref=e603]
+          - generic [ref=e604]:
+            - generic [ref=e605]:
+              - generic [ref=e606]:
+                - generic [ref=e607]:
+                  - link "小米科技有限责任公司保定莲池分公司" [ref=e609] [cursor=pointer]:
+                    - /url: /company/aecbbefd-09e1-4883-a9a8-68c6daf5d693
+                    - generic [ref=e611]:
+                      - emphasis [ref=e612]: 小米科技有限责任公司
+                      - text: 保定莲池分公司
+                  - generic [ref=e614]: 存续
+                - generic [ref=e615]:
+                  - generic [ref=e616] [cursor=pointer]:
+                    - generic [ref=e617]: 
+                    - generic [ref=e618]: 笔记
+                  - generic [ref=e619] [cursor=pointer]:
+                    - generic [ref=e620]: 
+                    - generic [ref=e621]: 联系
+                  - generic [ref=e623] [cursor=pointer]:
+                    - generic [ref=e624]: 
+                    - generic [ref=e625]: 监控
+              - generic [ref=e626]:
+                - generic [ref=e627]:
+                  - text: 负责人：
+                  - link "张伟" [ref=e632] [cursor=pointer]:
+                    - /url: https://www.qixin.com/people/info/9ad514fb59fe4c62a0660d6b0823a6c0
+                    - generic [ref=e633]: 张伟
+                - generic [ref=e635]: 注册资本：-
+                - generic [ref=e636]: 成立日期：2022-03-04
+                - generic [ref=e637]: 统一社会信用代码：91130606MA7J5PBW4X
+              - generic [ref=e638]:
+                - generic [ref=e639]:
+                  - text: 邮箱：
+                  - link "legal-corpstru@xiaomi.com" [ref=e640] [cursor=pointer]:
+                    - /url: mailto:legal-corpstru@xiaomi.com
+                - generic [ref=e641]:
+                  - text: 电话：
+                  - generic [ref=e642] [cursor=pointer]: 182********
+                - generic [ref=e643] [cursor=pointer]:
+                  - text: 更多
+                  - generic [ref=e644]: "2"
+              - generic [ref=e646]:
+                - text: 地址：河北省保定市莲池区复兴东路999号支点创业基地1号楼2层203
+                - generic [ref=e647] [cursor=pointer]: 地图显示
+                - generic [ref=e649] [cursor=pointer]: 通信地址
+              - link "| 0 条自身风险 2 条提示信息 999+ 条关联风险" [ref=e651] [cursor=pointer]:
+                - /url: /detail/company/qx-risk/aecbbefd-09e1-4883-a9a8-68c6daf5d693
+                - img [ref=e652]
+                - generic [ref=e653]: "|"
+                - generic [ref=e654]: 0 条自身风险
+                - generic [ref=e655]: 2 条提示信息
+                - generic [ref=e656]: 999+ 条关联风险
+            - img [ref=e659]
+        - generic [ref=e660]:
+          - generic [ref=e665]: 小米科技
+          - generic [ref=e666]:
+            - generic [ref=e667]:
+              - generic [ref=e668]:
+                - generic [ref=e669]:
+                  - link "小米科技有限责任公司工会委员会" [ref=e671] [cursor=pointer]:
+                    - /url: /company/97d04a00-1d94-11ef-9072-8e78ceca44f9
+                    - generic [ref=e673]:
+                      - emphasis [ref=e674]: 小米科技有限责任公司
+                      - text: 工会委员会
+                  - generic [ref=e676]: 存续
+                - generic [ref=e678] [cursor=pointer]:
+                  - generic [ref=e679]: 
+                  - generic [ref=e680]: 笔记
+              - generic [ref=e681]:
+                - generic [ref=e682]:
+                  - text: 法定代表人：
+                  - link "施艳" [ref=e687] [cursor=pointer]:
+                    - /url: https://www.qixin.com/people/info/54f4ae7a88a0f134b1ae526c64eaf683
+                    - generic [ref=e688]: 施艳
+                - generic [ref=e690]: 开办资金：-
+                - generic [ref=e691]: 成立日期：2020-01-17
+                - generic [ref=e692]: 统一社会信用代码：81110108MCL243784H
+              - generic [ref=e693]:
+                - text: 地址：北京市海淀区西二旗中路33号院6号楼6层006号
+                - generic [ref=e694] [cursor=pointer]: 地图显示
+            - img [ref=e697]
+        - generic [ref=e698]:
+          - generic [ref=e703]: 小米智科
+          - generic [ref=e704]:
+            - generic [ref=e705]:
+              - generic [ref=e706]:
+                - generic [ref=e707]:
+                  - link "甘肃小米智能科技有限责任公司" [ref=e709] [cursor=pointer]:
+                    - /url: /company/06a30d69-708f-41e6-94f9-d2037f00ed15
+                    - generic [ref=e711]:
+                      - text: 甘肃
+                      - emphasis [ref=e712]: 小米
+                      - text: 智能
+                      - emphasis [ref=e713]: 科技有限责任
+                      - text: 公司
+                  - generic [ref=e714]:
+                    - generic [ref=e715]: 存续
+                    - generic [ref=e716]: 小微企业
+                - generic [ref=e717]:
+                  - generic [ref=e718] [cursor=pointer]:
+                    - generic [ref=e719]: 
+                    - generic [ref=e720]: 笔记
+                  - generic [ref=e721] [cursor=pointer]:
+                    - generic [ref=e722]: 
+                    - generic [ref=e723]: 联系
+                  - generic [ref=e725] [cursor=pointer]:
+                    - generic [ref=e726]: 
+                    - generic [ref=e727]: 监控
+              - generic [ref=e728]:
+                - generic [ref=e729]:
+                  - text: 法定代表人：
+                  - link "王小龙" [ref=e734] [cursor=pointer]:
+                    - /url: https://www.qixin.com/people/info/03fdfd5eb19aff5426a1d989ea1c24e8
+                    - generic [ref=e735]: 王小龙
+                - generic [ref=e737]: 注册资本：980万元
+                - generic [ref=e738]: 成立日期：2017-11-23
+                - generic [ref=e739]: 统一社会信用代码：91620702MA733ATW2H
+              - generic [ref=e740]:
+                - generic [ref=e741]:
+                  - text: 邮箱：
+                  - link "164112166@qq.com" [ref=e742] [cursor=pointer]:
+                    - /url: mailto:164112166@qq.com
+                - generic [ref=e743]:
+                  - text: 电话：
+                  - generic [ref=e744] [cursor=pointer]: 093********
+                - generic [ref=e745] [cursor=pointer]:
+                  - text: 更多
+                  - generic [ref=e746]: "5"
+              - generic [ref=e748]:
+                - text: 地址：甘肃省张掖市甘州区北水桥街18号（张掖一中对面）
+                - generic [ref=e749] [cursor=pointer]: 地图显示
+                - generic [ref=e751] [cursor=pointer]: 通信地址
+              - link "| 0 条自身风险 2 条提示信息 4 条关联风险" [ref=e753] [cursor=pointer]:
+                - /url: /detail/company/qx-risk/06a30d69-708f-41e6-94f9-d2037f00ed15
+                - img [ref=e754]
+                - generic [ref=e755]: "|"
+                - generic [ref=e756]: 0 条自身风险
+                - generic [ref=e757]: 2 条提示信息
+                - generic [ref=e758]: 4 条关联风险
+            - img [ref=e761]
+        - generic [ref=e762]:
+          - img "小米科技" [ref=e766]
+          - generic [ref=e767]:
+            - generic [ref=e768]:
+              - generic [ref=e769]:
+                - generic [ref=e770]:
+                  - link "西藏小米科技有限责任公司" [ref=e772] [cursor=pointer]:
+                    - /url: /company/6817f366-b63b-48d5-9b13-3366abcc52c2
+                    - generic [ref=e774]:
+                      - text: 西藏
+                      - emphasis [ref=e775]: 小米科技有限责任公司
+                  - generic [ref=e777]: 注销
+                - generic [ref=e778]:
+                  - generic [ref=e779] [cursor=pointer]:
+                    - generic [ref=e780]: 
+                    - generic [ref=e781]: 笔记
+                  - generic [ref=e782] [cursor=pointer]:
+                    - generic [ref=e783]: 
+                    - generic [ref=e784]: 联系
+                  - generic [ref=e786] [cursor=pointer]:
+                    - generic [ref=e787]: 
+                    - generic [ref=e788]: 监控
+              - generic [ref=e789]:
+                - generic [ref=e790]:
+                  - text: 法定代表人：
+                  - link "雷军" [ref=e795] [cursor=pointer]:
+                    - /url: https://www.qixin.com/people/info/02ad6587897a976a793aa72ead924a47
+                    - generic [ref=e796]: 雷军
+                - generic [ref=e798]: 注册资本：100万元
+                - generic [ref=e799]: 成立日期：2012-10-29
+                - generic [ref=e800]: 统一社会信用代码：-
+              - generic [ref=e801]:
+                - generic [ref=e802]:
+                  - text: 邮箱：
+                  - link "605943316@qq.com" [ref=e803] [cursor=pointer]:
+                    - /url: mailto:605943316@qq.com
+                - generic [ref=e804]:
+                  - text: 电话：
+                  - generic [ref=e805] [cursor=pointer]: 135********
+                - generic [ref=e806] [cursor=pointer]:
+                  - text: 更多
+                  - generic [ref=e807]: "2"
+              - generic [ref=e809]:
+                - text: 地址：拉萨经开区阳光新城B4-2-202号
+                - generic [ref=e810] [cursor=pointer]: 地图显示
+                - generic [ref=e812] [cursor=pointer]: 通信地址
+              - link "| 0 条自身风险 2 条提示信息 999+ 条关联风险" [ref=e814] [cursor=pointer]:
+                - /url: /detail/company/qx-risk/6817f366-b63b-48d5-9b13-3366abcc52c2
+                - img [ref=e815]
+                - generic [ref=e816]: "|"
+                - generic [ref=e817]: 0 条自身风险
+                - generic [ref=e818]: 2 条提示信息
+                - generic [ref=e819]: 999+ 条关联风险
+            - img [ref=e822]
+        - generic [ref=e823]:
+          - img "小米科技" [ref=e827]
+          - generic [ref=e828]:
+            - generic [ref=e829]:
+              - generic [ref=e830]:
+                - generic [ref=e831]:
+                  - link "小米科技有限责任公司成都分公司" [ref=e833] [cursor=pointer]:
+                    - /url: /company/99dd0cd6-b5e8-48e8-a0d4-222ac5ae2704
+                    - generic [ref=e835]:
+                      - emphasis [ref=e836]: 小米科技有限责任公司
+                      - text: 成都分公司
+                  - generic [ref=e838]: 注销
+                - generic [ref=e839]:
+                  - generic [ref=e840] [cursor=pointer]:
+                    - generic [ref=e841]: 
+                    - generic [ref=e842]: 笔记
+                  - generic [ref=e843] [cursor=pointer]:
+                    - generic [ref=e844]: 
+                    - generic [ref=e845]: 联系
+                  - generic [ref=e847] [cursor=pointer]:
+                    - generic [ref=e848]: 
+                    - generic [ref=e849]: 监控
+              - generic [ref=e850]:
+                - generic [ref=e851]:
+                  - text: 负责人：
+                  - link "黎万强" [ref=e856] [cursor=pointer]:
+                    - /url: https://www.qixin.com/people/info/007e105cd80818842acd7a512f26a7fe
+                    - generic [ref=e857]: 黎万强
+                - generic [ref=e859]: 注册资本：-
+                - generic [ref=e860]: 成立日期：2012-02-09
+                - generic [ref=e861]: 统一社会信用代码：915101005902146068
+              - generic [ref=e862]:
+                - generic [ref=e863]:
+                  - text: 邮箱：
+                  - link "luoyingjie@xiaomi.com" [ref=e864] [cursor=pointer]:
+                    - /url: mailto:luoyingjie@xiaomi.com
+                - generic [ref=e865]:
+                  - text: 电话：
+                  - generic [ref=e866] [cursor=pointer]: 028********
+              - generic [ref=e867]:
+                - text: 地址：成都高新区盛和一路88号1栋1单元1309-1310号
+                - generic [ref=e868] [cursor=pointer]: 地图显示
+                - generic [ref=e870] [cursor=pointer]: 通信地址
+              - link "| 3 条自身风险 1 条提示信息 999+ 条关联风险" [ref=e872] [cursor=pointer]:
+                - /url: /detail/company/qx-risk/99dd0cd6-b5e8-48e8-a0d4-222ac5ae2704
+                - img [ref=e873]
+                - generic [ref=e874]: "|"
+                - generic [ref=e875]: 3 条自身风险
+                - generic [ref=e876]: 1 条提示信息
+                - generic [ref=e877]: 999+ 条关联风险
+              - generic [ref=e880]:
+                - generic [ref=e881]: 
+                - generic [ref=e882]:
+                  - text: 历史名称：
+                  - generic [ref=e884]:
+                    - text: 北京
+                    - emphasis [ref=e885]: 小米科技有限责任公司
+                    - text: 成都分公司
+            - img [ref=e887]
+      - generic [ref=e888]:
+        - generic [ref=e889]:
+          - generic [ref=e890]: 普通会员最多查看40条数据
+          - generic [ref=e891] [cursor=pointer]:
+            - img "message" [ref=e892]
+            - text: 开通VIP，查看最多
+            - emphasis [ref=e893]: "5000"
+            - text: 条数据
+        - generic [ref=e896]:
+          - button "上一页" [disabled] [ref=e897]:
+            - generic:
+              - img
+          - list [ref=e898]:
+            - listitem "第 1 页" [ref=e899]: "1"
+            - listitem "第 2 页" [ref=e900] [cursor=pointer]: "2"
+            - listitem "第 3 页" [ref=e901] [cursor=pointer]: "3"
+            - listitem "第 4 页" [ref=e902] [cursor=pointer]: "4"
+            - listitem "第 5 页" [ref=e903] [cursor=pointer]: "5"
+            - listitem "第 6 页" [ref=e904] [cursor=pointer]: "6"
+            - listitem "向后 5 页" [ref=e905] [cursor=pointer]:
+              - img
+            - listitem "第 12 页" [ref=e906] [cursor=pointer]: "12"
+          - button "下一页" [ref=e907] [cursor=pointer]:
+            - generic:
+              - img
+          - generic [ref=e908]:
+            - generic [ref=e909]: 前往
+            - spinbutton "页" [ref=e912]: "1"
+            - generic [ref=e913]: 页
+  - contentinfo [ref=e914]:
+    - generic [ref=e915]:
+      - generic [ref=e916]:
+        - generic [ref=e917]:
+          - link "text-url-reverse":
+            - /url: /
+            - img "text-url-reverse"
+          - img "brand" [ref=e918]
+        - generic [ref=e919]:
+          - heading "快速导航" [level=4] [ref=e920]
+          - generic [ref=e921]:
+            - link "地区导航" [ref=e922] [cursor=pointer]:
+              - /url: https://www.qixin.com/area-nav
+            - link "行业导航" [ref=e923] [cursor=pointer]:
+              - /url: https://www.qixin.com/industry-nav
+            - link "热门搜索" [ref=e924] [cursor=pointer]:
+              - /url: https://www.qixin.com/hot
+            - link "人员名录" [ref=e925] [cursor=pointer]:
+              - /url: https://www.qixin.com/people-nav
+            - link "年报查询" [ref=e926] [cursor=pointer]:
+              - /url: https://www.qixin.com/report
+            - link "品牌名录" [ref=e927] [cursor=pointer]:
+              - /url: https://www.qixin.com/brand-nav
+            - link "企业查询" [ref=e928] [cursor=pointer]:
+              - /url: /search?key=小米
+            - link "老板查询" [ref=e929] [cursor=pointer]:
+              - /url: /search/people?key=雷军
+            - link "商标查询" [ref=e930] [cursor=pointer]:
+              - /url: /search/trademark?key=小米
+            - link "融资查询" [ref=e931] [cursor=pointer]:
+              - /url: /search/financing
+            - link "关系查询" [ref=e932] [cursor=pointer]:
+              - /url: https://www.qixin.com/search/find-relation
+            - link "招标查询" [ref=e933] [cursor=pointer]:
+              - /url: https://zhaobiao.qixin.com/bidding
+            - link "批量查询" [ref=e934] [cursor=pointer]:
+              - /url: https://www.qixin.com/batch/search
+            - link "版权查询" [ref=e935] [cursor=pointer]:
+              - /url: https://www.qixin.com/copy-right
+            - link "姓氏大全" [ref=e936] [cursor=pointer]:
+              - /url: https://www.qixin.com/names
+            - link "企业版" [ref=e937] [cursor=pointer]:
+              - /url: https://b.qixin.com/?from=index
+            - link "招聘查询" [ref=e938] [cursor=pointer]:
+              - /url: https://www.qixin.com/job
+            - link "守护个人信息安全" [ref=e939] [cursor=pointer]:
+              - /url: https://www.qixin.com/network-case
+            - link "藏蓝青春 “键”指河山" [ref=e940] [cursor=pointer]:
+              - /url: https://www.qixin.com/network-youth
+            - link "守护“数字世界身份信息”" [ref=e941] [cursor=pointer]:
+              - /url: https://www.qixin.com/network-number
+        - generic [ref=e942]:
+          - heading "关于启信宝" [level=4] [ref=e943]
+          - generic [ref=e944]:
+            - link "关于我们" [ref=e945] [cursor=pointer]:
+              - /url: /other/about
+            - link "常见问题" [ref=e946] [cursor=pointer]:
+              - /url: https://www.qixin.com/customer-service
+            - generic [ref=e947] [cursor=pointer]: 意见反馈
+            - link "服务协议" [ref=e948] [cursor=pointer]:
+              - /url: /other/about/terms
+            - link "隐私政策" [ref=e949] [cursor=pointer]:
+              - /url: /other/about/privacy
+            - link "儿童隐私" [ref=e950] [cursor=pointer]:
+              - /url: https://static-cdn-p.qixin.com/policy/qixinbao_Web/children_zh-cn.html
+        - generic [ref=e951]:
+          - heading "联系方式" [level=4] [ref=e952]
+          - generic [ref=e953]:
+            - link "在线咨询" [ref=e954] [cursor=pointer]:
+              - /url: https://www.qixin.com/customer-service
+            - generic [ref=e955]:
+              - text: 企业邮箱：
+              - link "kefu@qixin.com" [ref=e956] [cursor=pointer]:
+                - /url: mailto:kefu@qixin.com
+            - generic [ref=e957]: 客服电话：400-6383-888
+            - generic [ref=e958]: 工作时间：工作日9:30-19:00
+        - generic [ref=e959]:
+          - generic [ref=e960]:
+            - img "启信宝APP" [ref=e961]
+            - generic [ref=e962]: 扫码下载APP
+          - generic [ref=e963]:
+            - img "启信宝小程序" [ref=e964]
+            - generic [ref=e965]: 启信宝小程序
+      - generic [ref=e966]: 数据来源：全国企业信用信息公示系统国家知识产权局商标局版权局
+      - generic [ref=e967]:
+        - text: 友情链接：
+        - link "合合信息" [ref=e968] [cursor=pointer]:
+          - /url: https://www.intsig.com
+        - link "名片全能王" [ref=e969] [cursor=pointer]:
+          - /url: https://www.camcard.com
+        - link "扫描全能王" [ref=e970] [cursor=pointer]:
+          - /url: https://www.camscanner.com
+        - link "开放平台" [ref=e971] [cursor=pointer]:
+          - /url: https://data.qixin.com/?from=footer_link
+        - link "国务院发展研究中心信息网" [ref=e972] [cursor=pointer]:
+          - /url: http://www.drcnet.com.cn
+        - link "蝉大师" [ref=e973] [cursor=pointer]:
+          - /url: https://chandashi.com
+        - link "权大师" [ref=e974] [cursor=pointer]:
+          - /url: https://www.quandashi.com
+        - link "中国比地招标网" [ref=e975] [cursor=pointer]:
+          - /url: http://www.bidizhaobiao.com
+        - link "网络非法金融信息举报专区" [ref=e976] [cursor=pointer]:
+          - /url: http://www.js12377.cn/wyjb/index.jhtml?reportNext=1&reportClass=2&harmType=2
+        - link "建设招标网" [ref=e977] [cursor=pointer]:
+          - /url: https://www.jszhaobiao.com
+        - link "蔚蓝地图" [ref=e978] [cursor=pointer]:
+          - /url: https://www.ipe.org.cn
+        - link "洞见研报" [ref=e979] [cursor=pointer]:
+          - /url: https://www.djyanbao.com/index
+        - link "猪八戒网" [ref=e980] [cursor=pointer]:
+          - /url: https://suzhou.zbj.com
+        - link "小程序商城系统" [ref=e981] [cursor=pointer]:
+          - /url: https://www.youzan.com
+      - generic [ref=e982]:
+        - generic [ref=e983]:
+          - generic [ref=e984]:
+            - link "沪公网安备 31010602003968号" [ref=e985] [cursor=pointer]:
+              - /url: http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010602003968
+            - text: 上海生腾数据科技有限公司，版权所有©2014 - 2026
+            - link "沪ICP备18033674号-2" [ref=e986] [cursor=pointer]:
+              - /url: https://beian.miit.gov.cn
+          - generic [ref=e987]:
+            - generic [ref=e988]:
+              - text: 增值电信业务经营许可证：
+              - link "沪B2-20200755" [ref=e989] [cursor=pointer]:
+                - /url: https://beian.miit.gov.cn
+            - text: 公司地址：上海市静安区万荣路1268号云立方A座11层
+        - generic [ref=e990]:
+          - img "营业执照" [ref=e991]
+          - link "工商网监" [ref=e992] [cursor=pointer]:
+            - /url: http://scjgj.sh.gov.cn
+            - img "工商网监" [ref=e993]
+          - link "上海市互联网违法和不良信息举报中心" [ref=e994] [cursor=pointer]:
+            - /url: http://www.shjbzx.cn
+            - img "上海市互联网违法和不良信息举报中心" [ref=e995]
+          - link "中央网信办违法和不良信息举报中心" [ref=e996] [cursor=pointer]:
+            - /url: https://www.12377.cn
+            - img "中央网信办违法和不良信息举报中心" [ref=e997]
+        - generic [ref=e998]:
+          - generic [ref=e999]: 不良信息举报电话：400-6383-888
+          - generic [ref=e1000]: 举报邮箱：
+          - link "kefu@qixin.com" [ref=e1001] [cursor=pointer]:
+            - /url: mailto:kefu@qixin.com
+  - generic [ref=e1002]:
+    - generic [ref=e1003]:
+      - generic [ref=e1004]: 
+      - generic [ref=e1005]: 小程序
+    - generic [ref=e1006]:
+      - generic [ref=e1007]: 
+      - generic [ref=e1008]: APP
+    - generic [ref=e1009]:
+      - generic [ref=e1010]: 
+      - generic [ref=e1011]: 微信
+    - generic [ref=e1012] [cursor=pointer]:
+      - generic [ref=e1013]: 
+      - generic [ref=e1014]: 反馈
+    - generic [ref=e1015] [cursor=pointer]:
+      - generic [ref=e1016]: 
+      - generic [ref=e1017]: 客服中心
+    - generic [ref=e1018] [cursor=pointer]:
+      - generic [ref=e1019]: 
+      - generic [ref=e1020]: 回到顶部
+    - generic [ref=e1022] [cursor=pointer]: 
+  - generic:
+    - generic:
+      - img "negative" [ref=e1023]
+      - generic [ref=e1024]:
+        - generic [ref=e1025] [cursor=pointer]:
+          - img "left" [ref=e1026]
+          - img "right" [ref=e1027]
+          - img "qrcode" [ref=e1028]
+        - generic [ref=e1029] [cursor=pointer]: 
+  - generic [ref=e1030]:
+    - img [ref=e1031] [cursor=pointer]
+    - img "close" [ref=e1032] [cursor=pointer]

@@ -1,0 +1,422 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e8]:
+        - link "text-url" [ref=e9] [cursor=pointer]:
+          - /url: /
+          - img "text-url" [ref=e10]
+        - img "credential-title" [ref=e12]
+        - generic [ref=e13]:
+          - generic [ref=e14]:
+            - generic [ref=e15]:
+              - textbox "请输入企业名、人名、产品名等关键词" [ref=e16]: 南宁市青秀区凤辉图书经营部
+              - generic [ref=e17] [cursor=pointer]: 
+            - generic [ref=e18] [cursor=pointer]:
+              - generic [ref=e19]: 
+              - generic [ref=e20]: 搜索
+          - generic [ref=e21] [cursor=pointer]: 企业版
+          - generic [ref=e23] [cursor=pointer]: 数据服务
+          - generic [ref=e25] [cursor=pointer]: 合作入口
+          - generic [ref=e27] [cursor=pointer]: 应用
+        - generic [ref=e28]:
+          - link "vip 成为VIP" [ref=e29] [cursor=pointer]:
+            - /url: /pay/vip
+            - img "vip" [ref=e30]
+            - generic [ref=e31]: 成为VIP
+          - img "backup-avatar" [ref=e36] [cursor=pointer]
+      - generic [ref=e39]:
+        - generic [ref=e40] [cursor=pointer]: 企业
+        - link "老板" [ref=e41] [cursor=pointer]:
+          - /url: /search/people?key=%E5%8D%97%E5%AE%81%E5%B8%82%E9%9D%92%E7%A7%80%E5%8C%BA%E5%87%A4%E8%BE%89%E5%9B%BE%E4%B9%A6%E7%BB%8F%E8%90%A5%E9%83%A8
+        - link "风险" [ref=e42] [cursor=pointer]:
+          - /url: /search/risk?key=%E5%8D%97%E5%AE%81%E5%B8%82%E9%9D%92%E7%A7%80%E5%8C%BA%E5%87%A4%E8%BE%89%E5%9B%BE%E4%B9%A6%E7%BB%8F%E8%90%A5%E9%83%A8
+        - link "商标" [ref=e43] [cursor=pointer]:
+          - /url: /search/trademark?key=%E5%8D%97%E5%AE%81%E5%B8%82%E9%9D%92%E7%A7%80%E5%8C%BA%E5%87%A4%E8%BE%89%E5%9B%BE%E4%B9%A6%E7%BB%8F%E8%90%A5%E9%83%A8
+        - link "专利" [ref=e44] [cursor=pointer]:
+          - /url: /search/patent?key=%E5%8D%97%E5%AE%81%E5%B8%82%E9%9D%92%E7%A7%80%E5%8C%BA%E5%87%A4%E8%BE%89%E5%9B%BE%E4%B9%A6%E7%BB%8F%E8%90%A5%E9%83%A8
+        - link "著作权" [ref=e45] [cursor=pointer]:
+          - /url: /search/copyright?key=%E5%8D%97%E5%AE%81%E5%B8%82%E9%9D%92%E7%A7%80%E5%8C%BA%E5%87%A4%E8%BE%89%E5%9B%BE%E4%B9%A6%E7%BB%8F%E8%90%A5%E9%83%A8
+        - link "招投标" [ref=e46] [cursor=pointer]:
+          - /url: https://zhaobiao.qixin.com/bidding?key=%E5%8D%97%E5%AE%81%E5%B8%82%E9%9D%92%E7%A7%80%E5%8C%BA%E5%87%A4%E8%BE%89%E5%9B%BE%E4%B9%A6%E7%BB%8F%E8%90%A5%E9%83%A8
+        - link "高级搜索" [ref=e47] [cursor=pointer]:
+          - /url: /search/advance
+    - generic [ref=e48]:
+      - generic [ref=e49]:
+        - generic [ref=e50]:
+          - generic [ref=e51]: 筛选条件
+          - generic [ref=e52]:
+            - text: 更多筛选条件，试试
+            - link "search 高级搜索 " [ref=e53] [cursor=pointer]:
+              - /url: /search/advance?keyword=%E5%8D%97%E5%AE%81%E5%B8%82%E9%9D%92%E7%A7%80%E5%8C%BA%E5%87%A4%E8%BE%89%E5%9B%BE%E4%B9%A6%E7%BB%8F%E8%90%A5%E9%83%A8
+              - img "search" [ref=e54]
+              - generic [ref=e55]: 高级搜索
+              - generic [ref=e56]: 
+        - generic [ref=e57]:
+          - generic [ref=e58]: 搜索范围
+          - generic [ref=e61]:
+            - generic [ref=e62] [cursor=pointer]: 企业名称
+            - generic [ref=e63] [cursor=pointer]: 股东
+            - generic [ref=e64] [cursor=pointer]: 法人
+            - generic [ref=e65] [cursor=pointer]: 高管
+            - generic [ref=e66] [cursor=pointer]: 地址电话
+            - generic [ref=e67] [cursor=pointer]: 经营范围
+            - generic [ref=e68] [cursor=pointer]: 商标
+            - generic [ref=e69] [cursor=pointer]: 专利
+            - generic [ref=e70] [cursor=pointer]: 作品著作权
+            - generic [ref=e71] [cursor=pointer]: 软件著作权
+            - generic [ref=e72] [cursor=pointer]: 品牌/产品
+        - generic [ref=e73]:
+          - generic [ref=e74]: 成立年限
+          - generic [ref=e77]:
+            - generic [ref=e78] [cursor=pointer]: 1年内
+            - generic [ref=e79] [cursor=pointer]: 1-5年
+            - generic [ref=e80] [cursor=pointer]: 5-10年
+            - generic [ref=e81] [cursor=pointer]: 10-15年
+            - generic [ref=e82] [cursor=pointer]: 15年以上
+            - generic [ref=e83] [cursor=pointer]: 自定义
+            - generic [ref=e85]:
+              - combobox [ref=e86]
+              - generic [ref=e87]: 至
+              - combobox [ref=e88]
+        - generic [ref=e90]:
+          - generic [ref=e91]: 注册资本
+          - generic [ref=e94]:
+            - generic [ref=e95] [cursor=pointer]: 0万 - 100万
+            - generic [ref=e96] [cursor=pointer]: 100万 - 200万
+            - generic [ref=e97] [cursor=pointer]: 200万 - 500万
+            - generic [ref=e98] [cursor=pointer]: 500万 - 1000万
+            - generic [ref=e99] [cursor=pointer]: 1000万以上
+            - generic [ref=e100] [cursor=pointer]: 自定义
+        - generic [ref=e102]:
+          - generic [ref=e103]: 省份地区
+          - generic [ref=e106]:
+            - generic [ref=e107] [cursor=pointer]: 北京
+            - generic [ref=e108] [cursor=pointer]: 天津
+            - generic [ref=e109] [cursor=pointer]: 河北
+            - generic [ref=e110] [cursor=pointer]: 山西
+            - generic [ref=e111] [cursor=pointer]: 内蒙古
+            - generic [ref=e112] [cursor=pointer]: 辽宁
+            - generic [ref=e113] [cursor=pointer]: 吉林
+            - generic [ref=e114] [cursor=pointer]: 黑龙江
+            - generic [ref=e115] [cursor=pointer]: 上海
+            - generic [ref=e116] [cursor=pointer]: 江苏
+            - generic [ref=e117] [cursor=pointer]: 浙江
+            - generic [ref=e118] [cursor=pointer]: 安徽
+            - generic [ref=e119] [cursor=pointer]: 福建
+            - generic [ref=e120] [cursor=pointer]: 江西
+            - generic [ref=e121] [cursor=pointer]: 山东
+            - generic [ref=e122] [cursor=pointer]: 河南
+            - generic [ref=e123] [cursor=pointer]: 湖北
+            - generic [ref=e124] [cursor=pointer]: 湖南
+            - generic [ref=e125] [cursor=pointer]: 广东
+            - generic [ref=e126] [cursor=pointer]: 广西
+            - generic [ref=e127] [cursor=pointer]: 海南
+            - generic [ref=e128] [cursor=pointer]: 重庆
+            - generic [ref=e129] [cursor=pointer]: 四川
+            - generic [ref=e130] [cursor=pointer]: 贵州
+            - generic [ref=e131] [cursor=pointer]: 云南
+            - generic [ref=e132] [cursor=pointer]: 西藏
+            - generic [ref=e133] [cursor=pointer]: 陕西
+            - generic [ref=e134] [cursor=pointer]: 甘肃
+            - generic [ref=e135] [cursor=pointer]: 青海
+            - generic [ref=e136] [cursor=pointer]: 宁夏
+            - generic [ref=e137] [cursor=pointer]: 新疆
+          - generic [ref=e139] [cursor=pointer]:
+            - text: 更多
+            - generic [ref=e140]: 
+        - generic [ref=e141]:
+          - generic [ref=e142]: 行业分类
+          - generic [ref=e145]:
+            - generic [ref=e146] [cursor=pointer]: 居民服务、修理和其他服务业
+            - generic [ref=e147] [cursor=pointer]: 交通运输、仓储和邮政业
+            - generic [ref=e148] [cursor=pointer]: 水利、环境和公共设施管理业
+            - generic [ref=e149] [cursor=pointer]: 教育
+            - generic [ref=e150] [cursor=pointer]: 批发和零售业
+            - generic [ref=e151] [cursor=pointer]: 国际组织
+            - generic [ref=e152] [cursor=pointer]: 信息传输、软件和信息技术服务业
+            - generic [ref=e153] [cursor=pointer]: 电力、热力、燃气及水生产和供应业
+            - generic [ref=e154] [cursor=pointer]: 公共管理、社会保障和社会组织
+            - generic [ref=e155] [cursor=pointer]: 采矿业
+            - generic [ref=e156] [cursor=pointer]: 制造业
+            - generic [ref=e157] [cursor=pointer]: 金融业
+            - generic [ref=e158] [cursor=pointer]: 科学研究和技术服务业
+            - generic [ref=e159] [cursor=pointer]: 农、林、牧、渔业
+            - generic [ref=e160] [cursor=pointer]: 住宿和餐饮业
+            - generic [ref=e161] [cursor=pointer]: 房地产业
+            - generic [ref=e162] [cursor=pointer]: 文化、体育和娱乐业
+            - generic [ref=e163] [cursor=pointer]: 租赁和商务服务业
+            - generic [ref=e164] [cursor=pointer]: 建筑业
+            - generic [ref=e165] [cursor=pointer]: 卫生和社会工作
+          - generic [ref=e167] [cursor=pointer]:
+            - text: 更多
+            - generic [ref=e168]: 
+        - generic [ref=e172]:
+          - generic [ref=e173]:
+            - text: 企业相关
+            - img "vip" [ref=e174]
+          - generic [ref=e177]:
+            - button "企业规模" [ref=e180] [cursor=pointer]: 企业规模
+            - button "实缴资本" [ref=e184] [cursor=pointer]: 实缴资本
+            - button "经营状态" [ref=e188] [cursor=pointer]: 经营状态
+            - button "公司类型" [ref=e192] [cursor=pointer]: 公司类型
+            - button "分支机构" [ref=e196] [cursor=pointer]: 分支机构
+            - button "组织类型" [ref=e200] [cursor=pointer]: 组织类型
+            - button "地址信息" [ref=e204] [cursor=pointer]: 地址信息
+            - button "货币类型" [ref=e208] [cursor=pointer]: 货币类型
+        - generic [ref=e212] [cursor=pointer]: 
+      - generic [ref=e215]:
+        - generic [ref=e217]:
+          - text: 启信宝为您找到
+          - emphasis [ref=e218]: "1"
+          - text: 条相关结果，用时 0.034 秒
+        - generic [ref=e219]:
+          - button "默认排序" [ref=e221] [cursor=pointer]:
+            - generic [ref=e223]: 默认排序
+          - generic [ref=e225] [cursor=pointer]:
+            - generic [ref=e226]: 
+            - text: 数据导出
+      - generic [ref=e228]:
+        - generic [ref=e229]:
+          - generic [ref=e234]: 凤辉图书
+          - generic [ref=e235]:
+            - generic [ref=e236]:
+              - generic [ref=e237]:
+                - generic [ref=e238]:
+                  - link "南宁市青秀区凤辉图书经营部（个体工商户）" [ref=e240] [cursor=pointer]:
+                    - /url: /company/2d8ad798-ac71-11ef-86f8-525400061c55
+                    - generic [ref=e242]:
+                      - emphasis [ref=e243]: 南宁市青秀区凤辉图书经营部
+                      - text: （个体工商户）
+                  - generic [ref=e244]:
+                    - generic [ref=e245]: 存续
+                    - generic [ref=e246]: 小微企业
+                - generic [ref=e247]:
+                  - generic [ref=e248] [cursor=pointer]:
+                    - generic [ref=e249]: 
+                    - generic [ref=e250]: 笔记
+                  - generic [ref=e251] [cursor=pointer]:
+                    - generic [ref=e252]: 
+                    - generic [ref=e253]: 联系
+                  - generic [ref=e255] [cursor=pointer]:
+                    - generic [ref=e256]: 
+                    - generic [ref=e257]: 监控
+              - generic [ref=e258]:
+                - generic [ref=e259]:
+                  - text: 经营者：
+                  - link "杨凤辉" [ref=e264] [cursor=pointer]:
+                    - /url: https://www.qixin.com/people/info/c08bd2d8ea2f909b45cfd32fa6f8dc0c
+                    - generic [ref=e265]: 杨凤辉
+                - generic [ref=e267]: 注册资本：-
+                - generic [ref=e268]: 成立日期：2024-11-27
+                - generic [ref=e269]: 统一社会信用代码：92450103MAE4T3UL51
+              - generic [ref=e270]:
+                - generic [ref=e271]:
+                  - text: 电话：
+                  - generic [ref=e272] [cursor=pointer]: 150********
+                - generic [ref=e273]:
+                  - generic [ref=e274]: 网址：
+                  - generic [ref=e275] [cursor=pointer]: www.goofish.com/personal?spm=a21ybx.item.itemheader.1.32473da6o5pdv7&userid=2736380295
+              - generic [ref=e276]:
+                - text: 地址：
+                - generic [ref=e277]:
+                  - emphasis [ref=e278]: 南宁市青秀区
+                  - text: 长福路9号龙胤·
+                  - emphasis [ref=e279]: 凤
+                  - text: 凰城12号楼1单元2402号
+                - generic [ref=e280] [cursor=pointer]: 地图显示
+              - link "| 2 条自身风险 0 条提示信息 0 条关联风险" [ref=e282] [cursor=pointer]:
+                - /url: /detail/company/qx-risk/2d8ad798-ac71-11ef-86f8-525400061c55
+                - img [ref=e283]
+                - generic [ref=e284]: "|"
+                - generic [ref=e285]: 2 条自身风险
+                - generic [ref=e286]: 0 条提示信息
+                - generic [ref=e287]: 0 条关联风险
+            - img [ref=e290]
+        - generic [ref=e292]:
+          - generic [ref=e293]: 没有找到您想找的企业？您可以尝试以下操作
+          - generic [ref=e294]:
+            - generic [ref=e295]: 输入更准确的关键词或调整搜索条件，重新搜索
+            - generic [ref=e296]:
+              - text: 前往
+              - link "高级搜索" [ref=e297] [cursor=pointer]:
+                - /url: /search/advance
+              - text: ，试试更多筛选条件搜索
+            - generic [ref=e298]:
+              - text: 以上都不行？向我们反馈
+              - generic [ref=e299] [cursor=pointer]: 新增企业
+  - contentinfo [ref=e301]:
+    - generic [ref=e302]:
+      - generic [ref=e303]:
+        - generic [ref=e304]:
+          - link "text-url-reverse":
+            - /url: /
+            - img "text-url-reverse"
+          - img "brand" [ref=e305]
+        - generic [ref=e306]:
+          - heading "快速导航" [level=4] [ref=e307]
+          - generic [ref=e308]:
+            - link "地区导航" [ref=e309] [cursor=pointer]:
+              - /url: https://www.qixin.com/area-nav
+            - link "行业导航" [ref=e310] [cursor=pointer]:
+              - /url: https://www.qixin.com/industry-nav
+            - link "热门搜索" [ref=e311] [cursor=pointer]:
+              - /url: https://www.qixin.com/hot
+            - link "人员名录" [ref=e312] [cursor=pointer]:
+              - /url: https://www.qixin.com/people-nav
+            - link "年报查询" [ref=e313] [cursor=pointer]:
+              - /url: https://www.qixin.com/report
+            - link "品牌名录" [ref=e314] [cursor=pointer]:
+              - /url: https://www.qixin.com/brand-nav
+            - link "企业查询" [ref=e315] [cursor=pointer]:
+              - /url: /search?key=小米
+            - link "老板查询" [ref=e316] [cursor=pointer]:
+              - /url: /search/people?key=雷军
+            - link "商标查询" [ref=e317] [cursor=pointer]:
+              - /url: /search/trademark?key=小米
+            - link "融资查询" [ref=e318] [cursor=pointer]:
+              - /url: /search/financing
+            - link "关系查询" [ref=e319] [cursor=pointer]:
+              - /url: https://www.qixin.com/search/find-relation
+            - link "招标查询" [ref=e320] [cursor=pointer]:
+              - /url: https://zhaobiao.qixin.com/bidding
+            - link "批量查询" [ref=e321] [cursor=pointer]:
+              - /url: https://www.qixin.com/batch/search
+            - link "版权查询" [ref=e322] [cursor=pointer]:
+              - /url: https://www.qixin.com/copy-right
+            - link "姓氏大全" [ref=e323] [cursor=pointer]:
+              - /url: https://www.qixin.com/names
+            - link "企业版" [ref=e324] [cursor=pointer]:
+              - /url: https://b.qixin.com/?from=index
+            - link "招聘查询" [ref=e325] [cursor=pointer]:
+              - /url: https://www.qixin.com/job
+            - link "守护个人信息安全" [ref=e326] [cursor=pointer]:
+              - /url: https://www.qixin.com/network-case
+            - link "藏蓝青春 “键”指河山" [ref=e327] [cursor=pointer]:
+              - /url: https://www.qixin.com/network-youth
+            - link "守护“数字世界身份信息”" [ref=e328] [cursor=pointer]:
+              - /url: https://www.qixin.com/network-number
+        - generic [ref=e329]:
+          - heading "关于启信宝" [level=4] [ref=e330]
+          - generic [ref=e331]:
+            - link "关于我们" [ref=e332] [cursor=pointer]:
+              - /url: /other/about
+            - link "常见问题" [ref=e333] [cursor=pointer]:
+              - /url: https://www.qixin.com/customer-service
+            - generic [ref=e334] [cursor=pointer]: 意见反馈
+            - link "服务协议" [ref=e335] [cursor=pointer]:
+              - /url: /other/about/terms
+            - link "隐私政策" [ref=e336] [cursor=pointer]:
+              - /url: /other/about/privacy
+            - link "儿童隐私" [ref=e337] [cursor=pointer]:
+              - /url: https://static-cdn-p.qixin.com/policy/qixinbao_Web/children_zh-cn.html
+        - generic [ref=e338]:
+          - heading "联系方式" [level=4] [ref=e339]
+          - generic [ref=e340]:
+            - link "在线咨询" [ref=e341] [cursor=pointer]:
+              - /url: https://www.qixin.com/customer-service
+            - generic [ref=e342]:
+              - text: 企业邮箱：
+              - link "kefu@qixin.com" [ref=e343] [cursor=pointer]:
+                - /url: mailto:kefu@qixin.com
+            - generic [ref=e344]: 客服电话：400-6383-888
+            - generic [ref=e345]: 工作时间：工作日9:30-19:00
+        - generic [ref=e346]:
+          - generic [ref=e347]:
+            - img "启信宝APP" [ref=e348]
+            - generic [ref=e349]: 扫码下载APP
+          - generic [ref=e350]:
+            - img "启信宝小程序" [ref=e351]
+            - generic [ref=e352]: 启信宝小程序
+      - generic [ref=e353]: 数据来源：全国企业信用信息公示系统国家知识产权局商标局版权局
+      - generic [ref=e354]:
+        - text: 友情链接：
+        - link "合合信息" [ref=e355] [cursor=pointer]:
+          - /url: https://www.intsig.com
+        - link "名片全能王" [ref=e356] [cursor=pointer]:
+          - /url: https://www.camcard.com
+        - link "扫描全能王" [ref=e357] [cursor=pointer]:
+          - /url: https://www.camscanner.com
+        - link "开放平台" [ref=e358] [cursor=pointer]:
+          - /url: https://data.qixin.com/?from=footer_link
+        - link "国务院发展研究中心信息网" [ref=e359] [cursor=pointer]:
+          - /url: http://www.drcnet.com.cn
+        - link "蝉大师" [ref=e360] [cursor=pointer]:
+          - /url: https://chandashi.com
+        - link "权大师" [ref=e361] [cursor=pointer]:
+          - /url: https://www.quandashi.com
+        - link "中国比地招标网" [ref=e362] [cursor=pointer]:
+          - /url: http://www.bidizhaobiao.com
+        - link "网络非法金融信息举报专区" [ref=e363] [cursor=pointer]:
+          - /url: http://www.js12377.cn/wyjb/index.jhtml?reportNext=1&reportClass=2&harmType=2
+        - link "建设招标网" [ref=e364] [cursor=pointer]:
+          - /url: https://www.jszhaobiao.com
+        - link "蔚蓝地图" [ref=e365] [cursor=pointer]:
+          - /url: https://www.ipe.org.cn
+        - link "洞见研报" [ref=e366] [cursor=pointer]:
+          - /url: https://www.djyanbao.com/index
+        - link "猪八戒网" [ref=e367] [cursor=pointer]:
+          - /url: https://suzhou.zbj.com
+        - link "小程序商城系统" [ref=e368] [cursor=pointer]:
+          - /url: https://www.youzan.com
+      - generic [ref=e369]:
+        - generic [ref=e370]:
+          - generic [ref=e371]:
+            - link "沪公网安备 31010602003968号" [ref=e372] [cursor=pointer]:
+              - /url: http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010602003968
+            - text: 上海生腾数据科技有限公司，版权所有©2014 - 2026
+            - link "沪ICP备18033674号-2" [ref=e373] [cursor=pointer]:
+              - /url: https://beian.miit.gov.cn
+          - generic [ref=e374]:
+            - generic [ref=e375]:
+              - text: 增值电信业务经营许可证：
+              - link "沪B2-20200755" [ref=e376] [cursor=pointer]:
+                - /url: https://beian.miit.gov.cn
+            - text: 公司地址：上海市静安区万荣路1268号云立方A座11层
+        - generic [ref=e377]:
+          - img "营业执照" [ref=e378]
+          - link "工商网监" [ref=e379] [cursor=pointer]:
+            - /url: http://scjgj.sh.gov.cn
+            - img "工商网监" [ref=e380]
+          - link "上海市互联网违法和不良信息举报中心" [ref=e381] [cursor=pointer]:
+            - /url: http://www.shjbzx.cn
+            - img "上海市互联网违法和不良信息举报中心" [ref=e382]
+          - link "中央网信办违法和不良信息举报中心" [ref=e383] [cursor=pointer]:
+            - /url: https://www.12377.cn
+            - img "中央网信办违法和不良信息举报中心" [ref=e384]
+        - generic [ref=e385]:
+          - generic [ref=e386]: 不良信息举报电话：400-6383-888
+          - generic [ref=e387]: 举报邮箱：
+          - link "kefu@qixin.com" [ref=e388] [cursor=pointer]:
+            - /url: mailto:kefu@qixin.com
+  - generic [ref=e389]:
+    - generic [ref=e390]:
+      - generic [ref=e391]: 
+      - generic [ref=e392]: 小程序
+    - generic [ref=e393]:
+      - generic [ref=e394]: 
+      - generic [ref=e395]: APP
+    - generic [ref=e396]:
+      - generic [ref=e397]: 
+      - generic [ref=e398]: 微信
+    - generic [ref=e399] [cursor=pointer]:
+      - generic [ref=e400]: 
+      - generic [ref=e401]: 反馈
+    - generic [ref=e402] [cursor=pointer]:
+      - generic [ref=e403]: 
+      - generic [ref=e404]: 客服中心
+    - generic [ref=e405] [cursor=pointer]:
+      - generic [ref=e406]: 
+      - generic [ref=e407]: 回到顶部
+    - generic [ref=e409] [cursor=pointer]: 
+  - generic:
+    - generic:
+      - img "negative" [ref=e410]
+      - generic [ref=e411]:
+        - generic [ref=e412] [cursor=pointer]:
+          - img "left" [ref=e413]
+          - img "right" [ref=e414]
+          - img "qrcode" [ref=e415]
+        - generic [ref=e416] [cursor=pointer]: 
+  - generic [ref=e417]:
+    - img [ref=e418] [cursor=pointer]
+    - img "close" [ref=e419] [cursor=pointer]

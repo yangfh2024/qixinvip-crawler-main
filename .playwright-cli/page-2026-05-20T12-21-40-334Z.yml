@@ -1,0 +1,468 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - text:  
+    - generic [ref=e5]:
+      - generic [ref=e8]:
+        - link "text-url-reverse" [ref=e9] [cursor=pointer]:
+          - /url: /
+          - img "text-url-reverse" [ref=e10]
+        - img "credential-title" [ref=e12]
+        - generic [ref=e13]:
+          - generic [ref=e14] [cursor=pointer]:
+            - img [ref=e15]
+            - generic [ref=e16]: 企业版
+          - generic [ref=e17] [cursor=pointer]:
+            - img [ref=e18]
+            - generic [ref=e19]: 数据服务
+          - link "产业洞察" [ref=e20] [cursor=pointer]:
+            - /url: https://z.qixin.com/
+            - img [ref=e21]
+            - generic [ref=e22]: 产业洞察
+          - generic [ref=e24] [cursor=pointer]: 合作入口
+          - generic [ref=e26] [cursor=pointer]: 应用
+          - link [ref=e28] [cursor=pointer]:
+            - /url: /pay/vip
+            - img [ref=e29]
+        - generic [ref=e31] [cursor=pointer]: 注册/登录
+      - generic [ref=e32]:
+        - generic [ref=e33]: 企业信息调查专家
+        - generic [ref=e34]:
+          - generic [ref=e35]:
+            - generic [ref=e36] [cursor=pointer]: 查企业
+            - generic [ref=e37] [cursor=pointer]: 查老板
+            - generic [ref=e38] [cursor=pointer]: 查风险
+            - generic [ref=e39] [cursor=pointer]: 查商标
+            - generic [ref=e40] [cursor=pointer]: 查招标
+          - generic [ref=e41]:
+            - img [ref=e42]
+            - generic [ref=e43]:
+              - generic [ref=e44]: 
+              - textbox "请输入企业名称、股东高管、品牌等" [ref=e45]
+              - link "-" [ref=e47] [cursor=pointer]:
+                - /url: /search/advance
+                - generic [ref=e49]: "-"
+            - generic [ref=e51] [cursor=pointer]: 搜 索
+          - generic [ref=e52]:
+            - img [ref=e54]
+            - generic [ref=e55]:
+              - link "长鑫科技集团股份有限公司" [ref=e56] [cursor=pointer]:
+                - /url: https://www.qixin.com/company/00823897-0b33-4b16-9751-3b4709550525
+              - link "长江存储控股股份有限公司" [ref=e57] [cursor=pointer]:
+                - /url: https://www.qixin.com/company/0225d3d8-4dd2-46b3-b30c-8b15b1db1397
+              - link "合肥清辉集电企业管理合伙企业（有限合伙）" [ref=e58] [cursor=pointer]:
+                - /url: https://www.qixin.com/company/5edff9db-8deb-49eb-9752-47b64ed65340
+              - link "合肥长鑫集成电路有限责任公司" [ref=e59] [cursor=pointer]:
+                - /url: https://www.qixin.com/company/39975399-020e-4fec-9a91-9f9589180258
+              - link "长鑫存储技术有限公司" [ref=e60] [cursor=pointer]:
+                - /url: https://www.qixin.com/company/aab8210f-7b47-4739-8899-f5ba4a0d36a0
+              - link "合肥芯睿投资有限责任公司" [ref=e61] [cursor=pointer]:
+                - /url: https://www.qixin.com/company/19a16bbf-3096-4012-b8fe-84428b838df2
+              - link "合肥海恒控股集团有限公司" [ref=e62] [cursor=pointer]:
+                - /url: https://www.qixin.com/company/18c4b500-b231-403e-921f-1f0069b3e5aa
+              - link "湖北长晟发展有限责任公司" [ref=e63] [cursor=pointer]:
+                - /url: https://www.qixin.com/company/da17baec-d2e1-4e04-8d6a-37199bf62f91
+              - link "国家集成电路产业投资基金二期股份有限公司" [ref=e64] [cursor=pointer]:
+                - /url: https://www.qixin.com/company/428d1493-9584-422d-8f45-11e0b17e06c6
+              - link "恒大地产集团有限公司" [ref=e65] [cursor=pointer]:
+                - /url: https://www.qixin.com/company/5cc0ecc5-0920-4e9e-ae89-d8d5043e3da0
+              - link "合肥集鑫肆拾号企业管理合伙企业（有限合伙）" [ref=e66] [cursor=pointer]:
+                - /url: https://www.qixin.com/company/540ea24e-c102-4aad-8ba1-814db527c01d
+              - link "合肥市产业投资控股（集团）有限公司" [ref=e67] [cursor=pointer]:
+                - /url: https://www.qixin.com/company/e329726f-147b-424c-916d-cc20c8a06537
+    - generic [ref=e69]:
+      - generic [ref=e70]:
+        - generic [ref=e71]: 热门应用
+        - generic [ref=e73] [cursor=pointer]:
+          - generic [ref=e74]: "-"
+          - generic [ref=e75]: 全部应用
+      - generic [ref=e76]:
+        - link "新增企业 查看新成立的企业" [ref=e77] [cursor=pointer]:
+          - /url: /search/new-company
+          - img [ref=e78]
+          - generic [ref=e79]:
+            - generic [ref=e81]: 新增企业
+            - generic [ref=e82]: 查看新成立的企业
+        - link "找关系 查看企业间关联关系" [ref=e83] [cursor=pointer]:
+          - /url: https://www.qixin.com/search/find-relation
+          - img [ref=e84]
+          - generic [ref=e85]:
+            - generic [ref=e87]: 找关系
+            - generic [ref=e88]: 查看企业间关联关系
+        - link "数据API 成熟API解决方案" [ref=e89] [cursor=pointer]:
+          - /url: https://data.qixin.com/api?from=functional_grid
+          - img [ref=e90]
+          - generic [ref=e91]:
+            - generic [ref=e93]: 数据API
+            - generic [ref=e94]: 成熟API解决方案
+        - link "司法大数据 全库司法数据查询 NEW" [ref=e95] [cursor=pointer]:
+          - /url: /search/judicial-big-data
+          - img [ref=e96]
+          - generic [ref=e97]:
+            - generic [ref=e99]: 司法大数据
+            - generic [ref=e100]: 全库司法数据查询
+          - generic [ref=e101]: NEW
+        - link "查招标 全流程招标信息服务" [ref=e102] [cursor=pointer]:
+          - /url: https://zhaobiao.qixin.com/bidding?track=tabs
+          - img [ref=e103]
+          - generic [ref=e104]:
+            - generic [ref=e106]: 查招标
+            - generic [ref=e107]: 全流程招标信息服务
+        - link "附近企业 快速发现目标客户" [ref=e108] [cursor=pointer]:
+          - /url: https://www.qixin.com/app/map-search
+          - img [ref=e109]
+          - generic [ref=e110]:
+            - generic [ref=e112]: 附近企业
+            - generic [ref=e113]: 快速发现目标客户
+        - link "批量查询 批量获取企业信息 企业 | 报告 | 受益人 | 集团" [ref=e114] [cursor=pointer]:
+          - /url: https://www.qixin.com/batch/search
+          - img [ref=e115]
+          - generic [ref=e116]:
+            - generic [ref=e118]: 批量查询
+            - generic [ref=e119]: 批量获取企业信息
+          - generic [ref=e120]: 企业 | 报告 | 受益人 | 集团
+        - link "企业认证 让合作变得更可信" [ref=e121] [cursor=pointer]:
+          - /url: https://www.qixin.com/user/claim?target=certificate_introduce&params=%7B%22trackfrom%22%3A%22pc_home_tab_certificate%22%7D
+          - img [ref=e122]
+          - generic [ref=e123]:
+            - generic [ref=e125]: 企业认证
+            - generic [ref=e126]: 让合作变得更可信
+        - link "查融资 查询融资轮次信息" [ref=e127] [cursor=pointer]:
+          - /url: /search/financing
+          - img [ref=e128]
+          - generic [ref=e129]:
+            - generic [ref=e131]: 查融资
+            - generic [ref=e132]: 查询融资轮次信息
+        - generic [ref=e133] [cursor=pointer]:
+          - img [ref=e134]
+          - generic [ref=e135]:
+            - generic [ref=e137]: 查合规
+            - generic [ref=e138]: 合规数据辅助商业决策
+    - generic [ref=e142]:
+      - generic [ref=e143]:
+        - link "" [ref=e145] [cursor=pointer]:
+          - /url: https://data.qixin.com/api?from=index_banner
+          - img [ref=e146]
+          - generic [ref=e147]: 
+        - link "" [ref=e149] [cursor=pointer]:
+          - /url: https://ai.qixin.com/?from=AIDATA_Invite
+          - img [ref=e150]
+          - generic [ref=e151]: 
+        - link "" [ref=e153] [cursor=pointer]:
+          - /url: https://www.qixin.com/pay/vip?tab=teamvip
+          - img [ref=e154]
+          - generic [ref=e155]: 
+      - list [ref=e156]:
+        - listitem [ref=e157] [cursor=pointer]:
+          - button "幻灯片切换至索引 1" [ref=e158]
+        - listitem [ref=e159] [cursor=pointer]:
+          - button "幻灯片切换至索引 2" [ref=e160]
+        - listitem [ref=e161] [cursor=pointer]:
+          - button "幻灯片切换至索引 3" [ref=e162]
+    - generic [ref=e165]:
+      - generic [ref=e166]:
+        - generic [ref=e167]:
+          - img [ref=e168]
+          - generic [ref=e169]: 企业数据
+          - generic [ref=e170]: 全国
+        - generic [ref=e171]:
+          - generic [ref=e172]:
+            - generic [ref=e173]: 515,084
+            - generic [ref=e174]: 近7天新增企业
+          - generic [ref=e175]:
+            - generic [ref=e176]: 168,146
+            - generic [ref=e177]: 近7天消亡企业
+        - generic [ref=e178]:
+          - generic [ref=e179]: 行业新增
+          - generic [ref=e180]:
+            - generic [ref=e181]: 零售业
+            - generic [ref=e182]:
+              - progressbar [ref=e183]
+              - generic [ref=e187]: 148,616
+          - generic [ref=e188]:
+            - generic [ref=e189]: 批发业
+            - generic [ref=e190]:
+              - progressbar [ref=e191]
+              - generic [ref=e195]: 78,795
+          - generic [ref=e196]:
+            - generic [ref=e197]: 商务服务业
+            - generic [ref=e198]:
+              - progressbar [ref=e199]
+              - generic [ref=e203]: 48,910
+        - generic [ref=e204]:
+          - generic [ref=e205]: 行业消亡
+          - generic [ref=e206]:
+            - generic [ref=e207]: 零售业
+            - generic [ref=e208]:
+              - progressbar [ref=e209]
+              - generic [ref=e213]: 54,995
+          - generic [ref=e214]:
+            - generic [ref=e215]: 批发业
+            - generic [ref=e216]:
+              - progressbar [ref=e217]
+              - generic [ref=e221]: 22,365
+          - generic [ref=e222]:
+            - generic [ref=e223]: 餐饮业
+            - generic [ref=e224]:
+              - progressbar [ref=e225]
+              - generic [ref=e229]: 17,066
+      - generic [ref=e230]:
+        - generic [ref=e231]:
+          - img [ref=e232]
+          - generic [ref=e233]: 企业热榜
+        - generic [ref=e234]:
+          - link "长鑫科技集团股份有限公司 长鑫科技集团股份有限公司" [ref=e236] [cursor=pointer]:
+            - /url: https://www.qixin.com/company/00823897-0b33-4b16-9751-3b4709550525
+            - img [ref=e237]
+            - img "长鑫科技集团股份有限公司" [ref=e240]
+            - generic [ref=e241]: 长鑫科技集团股份有限公司
+          - link "长江存储控股股份有限公司 长江存储控股股份有限公司" [ref=e243] [cursor=pointer]:
+            - /url: https://www.qixin.com/company/0225d3d8-4dd2-46b3-b30c-8b15b1db1397
+            - img [ref=e244]
+            - img "长江存储控股股份有限公司" [ref=e247]
+            - generic [ref=e248]: 长江存储控股股份有限公司
+          - link "清辉集电 合肥清辉集电企业管理合伙企业（有限合伙）" [ref=e250] [cursor=pointer]:
+            - /url: https://www.qixin.com/company/5edff9db-8deb-49eb-9752-47b64ed65340
+            - img [ref=e251]
+            - generic [ref=e255]: 清辉集电
+            - generic [ref=e256]: 合肥清辉集电企业管理合伙企业（有限合伙）
+          - link "合肥长鑫集成电路有限责任公司 合肥长鑫集成电路有限责任公司" [ref=e258] [cursor=pointer]:
+            - /url: https://www.qixin.com/company/39975399-020e-4fec-9a91-9f9589180258
+            - img [ref=e259]
+            - img "合肥长鑫集成电路有限责任公司" [ref=e262]
+            - generic [ref=e263]: 合肥长鑫集成电路有限责任公司
+          - link "长鑫存储技术有限公司 长鑫存储技术有限公司" [ref=e265] [cursor=pointer]:
+            - /url: https://www.qixin.com/company/aab8210f-7b47-4739-8899-f5ba4a0d36a0
+            - img [ref=e266]
+            - img "长鑫存储技术有限公司" [ref=e269]
+            - generic [ref=e270]: 长鑫存储技术有限公司
+          - link "芯睿投资 合肥芯睿投资有限责任公司" [ref=e272] [cursor=pointer]:
+            - /url: https://www.qixin.com/company/19a16bbf-3096-4012-b8fe-84428b838df2
+            - img [ref=e273]
+            - generic [ref=e277]: 芯睿投资
+            - generic [ref=e278]: 合肥芯睿投资有限责任公司
+      - generic [ref=e279]:
+        - generic [ref=e280]:
+          - img [ref=e281]
+          - generic [ref=e282]: 人物热榜
+        - generic [ref=e283]:
+          - link "朱 朱一明 关联企业14家 | 兆易创新科技集团股份有限公司" [ref=e285] [cursor=pointer]:
+            - /url: https://www.qixin.com/people/info/0463bd2ab04ed93bf0b413d3b5306a0f
+            - img [ref=e286]
+            - img "朱" [ref=e289]
+            - generic [ref=e290]: 朱一明
+            - generic [ref=e291]: 关联企业14家 | 兆易创新科技集团股份有限公司
+          - link "马 马云 关联企业46家 | 北京阿里巴巴信息技术有限公司" [ref=e293] [cursor=pointer]:
+            - /url: https://www.qixin.com/people/info/06b89ab3783a5415a5995811fd089ae6
+            - img [ref=e294]
+            - img "马" [ref=e297]
+            - generic [ref=e298]: 马云
+            - generic [ref=e299]: 关联企业46家 | 北京阿里巴巴信息技术有限公司
+          - link "张 张子彪 关联企业11家 | 苏州研途教育科技有限公司" [ref=e301] [cursor=pointer]:
+            - /url: https://www.qixin.com/people/info/5d5e2b6ff325cf503e69b9322b9f43d0
+            - img [ref=e302]
+            - img "张" [ref=e305]
+            - generic [ref=e306]: 张子彪
+            - generic [ref=e307]: 关联企业11家 | 苏州研途教育科技有限公司
+          - link "陈 陈南翔 关联企业13家 | 长江存储科技有限责任公司" [ref=e309] [cursor=pointer]:
+            - /url: https://www.qixin.com/people/info/406c6707c60003077608140f9824d1f4
+            - img [ref=e310]
+            - img "陈" [ref=e313]
+            - generic [ref=e314]: 陈南翔
+            - generic [ref=e315]: 关联企业13家 | 长江存储科技有限责任公司
+          - link "俞 俞浩 关联企业21家 | 追觅科技（苏州）有限公司" [ref=e317] [cursor=pointer]:
+            - /url: https://www.qixin.com/people/info/05de23da3daf27c7e6653f0ff6dde44f
+            - img [ref=e318]
+            - img "俞" [ref=e321]
+            - generic [ref=e322]: 俞浩
+            - generic [ref=e323]: 关联企业21家 | 追觅科技（苏州）有限公司
+          - link "杨 杨建忠 关联企业18家 | 巨力集团有限公司" [ref=e325] [cursor=pointer]:
+            - /url: https://www.qixin.com/people/info/00e5a292e3c9bd9db6fc80d2f16b6544
+            - img [ref=e326]
+            - img "杨" [ref=e329]
+            - generic [ref=e330]: 杨建忠
+            - generic [ref=e331]: 关联企业18家 | 巨力集团有限公司
+    - generic [ref=e335]:
+      - tablist [ref=e339]:
+        - tab "按区域查询" [selected] [ref=e341]
+        - tab "按行业查询" [ref=e342]
+        - tab "最新注册企业" [ref=e343]
+      - tabpanel "按区域查询" [ref=e345]
+    - generic [ref=e348]:
+      - generic [ref=e349]:
+        - generic [ref=e350]:
+          - img [ref=e351]
+          - generic [ref=e352]: 3.1亿+企业和组织机构
+        - generic [ref=e353]: 实时搜索海量企业信息
+      - generic [ref=e354]:
+        - generic [ref=e355]:
+          - img [ref=e356]
+          - generic [ref=e357]: 毫秒搜索
+        - generic [ref=e358]: 精确搜索无需等待，节约时间
+      - generic [ref=e359]:
+        - generic [ref=e360]:
+          - img [ref=e361]
+          - generic [ref=e362]: 多维信息
+        - generic [ref=e363]: 工商、关联、失信，多类信息齐全
+      - generic [ref=e364]:
+        - generic [ref=e365]:
+          - img [ref=e366]
+          - generic [ref=e367]: 信用报告
+        - generic [ref=e368]: 快速洞察目标企业商业信用
+  - contentinfo [ref=e369]:
+    - generic [ref=e370]:
+      - generic [ref=e371]:
+        - generic [ref=e372]:
+          - link "text-url-reverse":
+            - /url: /
+            - img "text-url-reverse"
+          - img "brand" [ref=e373]
+        - generic [ref=e374]:
+          - heading "快速导航" [level=4] [ref=e375]
+          - generic [ref=e376]:
+            - link "地区导航" [ref=e377] [cursor=pointer]:
+              - /url: https://www.qixin.com/area-nav
+            - link "行业导航" [ref=e378] [cursor=pointer]:
+              - /url: https://www.qixin.com/industry-nav
+            - link "热门搜索" [ref=e379] [cursor=pointer]:
+              - /url: https://www.qixin.com/hot
+            - link "人员名录" [ref=e380] [cursor=pointer]:
+              - /url: https://www.qixin.com/people-nav
+            - link "年报查询" [ref=e381] [cursor=pointer]:
+              - /url: https://www.qixin.com/report
+            - link "品牌名录" [ref=e382] [cursor=pointer]:
+              - /url: https://www.qixin.com/brand-nav
+            - link "企业查询" [ref=e383] [cursor=pointer]:
+              - /url: /search?key=小米
+            - link "老板查询" [ref=e384] [cursor=pointer]:
+              - /url: /search/people?key=雷军
+            - link "商标查询" [ref=e385] [cursor=pointer]:
+              - /url: /search/trademark?key=小米
+            - link "融资查询" [ref=e386] [cursor=pointer]:
+              - /url: /search/financing
+            - link "关系查询" [ref=e387] [cursor=pointer]:
+              - /url: https://www.qixin.com/search/find-relation
+            - link "招标查询" [ref=e388] [cursor=pointer]:
+              - /url: https://zhaobiao.qixin.com/bidding
+            - link "批量查询" [ref=e389] [cursor=pointer]:
+              - /url: https://www.qixin.com/batch/search
+            - link "版权查询" [ref=e390] [cursor=pointer]:
+              - /url: https://www.qixin.com/copy-right
+            - link "姓氏大全" [ref=e391] [cursor=pointer]:
+              - /url: https://www.qixin.com/names
+            - link "企业版" [ref=e392] [cursor=pointer]:
+              - /url: https://b.qixin.com/?from=index
+            - link "招聘查询" [ref=e393] [cursor=pointer]:
+              - /url: https://www.qixin.com/job
+            - link "守护个人信息安全" [ref=e394] [cursor=pointer]:
+              - /url: https://www.qixin.com/network-case
+            - link "藏蓝青春 “键”指河山" [ref=e395] [cursor=pointer]:
+              - /url: https://www.qixin.com/network-youth
+            - link "守护“数字世界身份信息”" [ref=e396] [cursor=pointer]:
+              - /url: https://www.qixin.com/network-number
+        - generic [ref=e397]:
+          - heading "关于启信宝" [level=4] [ref=e398]
+          - generic [ref=e399]:
+            - link "关于我们" [ref=e400] [cursor=pointer]:
+              - /url: /other/about
+            - link "常见问题" [ref=e401] [cursor=pointer]:
+              - /url: https://www.qixin.com/customer-service
+            - generic [ref=e402] [cursor=pointer]: 意见反馈
+            - link "服务协议" [ref=e403] [cursor=pointer]:
+              - /url: /other/about/terms
+            - link "隐私政策" [ref=e404] [cursor=pointer]:
+              - /url: /other/about/privacy
+            - link "儿童隐私" [ref=e405] [cursor=pointer]:
+              - /url: https://static-cdn-p.qixin.com/policy/qixinbao_Web/children_zh-cn.html
+        - generic [ref=e406]:
+          - heading "联系方式" [level=4] [ref=e407]
+          - generic [ref=e408]:
+            - link "在线咨询" [ref=e409] [cursor=pointer]:
+              - /url: https://www.qixin.com/customer-service
+            - generic [ref=e410]:
+              - text: 企业邮箱：
+              - link "kefu@qixin.com" [ref=e411] [cursor=pointer]:
+                - /url: mailto:kefu@qixin.com
+            - generic [ref=e412]: 客服电话：400-6383-888
+            - generic [ref=e413]: 工作时间：工作日9:30-19:00
+        - generic [ref=e414]:
+          - generic [ref=e415]:
+            - img "启信宝APP" [ref=e416]
+            - generic [ref=e417]: 扫码下载APP
+          - generic [ref=e418]:
+            - img "启信宝小程序" [ref=e419]
+            - generic [ref=e420]: 启信宝小程序
+      - generic [ref=e421]: 数据来源：全国企业信用信息公示系统国家知识产权局商标局版权局
+      - generic [ref=e422]:
+        - text: 友情链接：
+        - link "合合信息" [ref=e423] [cursor=pointer]:
+          - /url: https://www.intsig.com
+        - link "名片全能王" [ref=e424] [cursor=pointer]:
+          - /url: https://www.camcard.com
+        - link "扫描全能王" [ref=e425] [cursor=pointer]:
+          - /url: https://www.camscanner.com
+        - link "开放平台" [ref=e426] [cursor=pointer]:
+          - /url: https://data.qixin.com/?from=footer_link
+        - link "国务院发展研究中心信息网" [ref=e427] [cursor=pointer]:
+          - /url: http://www.drcnet.com.cn
+        - link "蝉大师" [ref=e428] [cursor=pointer]:
+          - /url: https://chandashi.com
+        - link "权大师" [ref=e429] [cursor=pointer]:
+          - /url: https://www.quandashi.com
+        - link "中国比地招标网" [ref=e430] [cursor=pointer]:
+          - /url: http://www.bidizhaobiao.com
+        - link "网络非法金融信息举报专区" [ref=e431] [cursor=pointer]:
+          - /url: http://www.js12377.cn/wyjb/index.jhtml?reportNext=1&reportClass=2&harmType=2
+        - link "建设招标网" [ref=e432] [cursor=pointer]:
+          - /url: https://www.jszhaobiao.com
+        - link "蔚蓝地图" [ref=e433] [cursor=pointer]:
+          - /url: https://www.ipe.org.cn
+        - link "洞见研报" [ref=e434] [cursor=pointer]:
+          - /url: https://www.djyanbao.com/index
+        - link "猪八戒网" [ref=e435] [cursor=pointer]:
+          - /url: https://suzhou.zbj.com
+        - link "小程序商城系统" [ref=e436] [cursor=pointer]:
+          - /url: https://www.youzan.com
+      - generic [ref=e437]:
+        - generic [ref=e438]:
+          - generic [ref=e439]:
+            - link "沪公网安备 31010602003968号" [ref=e440] [cursor=pointer]:
+              - /url: http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010602003968
+            - text: 上海生腾数据科技有限公司，版权所有©2014 - 2026
+            - link "沪ICP备18033674号-2" [ref=e441] [cursor=pointer]:
+              - /url: https://beian.miit.gov.cn
+          - generic [ref=e442]:
+            - generic [ref=e443]:
+              - text: 增值电信业务经营许可证：
+              - link "沪B2-20200755" [ref=e444] [cursor=pointer]:
+                - /url: https://beian.miit.gov.cn
+            - text: 公司地址：上海市静安区万荣路1268号云立方A座11层
+        - generic [ref=e445]:
+          - img "营业执照" [ref=e446]
+          - link "工商网监" [ref=e447] [cursor=pointer]:
+            - /url: http://scjgj.sh.gov.cn
+            - img "工商网监" [ref=e448]
+          - link "上海市互联网违法和不良信息举报中心" [ref=e449] [cursor=pointer]:
+            - /url: http://www.shjbzx.cn
+            - img "上海市互联网违法和不良信息举报中心" [ref=e450]
+          - link "中央网信办违法和不良信息举报中心" [ref=e451] [cursor=pointer]:
+            - /url: https://www.12377.cn
+            - img "中央网信办违法和不良信息举报中心" [ref=e452]
+        - generic [ref=e453]:
+          - generic [ref=e454]: 不良信息举报电话：400-6383-888
+          - generic [ref=e455]: 举报邮箱：
+          - link "kefu@qixin.com" [ref=e456] [cursor=pointer]:
+            - /url: mailto:kefu@qixin.com
+  - generic [ref=e458] [cursor=pointer]: 
+  - generic [ref=e459]:
+    - generic [ref=e460] [cursor=pointer]:
+      - img "left" [ref=e461]
+      - img "right" [ref=e462]
+      - img "qrcode" [ref=e463]
+    - generic [ref=e464] [cursor=pointer]: 
+  - generic [ref=e465]:
+    - img [ref=e466] [cursor=pointer]
+    - img "close" [ref=e467] [cursor=pointer]
+  - generic [ref=e470]:
+    - img "activity" [ref=e471]
+    - img "close" [ref=e472] [cursor=pointer]
+    - img [ref=e473] [cursor=pointer]

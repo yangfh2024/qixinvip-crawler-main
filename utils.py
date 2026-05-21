@@ -99,13 +99,28 @@ async def human_like_typing(page, selector: str, text: str, delay_range: tuple =
 
 
 async def random_mouse_move(page):
-    """随机鼠标移动，模拟真实用户"""
+    """随机鼠标移动，模拟真实用户（带平滑轨迹）"""
     try:
         viewport_size = page.viewport_size
-        if viewport_size:
-            x = random.randint(0, viewport_size['width'])
-            y = random.randint(0, viewport_size['height'])
+        if not viewport_size:
+            return
+        w, h = viewport_size['width'], viewport_size['height']
+
+        # 随机选择终点
+        end_x = random.randint(0, w)
+        end_y = random.randint(0, h)
+
+        # 分段移动，模拟人类鼠标轨迹（非直线瞬移）
+        steps = random.randint(6, 15)
+        for i in range(1, steps + 1):
+            t = i / steps
+            # 线性插值 + 随机噪声，模拟手部抖动
+            x = end_x * t + random.randint(-4, 4)
+            y = end_y * t + random.randint(-4, 4)
+            x = max(0, min(w, x))
+            y = max(0, min(h, y))
             await page.mouse.move(x, y)
+            await asyncio.sleep(random.uniform(0.008, 0.025))
     except:
         pass
 

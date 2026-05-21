@@ -202,6 +202,11 @@ async def health_check():
         "browser_ready": browser_manager is not None,
         "cookie_valid": cookie_info["valid"],
         "cookie_count": cookie_info["count"],
+        "rate_limit": {
+            "current_delay": QixinbaoCrawler._current_delay,
+            "min_delay": QixinbaoCrawler._min_delay,
+            "max_delay": QixinbaoCrawler._max_delay,
+        },
         "version": "2.0.0",
         "timestamp": datetime.now().isoformat(),
     }
@@ -271,9 +276,36 @@ async def crawl_advanced(request: AdvancedSearchRequest):
         import re as _re
         _strip_em = lambda s: _re.sub(r"</?em>", "", s) if isinstance(s, str) else s
 
+        # ── 限速 / WAF 拦截检测与自动重试 ────────────
+        if result.get("isLimit"):
+            if result.get("_forbidden"):
+                # 403 → WAF 拦截，非频率问题，不重试
+                return AdvancedSearchResponse(
+                    success=False,
+                    error="请求被 WAF 拦截，当前 Cookie 无法调高级搜索 API。"
+                          "建议使用扫码登录刷新 cookie，或改用浏览器爬取模式",
+                )
+            # 普通限速（isLimit=true, status=200），等间隔后重试一次
+            import time as _time
+            _time.sleep(QixinbaoCrawler._current_delay)
+            result = crawler.advanced_search(
+                keyword=request.keyword, status=request.status,
+                province=request.province, industry=request.industry,
+                establish=request.establish, reg_capi=request.reg_capi,
+                paid_capi=request.paid_capi, company_type=request.company_type,
+                org_type=request.org_type, employee=request.employee,
+                insured=request.insured, listing=request.listing,
+                scale=request.scale, page=request.page, page_size=request.page_size,
+            )
+            if result.get("isLimit"):
+                return AdvancedSearchResponse(
+                    success=False,
+                    error="请求被限速，请稍后重试",
+                )
+
         # ── Cookie 过期检测 ──────────────────────────
         # totalNum=0 可能是指标不匹配，也可能是 cookie 失效了
-        if result.get("totalNum") == 0 and not result.get("isLimit"):
+        if result.get("totalNum") == 0:
             cookie_ok = QixinbaoCrawler.check_cookie_valid()
             if not cookie_ok:
                 return AdvancedSearchResponse(

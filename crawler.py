@@ -34,9 +34,9 @@ class QixinbaoCrawler:
 
     # ── 请求限速（防止被封 IP） ────────────────────────────
     _last_api_time: float = 0.0        # 上一次调 API 的时间戳
-    _current_delay: float = 0.3        # 当前请求间隔，300ms 起步
-    _max_delay: float = 5.0            # 最长间隔，最多等 5 秒
-    _min_delay: float = 0.2            # 最短间隔，200ms
+    _current_delay: float = 1.5        # 当前请求间隔，1.5s 起步（启信宝限速较严）
+    _max_delay: float = 10.0           # 最长间隔，最多等 10 秒
+    _min_delay: float = 1.0            # 最短间隔，1s（低于此值易触发限速）
 
     def __init__(self, config_path: str = 'config.json'):
         """
@@ -717,13 +717,11 @@ class QixinbaoCrawler:
         cookies = self._cookies_from_config()
 
         # ── 按参数构建请求体 ──────────────────────────────
-        body = {"page": page, "size": page_size}
-        if keyword:
-            body["key"] = keyword
+        body = {"page": page, "size": page_size, "key": keyword}
         if status:
             body["status"] = status
         if province:
-            body["province"] = province
+            body["areas"] = province       # 网页用的是 areas 不是 province
         if industry:
             body["industry"] = industry
         if reg_capi:
@@ -768,7 +766,7 @@ class QixinbaoCrawler:
         if elapsed < QixinbaoCrawler._current_delay:
             time.sleep(QixinbaoCrawler._current_delay - elapsed)
 
-        # 发请求
+        # 发请求（不抛异常，检查状态码自行处理）
         resp = requests.post(
             "https://www.qixin.com/api-proxy/search/advanced",
             headers=headers,
@@ -776,10 +774,18 @@ class QixinbaoCrawler:
             data=json_body,
             timeout=15,
         )
-        resp.raise_for_status()
 
         # ── 更新计时 & 异常检测 ──────────────────────────
         QixinbaoCrawler._last_api_time = time.time()
+
+        # 403 说明请求被 WAF 拦截，不是频率问题
+        if resp.status_code == 403:
+            return {"items": [], "isLimit": True, "_forbidden": True}
+
+        # 其他非 200 也统一处理
+        if resp.status_code != 200:
+            return {"items": [], "isLimit": True}
+
         data = resp.json()
 
         # 如果被限速了，自动加长间隔

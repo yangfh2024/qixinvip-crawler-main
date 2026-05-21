@@ -84,7 +84,7 @@ class CookieStatusResponse(BaseModel):
 
 class AdvancedSearchRequest(BaseModel):
     """高级搜索的请求格式"""
-    keyword: str = Field(default="", description="搜索关键词（可选）")
+    keyword: str = Field(default="", description="搜索关键词（必填，只传省份/行业等筛选条件不返回数据）")
     status: Optional[List[int]] = Field(default=None, description="经营状态: 1=存续 2=注销 3=吊销 4=撤销 5=迁出 6=设立中 7=清算中 8=停业")
     province: Optional[List[str]] = Field(default=None, description="省份代码列表")
     industry: Optional[List[str]] = Field(default=None, description="行业代码列表")

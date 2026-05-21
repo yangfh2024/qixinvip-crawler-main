@@ -1,51 +1,75 @@
 """
-启信宝扫码登录 - 登录后遍历多个页面触发完整Cookie
+启信宝扫码登录 - 扫码后自动检测登录，保存完整Cookie
 """
 import asyncio, sys, io, json, os
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
+import requests
 from playwright.async_api import async_playwright
 
-AUTH_KEYS = ["pt4_token", "p_skey", "RK", "ETK", "pt_login_sig", "uin"]
+
+def check_cookies_valid(cookie_str: str) -> bool:
+    """调 getEquityConfig API 验证 cookie 是否真实有效"""
+    try:
+        from utils import compute_qixin_signature
+        cookies = {}
+        for part in cookie_str.split(";"):
+            if "=" in part:
+                k, v = part.strip().split("=", 1)
+                cookies[k.strip()] = v.strip()
+
+        body = "{}"
+        header_name, header_value = compute_qixin_signature(
+            "/v4/internal/user/getEquityConfig", body, "/api-proxy/app"
+        )
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+            "Content-Type": "application/json",
+            "X-Requested-With": "XMLHttpRequest",
+            "Origin": "https://www.qixin.com",
+            "Referer": "https://www.qixin.com/",
+            header_name: header_value,
+        }
+        resp = requests.post(
+            "https://www.qixin.com/api-proxy/app/v4/internal/user/getEquityConfig",
+            headers=headers, cookies=cookies, data=body, timeout=10,
+        )
+        data = resp.json()
+        vip = data.get("vipCount", 0)
+        print(f"    API验证: vipCount={vip}", flush=True)
+        return vip > 0
+    except Exception as e:
+        print(f"    API验证失败: {e}", flush=True)
+        return False
 
 
 async def save_cookies(context, label=""):
-    # 获取全部域名下的所有cookie
     cookies = await context.cookies()
-
-    # 按域名分组显示
     domains = set(c["domain"] for c in cookies)
-    print(f"  [{label}] 共 {len(cookies)} 个Cookie, 域名: {domains}")
+    print(f"  [{label}] 共 {len(cookies)} 个Cookie, 域名: {domains}", flush=True)
 
-    # 保存到文件
     cookie_str = "; ".join(f'{c["name"]}={c["value"]}' for c in cookies)
     with open("cookie.txt", "w", encoding="utf-8") as f:
         f.write(cookie_str)
     with open("storage_state.json", "w", encoding="utf-8") as f:
         json.dump(await context.storage_state(), f, ensure_ascii=False)
 
-    # 检查认证cookie
-    auth = [c for c in cookies if c["name"] in AUTH_KEYS]
-    if auth:
-        for c in auth:
-            print(f"    ✅ {c['name']} = {c['value'][:30]}... domain={c['domain']}")
+    valid = check_cookies_valid(cookie_str)
+    if valid:
+        print(f"    ✅ Cookie有效！VIP登录正常", flush=True)
     else:
-        print(f"   ❌ 无认证Cookie")
-        for c in cookies:
-            print(f"      {c['name']} (domain={c['domain']})")
-    return len(auth) > 0
+        print(f"    ❌ Cookie无效（或未登录VIP）", flush=True)
+    return valid
 
 
 async def main():
     print("=" * 60)
-    print("    启信宝扫码登录（遍历触发版）")
+    print("    Qixinbao QR Code Login")
     print("=" * 60)
     print()
 
     async with async_playwright() as p:
-        # 尝试使用用户本地Chrome（可能已登录）
-        print("[尝试1] 使用本地Chrome浏览器...")
+        print("[1/4] Opening browser...")
 
-        # 查找Chrome可执行文件路径
         chrome_paths = [
             "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
             "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe",
@@ -59,14 +83,14 @@ async def main():
                 break
 
         if chrome_exe:
-            print(f"  找到Chrome: {chrome_exe}")
+            print(f"  Using local Chrome: {chrome_exe}", flush=True)
             browser = await p.chromium.launch(
                 executable_path=chrome_exe,
                 headless=False,
                 args=["--disable-blink-features=AutomationControlled"],
             )
         else:
-            print("  使用默认Playwright Chromium")
+            print("  Using Playwright Chromium", flush=True)
             browser = await p.chromium.launch(
                 headless=False,
                 args=["--disable-blink-features=AutomationControlled"],
@@ -79,68 +103,63 @@ async def main():
         )
         page = await context.new_page()
 
-        # Step 1: Go to homepage - check if already logged in
-        print("\n[1/5] 打开首页检查登录状态...")
+        print("\n[2/4] Opening qixin.com homepage...", flush=True)
         await page.goto("https://www.qixin.com/", wait_until="domcontentloaded")
         await asyncio.sleep(3)
-        has_auth = await save_cookies(context, "初始")
 
-        if not has_auth:
-            # Step 2: Wait for scan
-            print("\n[2/5] 请在浏览器中扫码登录（等待中）...")
-            logged_in = False
-            for i in range(120):
-                await asyncio.sleep(2)
-                try:
-                    text = await page.evaluate("() => document.body.innerText")
-                    if "登录" not in text[:500]:
-                        print(f"  检测到登录！({i*2}秒)")
-                        logged_in = True
-                        break
-                except:
-                    pass
-                if i % 15 == 0:
-                    print(f"  等待扫码... ({i*2}秒)")
+        print("\n[3/4] Waiting for QR code scan and login...", flush=True)
+        print("    (Browser window may need you to click the login button first)", flush=True)
 
-            if not logged_in:
-                print("  未检测到登录")
-            else:
-                print(f"  URL: {page.url}")
+        logged_in = False
+        for i in range(120):
+            await asyncio.sleep(2)
+            try:
+                text = await page.evaluate("() => document.body.innerText")
+                if "登录" not in text[:500]:
+                    print(f"\n  Login detected! ({i*2}s)", flush=True)
+                    logged_in = True
+                    break
+            except:
+                pass
+            if i % 10 == 0:
+                print(f"  Waiting... ({i*2}s)", flush=True)
 
-        # Step 3: Visit pages to trigger cookies
-        print("\n[3/5] 遍历页面触发Cookie...")
+        if not logged_in:
+            print("\n  Login not detected after 4 minutes.", flush=True)
+            print("  Try again or copy cookies manually from Chrome DevTools.", flush=True)
+        else:
+            print(f"  URL: {page.url}", flush=True)
+
+        print("\n[4/4] Visiting pages to capture cookies...", flush=True)
         urls = [
-            ("个人中心", "https://www.qixin.com/usercenter"),
-            ("会员中心", "https://www.qixin.com/member"),
-            ("搜索", "https://www.qixin.com/search?key=腾讯"),
-            ("设置", "https://www.qixin.com/setting"),
-            ("消息", "https://www.qixin.com/msg"),
+            ("UserCenter", "https://www.qixin.com/usercenter"),
+            ("Member", "https://www.qixin.com/member"),
+            ("Search", "https://www.qixin.com/search?key=%E8%85%BE%E8%AE%AF"),
+            ("Settings", "https://www.qixin.com/setting"),
+            ("Messages", "https://www.qixin.com/msg"),
         ]
+        got_valid = False
         for name, url in urls:
             try:
-                print(f"  访问 {name}...", flush=True)
+                print(f"  Visiting {name}...", flush=True)
                 await page.goto(url, wait_until="domcontentloaded", timeout=15000)
-                await asyncio.sleep(3)
-                has_auth = await save_cookies(context, name)
-                if has_auth:
+                await asyncio.sleep(2)
+                got_valid = await save_cookies(context, name)
+                if got_valid:
                     break
             except Exception as e:
-                print(f"  跳过: {str(e)[:50]}")
-                await save_cookies(context, f"{name}(err)")
+                print(f"  Skip {name}: {str(e)[:50]}", flush=True)
 
-        # Step 4: Final report
-        print(f"\n[4/4] 最终:")
-        has_auth = await save_cookies(context, "最终")
-
-        if has_auth:
-            print("\n✅ Cookie就绪！可以开始爬取")
+        print(f"\n{'='*60}")
+        if got_valid:
+            print("  ✅ Login successful! Cookie saved to cookie.txt")
+            print("  You can now run start.bat to start the API server.")
         else:
-            print("\n❌ 仍未获取到认证Cookie")
-            print("   建议：在Chrome中登录后，")
-            print("   F12 → Application → Cookies → 右键复制所有cookie")
-            print("   粘贴到 cookie.txt")
+            print("  ❌ Cookie still not valid after login.")
+            print("  Manual method: Chrome -> F12 -> Network -> copy cookie -> paste into cookie.txt")
+        print(f"{'='*60}")
 
-        await asyncio.sleep(10)
+        await asyncio.sleep(3)
         await browser.close()
 
 

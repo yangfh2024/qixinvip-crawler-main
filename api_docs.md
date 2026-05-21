@@ -1,6 +1,6 @@
 # 启信宝爬虫 API 接口文档
 
-**基础地址：** `http://localhost:8000`
+**基础地址：** `http://localhost:8004`
 **Content-Type：** `application/json`
 
 ---
@@ -12,9 +12,6 @@
 | GET | `/health` | 健康检查 |
 | POST | `/crawl/single` | 爬取单个公司（需浏览器） |
 | POST | `/crawl/advanced` | 高级搜索（无需浏览器） |
-| POST | `/crawl/batch` | 批量爬取（异步，需浏览器） |
-| GET | `/crawl/task/{task_id}` | 查询批量任务状态 |
-| GET | `/crawl/download/{filename}` | 下载结果文件 |
 | POST | `/cookie/check` | 检查 Cookie 状态 |
 | POST | `/cookie/update` | 更新 Cookie |
 
@@ -72,7 +69,7 @@ POST /crawl/single
 ### 请求示例
 
 ```bash
-curl -X POST http://localhost:8001/crawl/single \
+curl -X POST http://localhost:8004/crawl/single \
   -H "Content-Type: application/json" \
   -d '{"company_name": "腾讯科技（深圳）有限公司"}'
 ```
@@ -80,7 +77,7 @@ curl -X POST http://localhost:8001/crawl/single \
 ```python
 import requests
 
-resp = requests.post("http://localhost:8001/crawl/single", json={
+resp = requests.post("http://localhost:8004/crawl/single", json={
     "company_name": "腾讯科技（深圳）有限公司",
     "timeout": 120,
 })
@@ -279,7 +276,7 @@ POST /crawl/advanced
 #### 示例 1：关键词搜索
 
 ```bash
-curl -X POST http://localhost:8001/crawl/advanced \
+curl -X POST http://localhost:8004/crawl/advanced \
   -H "Content-Type: application/json" \
   -d '{"keyword":"科技","page":1,"page_size":10}'
 ```
@@ -289,7 +286,7 @@ curl -X POST http://localhost:8001/crawl/advanced \
 ```python
 import requests
 
-resp = requests.post("http://localhost:8001/crawl/advanced", json={
+resp = requests.post("http://localhost:8004/crawl/advanced", json={
     "keyword": "科技",       # 关键词
     "status": [1],           # 存续
     "province": ["44"],      # 广东
@@ -302,7 +299,7 @@ resp = requests.post("http://localhost:8001/crawl/advanced", json={
 #### 示例 3：A 股上市制造企业
 
 ```python
-resp = requests.post("http://localhost:8001/crawl/advanced", json={
+resp = requests.post("http://localhost:8004/crawl/advanced", json={
     "listing": ["a-share"],
     "industry": ["C"],       # 制造业
     "employee": ["500+"],    # 员工 500 人以上
@@ -314,7 +311,7 @@ resp = requests.post("http://localhost:8001/crawl/advanced", json={
 #### 示例 4：有限责任公司 + 成立 1-5 年
 
 ```python
-resp = requests.post("http://localhost:8001/crawl/advanced", json={
+resp = requests.post("http://localhost:8004/crawl/advanced", json={
     "company_type": ["有限责任公司"],
     "status": [1],
     "establish": ["1-5y"],
@@ -386,109 +383,7 @@ resp = requests.post("http://localhost:8001/crawl/advanced", json={
 
 ---
 
-## 4. 批量爬取
-
-```
-POST /crawl/batch
-```
-
-异步批量爬取多个公司。**需要浏览器支持**，提交后立即返回 `task_id`，通过查询接口获取进度和结果。
-
-### 请求参数
-
-| 参数 | 类型 | 必填 | 说明 | 默认值 |
-|------|------|------|------|--------|
-| `companies` | string[] | 是 | 公司名称列表（1-200 个） | - |
-| `export_format` | string | 否 | 导出格式：`"excel"` 或 `"csv"` | `"excel"` |
-| `timeout` | int | 否 | 单个公司超时（秒），范围 30-300 | 120 |
-
-### 请求示例
-
-```python
-import requests
-
-resp = requests.post("http://localhost:8001/crawl/batch", json={
-    "companies": [
-        "腾讯科技（深圳）有限公司",
-        "阿里巴巴（中国）有限公司",
-        "百度在线网络技术公司"
-    ],
-    "export_format": "excel",
-})
-task = resp.json()
-# {"task_id": "a1b2c3d4e5f6", "status": "queued", "message": "已加入队列，共 3 个公司"}
-task_id = task["task_id"]
-```
-
-### 返回字段
-
-| 字段 | 类型 | 说明 |
-|------|------|------|
-| `task_id` | string | 任务 ID（12 位十六进制） |
-| `status` | string | `"queued"` |
-| `message` | string | 提示信息 |
-
----
-
-## 5. 查询任务状态
-
-```
-GET /crawl/task/{task_id}
-```
-
-查询批量爬取任务的执行进度。轮询此接口直到 `status` 变为 `"completed"` 或 `"failed"`。
-
-### 请求示例
-
-```python
-import time
-
-# 轮询直到完成
-while True:
-    resp = requests.get(f"http://localhost:8001/crawl/task/{task_id}")
-    status = resp.json()
-    print(f"[{status['status']}] {status['progress']}/{status['total']}")
-    
-    if status['status'] in ('completed', 'failed'):
-        break
-    time.sleep(3)
-
-# 下载结果文件
-if status['status'] == 'completed' and status['result_file']:
-    download_url = f"http://localhost:8001/crawl/download/{status['result_file']}"
-    print(f"下载地址: {download_url}")
-```
-
-### 返回字段
-
-| 字段 | 类型 | 说明 |
-|------|------|------|
-| `task_id` | string | 任务 ID |
-| `status` | string | `"queued"` / `"running"` / `"completed"` / `"failed"` |
-| `progress` | int | 已完成数量 |
-| `total` | int | 总数量 |
-| `result_file` | string/null | 结果文件名（完成后有值） |
-| `error` | string/null | 失败时的错误信息 |
-
----
-
-## 6. 下载结果文件
-
-```
-GET /crawl/download/{filename}
-```
-
-下载批量爬取生成的结果文件（Excel 或 CSV）。
-
-### 请求示例
-
-```bash
-curl -O http://localhost:8001/crawl/download/qixinbao_companies_20260521_120000.xlsx
-```
-
----
-
-## 7. 检查 Cookie 状态
+## 4. 检查 Cookie 状态
 
 ```
 POST /cookie/check
@@ -518,7 +413,7 @@ POST /cookie/check
 
 ---
 
-## 8. 更新 Cookie
+## 5. 更新 Cookie
 
 ```
 POST /cookie/update
@@ -535,11 +430,11 @@ POST /cookie/update
 ### 请求示例
 
 ```bash
-curl -X POST "http://localhost:8001/cookie/update?cookie_str=acw_tc=xxx;%20pdid=s%3Axxx"
+curl -X POST "http://localhost:8004/cookie/update?cookie_str=acw_tc=xxx;%20pdid=s%3Axxx"
 ```
 
 ```python
-requests.post("http://localhost:8001/cookie/update", params={
+requests.post("http://localhost:8004/cookie/update", params={
     "cookie_str": "acw_tc=xxx; pdid=s%3Axxx"
 })
 ```
@@ -574,7 +469,6 @@ Cookie 中的 `acw_tc`（阿里云 WAF 令牌）约 30 分钟过期，过期后�
 | 端点 | 最大页码 | 每页最大条数 |
 |------|----------|-------------|
 | `/crawl/advanced` | 1000 | 100 |
-| `/crawl/batch` | 单次最多 200 个公司 | - |
 
 ### 错误处理
 
@@ -595,7 +489,6 @@ Cookie 中的 `acw_tc`（阿里云 WAF 令牌）约 30 分钟过期，过期后�
 
 1. 使用 `/crawl/advanced` 搜索企业列表，获取 `eid`（企业唯一 ID）
 2. 需要详情时，通过 `/crawl/single` 传入企业名称获取详细信息
-3. 大批量数据使用 `/crawl/batch` 异步处理
 
 ### 请求限速
 

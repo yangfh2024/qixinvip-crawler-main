@@ -1,38 +1,38 @@
 @echo off
-chcp 65001 > nul
-title 启信宝爬虫 API 服务
+title Qixinbao Crawler API Service
+cd /d "%~dp0"
 
 echo ============================================
-echo    启动启信宝爬虫 API 服务
+echo    Starting Qixinbao Crawler API Service
 echo ============================================
 echo.
 
-REM 检查配置文件
+REM Check config file
 if not exist "config.json" (
     copy config.example.json config.json > nul
-    echo [提示] 已创建 config.json，请检查配置
+    echo [INFO] Created config.json from template
 )
 
-REM 检查 Cookie
+REM Check Cookie
 if exist "cookie.txt" (
-    echo [OK] 已找到 cookie.txt
+    echo [OK] Found cookie.txt
 ) else (
-    echo [警告] 未找到 cookie.txt，部分功能可能受限
-    echo       请运行 qr_login.bat 扫码登录
+    echo [WARN] cookie.txt not found. Some features may be limited.
+    echo        Run qr_login.bat to login first.
 )
 
-REM 激活虚拟环境并启动
+REM Activate virtual environment and start
 if exist "venv\Scripts\activate.bat" (
     call venv\Scripts\activate.bat
 ) else (
-    echo [提示] 未找到虚拟环境，使用系统 Python
+    echo [INFO] No virtual environment found, using system Python
 )
 
-echo 启动服务中...
-python -m uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+echo Starting server...
+python run.py
 
 echo.
-echo 访问 http://localhost:8000/docs 查看 API 文档
-echo 详细 API 说明见 api_docs.md
+echo Visit http://localhost:8004/docs for API documentation
+echo Full API docs: see api_docs.md
 
 pause

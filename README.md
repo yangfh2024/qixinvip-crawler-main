@@ -28,7 +28,7 @@
 
 ## 📋 系统要求
 
-- Python 3.8+
+- Python 3.10 ~ 3.12（3.13/3.14 不兼容）
 - Windows / macOS / Linux
 - 稳定的网络连接
 - 启信宝 VIP 账号（用于获取 Cookie）
@@ -159,14 +159,14 @@ python main.py
 start.bat
 ```
 
-访问 `http://localhost:8001/docs` 查看交互式 API 文档。
+访问 `http://localhost:8004/docs` 查看交互式 API 文档。
 
 **快速测试：**
 
 ```python
 import requests
 
-resp = requests.post("http://localhost:8001/crawl/advanced", json={
+resp = requests.post("http://localhost:8004/crawl/advanced", json={
     "keyword": "科技",
     "page": 1,
     "page_size": 10,

@@ -15,6 +15,10 @@ from fastapi.responses import FileResponse, JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 
 import sys
+# 确保 Windows 事件循环支持子进程（Playwright 需要）
+if sys.platform == 'win32':
+    asyncio.set_event_loop_policy(asyncio.WindowsProactorEventLoopPolicy())
+
 if hasattr(sys.stdout, 'reconfigure'):
     sys.stdout.reconfigure(encoding='utf-8')
 
@@ -111,7 +115,8 @@ async def _ensure_browser():
             print("[浏览器] 延迟启动成功")
         except Exception as e:
             browser_manager = None
-            raise RuntimeError(f"浏览器启动失败: {e}")
+            tb = traceback.format_exc()
+            raise RuntimeError(f"浏览器启动失败: {e}\n{tb}")
 
 
 async def _crawl_single(company_name: str, timeout: int = 120) -> dict:
@@ -255,7 +260,7 @@ async def crawl_advanced(request: AdvancedSearchRequest):
         )
 
 
-@app.post("/crawl/batch", response_model=CrawlTaskResponse, summary="批量爬取（异步）")
+@app.post("/crawl/batch", response_model=CrawlTaskResponse, summary="批量爬取（异步）", include_in_schema=False)
 async def crawl_batch(request: BatchCrawlRequest, background_tasks: BackgroundTasks):
     """
     批量爬取多个公司。
@@ -336,7 +341,7 @@ async def _run_batch(task_id: str):
         traceback.print_exc()
 
 
-@app.get("/crawl/task/{task_id}", response_model=CrawlTaskStatus, summary="查询任务状态")
+@app.get("/crawl/task/{task_id}", response_model=CrawlTaskStatus, summary="查询任务状态", include_in_schema=False)
 async def get_task_status(task_id: str):
     """查询批量爬取任务的执行进度和结果"""
     task = _tasks.get(task_id)
@@ -353,7 +358,7 @@ async def get_task_status(task_id: str):
     )
 
 
-@app.get("/crawl/download/{filename:path}", summary="下载结果文件")
+@app.get("/crawl/download/{filename:path}", summary="下载结果文件", include_in_schema=False)
 async def download_file(filename: str):
     """下载爬取结果文件（Excel 或 CSV）"""
     filepath = os.path.join(os.path.dirname(__file__), "..", filename)
@@ -406,4 +411,4 @@ async def update_cookie(cookie_str: str):
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("app.main:app", host="0.0.0.0", port=8000, reload=True)
+    uvicorn.run("app.main:app", host="0.0.0.0", port=8004, reload=True)

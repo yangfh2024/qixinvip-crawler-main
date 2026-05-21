@@ -1,0 +1,1 @@
+C:\Users\FITS-PC\AppData\Local\Programs\Python\Python312\python.exe: No module named uvicorn

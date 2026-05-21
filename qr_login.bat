@@ -1,18 +1,18 @@
 @echo off
-chcp 65001 > nul
-title 启信宝扫码登录
+title Qixinbao QR Login
+cd /d "%~dp0"
 
 echo ============================================
-echo    启信宝扫码登录助手
+echo    Qixinbao QR Code Login
 echo ============================================
 echo.
 
-REM 激活虚拟环境
+REM Activate virtual environment
 if exist "venv\Scripts\activate.bat" (
     call venv\Scripts\activate.bat
 )
 
-echo 正在打开浏览器，请在页面中扫码登录...
+echo Opening browser. Please scan the QR code to login...
 echo.
 python qr_login.py
 

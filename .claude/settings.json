@@ -101,7 +101,23 @@
       "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(f'status={d[\\\\\"status\\\\\"]}'\\)\")",
       "Bash(timeout 60 ./venv/Scripts/python -c ' *)",
       "Bash(python -c \"import py_compile; py_compile.compile\\('qr_login.py', doraise=True\\); print\\('OK'\\)\")",
-      "Bash(curl -s http://localhost:8004/openapi.json)"
+      "Bash(curl -s http://localhost:8004/openapi.json)",
+      "Bash(python -c \"import sys; print\\(sys.version\\)\")",
+      "Bash(pip show *)",
+      "Bash(python -m pip show pydantic)",
+      "Bash(python -c \"from pydantic import __version__; print\\(__version__\\)\")",
+      "Bash(findstr :8004)",
+      "Bash(tasklist /v)",
+      "Bash(findstr python *)",
+      "Bash(taskkill /PID 17288 /F)",
+      "Bash(taskkill //PID 17288 //F)",
+      "Bash(./venv/Scripts/python.exe -c ' *)",
+      "Bash(./venv/Scripts/python.exe)",
+      "Bash(git remote *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(taskkill //F //IM git-remote-https.exe)"
     ],
     "additionalDirectories": [
       "\\tmp"

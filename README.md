@@ -1,379 +1,261 @@
-# 启信宝 VIP 爬虫
+# 启信宝企业数据爬虫
 
-> **当前版本**: v2.0.0 | **状态**: ✅ 稳定可用 | **成功率**: 85.7%
+> **当前版本**: v2.0.0 | **状态**: 稳定可用
 
-专业的启信宝企业信息爬取工具，支持 Playwright 浏览器爬取和 **HTTP API 高级搜索**双模式。
+基于 Playwright + FastAPI 的启信宝企业信息查询服务，提供 **HTTP API 高级搜索**（毫秒级，无需浏览器）和 **Playwright 浏览器爬取**（完整工商信息）双模式。
 
-**【重要通知】**: v2.0.0 新增高级搜索 HTTP API，支持多维度企业筛选查询，毫秒级响应，无需启动浏览器。
+## 系统架构
 
-## ✨ 特性
+```
+┌──────────────┐     ┌──────────────────┐     ┌──────────────┐
+│  HTTP 请求    │ ──▶ │  FastAPI 服务     │ ──▶ │  高级搜索 API │
+│  (curl/代码)  │     │  (port 8004)     │     │  (毫秒级响应) │
+└──────────────┘     └──────────────────┘     └──────────────┘
+                            │
+                            ▼
+                     ┌──────────────────┐
+                     │  Playwright 浏览器 │
+                     │  (单公司详情爬取)   │
+                     └──────────────────┘
+```
 
-- 🚀 **自动化浏览器**: 使用 Playwright 模拟真实用户操作
-- 🎯 **精准数据提取**: 提取公司基本信息、联系方式、股东高管等
-- 🔐 **VIP 权限利用**: 通过 Cookie 登录，充分利用 VIP 权限
-- 🛡️ **反爬优化**: 随机延迟、鼠标移动、隐身模式
-- 📊 **多格式导出**: 支持 Excel、CSV 格式导出
-- ⚡ **批量处理**: 支持单公司测试、批量爬取、交互式三种模式
-- 🌐 **HTTP API 高级搜索**: 毫秒级响应，多维筛选（行业/地区/资本/年限等），无需浏览器
+**典型流程：** 先用高级搜索 API 筛选目标企业列表 → 再对目标企业逐条爬取详细信息。
 
-## 📊 版本信息
+## 特性
 
-- **当前版本**: v1.0.0
-- **发布日期**: 2024-02-17
-- **数据提取成功率**: 85.7% (12/14 字段)
-- **测试状态**: ✅ 已验证通过
-- **文档完善度**: 100%
+- **双模式数据获取**：高级搜索 API（毫秒级） + 浏览器爬取（完整工商信息）
+- **多维筛选**：支持行业、地区、注册资本、成立年限、经营状态等 15+ 筛选条件
+- **异步批量任务**：提交公司列表后异步处理，支持进度查询和结果下载
+- **VIP 权限利用**：支持 Cookie 登录和扫码登录
+- **一键部署**：Windows 双击 `.bat`，macOS/Linux 运行 `.sh`
+- **自动限速与重试**：内置请求频率控制，WAF 拦截自动检测和重试
+- **Swagger 交互式文档**：访问 `http://localhost:8004/docs` 即可在线调试
 
-**详细版本信息**: 见 [VERSION.md](VERSION.md) | [更新日志](CHANGELOG.md)
-
-## 📋 系统要求
+## 系统要求
 
 - Python 3.10 ~ 3.12（3.13/3.14 不兼容）
 - Windows / macOS / Linux
 - 稳定的网络连接
 - 启信宝 VIP 账号（用于获取 Cookie）
 
-## 🔧 安装步骤
+## 安装部署
 
-### 1. 安装 Python 依赖
+### 方式一：一键部署（推荐）
 
+**Windows：** 双击 `setup.bat`，等待 3~10 分钟完成安装。
+
+**macOS / Linux：**
 ```bash
-pip install -r requirements.txt
+bash setup.sh
 ```
 
-### 2. 安装 Playwright 浏览器
+### 方式二：手动部署
 
 ```bash
+# 1. 创建虚拟环境
+python3 -m venv venv
+
+# 2. 安装依赖（Windows）
+venv\Scripts\pip install -r requirements.txt
+venv\Scripts\python -m playwright install chromium
+
+# 2. 安装依赖（macOS / Linux）
+source venv/bin/activate
+pip install -r requirements.txt
 playwright install chromium
 ```
 
-### 3. 配置 Cookie
+## 配置 Cookie
 
-#### 🌟 推荐方式：使用 cookie.txt（每次更新只需 10 秒）
+### 方式 A：扫码登录（推荐）
 
-1. 安装 **EditThisCookie** 或 **Cookie-Editor** 浏览器插件
-2. 登录启信宝 VIP 账号
-3. 点击插件图标 → 导出/复制 Cookie
-4. 粘贴到项目的 `cookie.txt` 文件中
-5. 保存文件
+```bash
+# Windows 双击 qr_login.bat，或终端执行：
+python qr_login.py
+```
 
-**优点：**
-- ✅ 无需修改代码
-- ✅ 一键更新，10 秒完成
-- ✅ 每次运行前更新即可
+在弹出的浏览器窗口中用启信宝 App 扫码登录，脚本自动保存 Cookie 到 `cookie.txt`。
 
-#### 传统方式：直接修改 config.json
+### 方式 B：手动从浏览器复制
 
-1. 在浏览器中登录启信宝 VIP 账号
-2. 按 `F12` 打开开发者工具
-3. 切换到 `Network` 标签
-4. 刷新页面
-5. 点击任意请求，找到 `Request Headers`
-6. 复制 `Cookie` 后的整个字符串
-7. 将 Cookie 粘贴到 `config.json` 文件中
+1. Chrome 打开 [qixin.com](https://www.qixin.com) 并登录 VIP 账号
+2. `F12` → **Network** 标签 → 勾选 **Preserve log**
+3. 搜索任意公司，在 Network 中找到 API 请求
+4. 点击该请求 → **Request Headers** → 找到 `cookie:` 行 → **右键 → Copy value**
+5. 粘贴到 `cookie.txt` 文件覆盖保存
 
-**注意：** 如果存在 `cookie.txt` 文件，程序会优先使用 `cookie.txt` 中的 Cookie。
+> **提示：** 从 Network 复制的 Cookie 包含 `acw_tc`（WAF 令牌，约 30 分钟有效），API 提示过期时重新复制一次即可。
 
-示例：
+## 启动服务
+
+### Windows
+
+双击 `start.bat`，终端显示：
+
+```
+INFO:     Started server process [12345]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8004
+```
+
+### 命令行（所有平台）
+
+```bash
+venv\Scripts\python -m uvicorn app.main:app --host 0.0.0.0 --port 8004
+```
+
+浏览器访问 `http://localhost:8004/docs` 查看交互式 API 文档。
+
+## API 接口一览
+
+| 接口 | 方法 | 说明 |
+|------|------|------|
+| `/health` | GET | 健康检查，查看服务和 Cookie 状态 |
+| `/crawl/advanced` | POST | 高级搜索（毫秒级，无需浏览器） |
+| `/crawl/single` | POST | 爬取单个公司完整信息 |
+| `/crawl/batch` | POST | 批量爬取（异步任务） |
+| `/crawl/task/{task_id}` | GET | 查询批量任务进度 |
+| `/crawl/download/{filename}` | GET | 下载结果文件 |
+| `/cookie/check` | POST | 检查 Cookie 有效性 |
+| `/cookie/update` | POST | 在线更新 Cookie |
+
+## 快速上手
+
+### 健康检查
+
+```bash
+curl http://localhost:8004/health
+```
+
+返回示例：
 ```json
-{
-  "cookie": "acw_tc=xxx; session_id=xxx; user_token=xxx; vip_status=1"
-}
+{"status":"ok","cookie_valid":true,"cookie_count":9,"version":"2.0.0"}
 ```
 
----
-
-## 📊 功能状态
-
-### ✅ 已实现 (v1.0.0)
-
-| 模块 | 功能 | 状态 | 成功率 |
-|------|------|------|--------|
-| 搜索 | 公司搜索 | ✅ | 100% |
-| 导航 | 进入详情页 | ✅ | 100% |
-| 提取 | 基本信息 (9字段) | ✅ | 100% |
-| 提取 | 联系方式 (3字段) | ✅ | 100% |
-| 提取 | 股东信息 | ⏳ | 0% |
-| 提取 | 高管信息 | ⏳ | 0% |
-| 导出 | Excel/CSV | ✅ | 100% |
-| 批量 | 批量处理 | ✅ | 100% |
-
-**总体成功率**: **85.7% (12/14 字段)**
-
-详见 [v1.0.0 发布说明](v1.0.0_README.md)
-
-## 🚀 使用方法
-
-### 方式一：单公司测试（推荐首次使用）
+### 高级搜索（筛选企业列表）
 
 ```bash
-python main.py
+curl -X POST http://localhost:8004/crawl/advanced \
+  -H "Content-Type: application/json" \
+  -d '{"keyword":"科技","status":[1],"province":["44"],"reg_capi":["1000-"],"page":1,"page_size":10}'
 ```
 
-选择 `1`，然后输入公司名称，例如：
-```
-腾讯科技（深圳）有限公司
-```
-
-### 方式二：批量爬取
-
-#### 从 Excel 文件读取：
-
-准备 Excel 文件（companies.xlsx），包含公司名称列：
-
-```
-| 公司名称           |
-|-------------------|
-| 腾讯科技（深圳）有限公司 |
-| 阿里巴巴（中国）有限公司 |
-| 百度在线网络技术公司 |
-```
-
-运行程序选择 `2`，然后选择从 Excel 读取。
-
-#### 从文本文件读取：
-
-创建 companies.txt，每行一个公司名：
-```
-腾讯科技（深圳）有限公司
-阿里巴巴（中国）有限公司
-百度在线网络技术公司
-```
-
-### 方式三：交互式模式
-
-适合临时查询多个不相关的公司：
+### 爬取单个公司详情
 
 ```bash
-python main.py
+curl -X POST http://localhost:8004/crawl/single \
+  -H "Content-Type: application/json" \
+  -d '{"company_name": "腾讯科技（深圳）有限公司"}'
 ```
 
-选择 `3`，然后逐个输入公司名称。
-
-### 方式四：高级搜索 API（推荐新用户）
-
-启动 API 服务后，通过 HTTP 接口进行高级搜索，无需浏览器，速度毫秒级。
+### 检查 Cookie
 
 ```bash
-# 启动 API 服务
-start.bat
+curl -X POST http://localhost:8004/cookie/check
 ```
 
-访问 `http://localhost:8004/docs` 查看交互式 API 文档。
+### 更新 Cookie
 
-**快速测试：**
-
-```python
-import requests
-
-resp = requests.post("http://localhost:8004/crawl/advanced", json={
-    "keyword": "科技",
-    "page": 1,
-    "page_size": 10,
-})
-data = resp.json()
-print(f"共 {data['total']} 条结果")
-for item in data["items"]:
-    print(item["company_name"], item["legal_person"])
+```bash
+curl -X POST "http://localhost:8004/cookie/update?cookie_str=acw_tc=xxx;%20pdid=s%3Axxx"
 ```
 
-**支持的多维筛选参数：**
+## 高级搜索筛选参数
 
 | 参数 | 说明 | 示例 |
 |------|------|------|
-| `keyword` | 关键词 | `"科技"` |
+| `keyword` | 企业关键词 | `"科技"` |
 | `status` | 经营状态 | `[1]`（存续） |
-| `province` | 省份地区 | `["44"]`（广东） |
-| `industry` | 行业分类 | `["I65"]`（软件） |
-| `reg_capi` | 注册资本 | `["1000-"]` |
-| `establish` | 成立年限 | `["1-5y"]` |
+| `province` | 省份代码 | `["44"]`（广东） |
+| `industry` | 行业代码 | `["I65"]`（软件） |
+| `reg_capi` | 注册资本范围 | `["1000-"]`（1000万以上） |
+| `establish` | 成立年限 | `["1-5y"]`（1-5年） |
 | `company_type` | 公司类型 | `["有限责任公司"]` |
+| `org_type` | 组织类型 | `["企业"]` |
+| `listing` | 上市状态 | `["a-share"]`（A股） |
+| `page` | 页码（最大 1000） | `1` |
+| `page_size` | 每页条数（最大 100） | `20` |
 
-完整参数列表见 [api_docs.md](api_docs.md)。
+完整参数说明见 [api_docs.md](api_docs.md)。
 
----
-
-## 📁 项目结构
+## 项目结构
 
 ```
 qixinvip-crawler/
-├── main.py              # 主程序入口（CLI 交互模式）
-├── crawler.py           # 爬虫核心逻辑
-├── browser.py           # 浏览器管理
-├── exporter.py          # 数据导出
-├── utils.py             # 工具函数（含 HMAC 签名算法）
 ├── app/
-│   ├── main.py          # FastAPI 服务（HTTP API）
-│   └── schemas.py       # API 请求/响应模型
-├── config.json          # 配置文件
-├── cookie.txt           # Cookie 文件（优先使用）
-├── selectors.json       # 选择器配置文件
-├── requirements.txt     # Python 依赖
-├── api_docs.md           # 完整 API 接口文档（8个端点）
-├── README.md            # 完整使用说明
-├── QUICKSTART.md        # 5分钟快速上手
-├── USAGE_GUIDE.md       # 快速使用指南
-├── setup.bat            # 一键部署脚本（Windows）
-├── start.bat            # 启动 API 服务
-└── output/              # 输出目录（自动创建）
-    └── qixinbao_companies_20240101_120000.xlsx
+│   ├── main.py              # FastAPI 服务入口
+│   └── schemas.py           # API 请求/响应数据模型
+├── main.py                  # CLI 命令行版入口（三种模式）
+├── crawler.py               # 爬虫核心逻辑
+├── browser.py               # Playwright 浏览器管理
+├── exporter.py              # 数据导出（Excel/CSV）
+├── utils.py                 # 工具函数（含签名算法）
+├── qr_login.py              # 扫码登录工具
+├── config.json              # 运行时配置
+├── cookie.txt               # Cookie 文件（扫码登录自动生成）
+├── selectors.json           # CSS 选择器配置
+├── requirements.txt         # Python 依赖
+├── api_docs.md              # 完整 API 接口文档
+├── README.md                # 本文件
+├── setup.bat / setup.sh     # 一键部署脚本
+├── start.bat / start.sh     # 启动 API 服务
+├── qr_login.bat             # 扫码登录快捷方式
+└── output/                  # 爬取结果输出目录
 ```
 
-## ⚙️ 配置说明
+## 爬取字段说明
 
-`config.json` 配置项说明：
+### 浏览器爬取（完整信息）
+- 公司名称、法定代表人、注册资本、成立日期、经营状态
+- 统一社会信用代码、经营范围、所属行业、纳税人资质
+- 联系电话、企业邮箱、注册地址
+- 股东信息、主要人员
 
-```json
-{
-  "cookie": "your_cookie_here",           // 必填：启信宝VIP Cookie
-  "delays": {
-    "min": 1.0,                            // 最小延迟（秒）
-    "max": 3.0                             // 最大延迟（秒）
-  },
-  "browser": {
-    "headless": false,                     // 是否无头模式（false显示浏览器）
-    "timeout": 30000,                      // 页面超时时间（毫秒）
-    "user_agent": "Mozilla/5.0..."        // 浏览器User-Agent
-  },
-  "output": {
-    "format": "excel",                     // 输出格式：excel 或 csv
-    "filename": "qixinbao_companies",      // 输出文件名
-    "timestamp": true                      // 是否在文件名添加时间戳
-  },
-  "anti_detection": {
-    "random_mouse_move": true,             // 随机鼠标移动
-    "random_scroll": true,                 // 随机滚动
-    "stealth_mode": true                   // 启用隐身模式
-  }
-}
+### 高级搜索 API（列表信息）
+- 公司名称、法定代表人、注册资本、成立日期、经营状态
+- 统一社会信用代码、联系电话、邮箱、地址、行业
+
+## 常见问题
+
+**端口被占用？**
+```bash
+venv\Scripts\python -m uvicorn app.main:app --host 0.0.0.0 --port 8080
 ```
 
-## 📊 数据字段说明
+**高级搜索返回 total_num=0？**
+- 筛选项参数无效——检查是否传了 `"string"` 等错误值
+- Cookie 过期——重新扫码登录或复制 Cookie
 
-爬取的数据包含以下字段：
+**Cookie 多久更新一次？**
+- `acw_tc`（WAF 令牌）约 30 分钟有效
+- `pdid`（登录会话）约 7~30 天
+- API 提示过期时重新复制完整 Cookie 即可
 
-### 基本信息
-- `company_name`: 公司名称
-- `legal_person`: 法定代表人
-- `registered_capital`: 注册资本
-- `establish_date`: 成立日期
-- `status`: 经营状态
-- `organization_code`: 统一社会信用代码
-- `business_scope`: 经营范围
-- `industry`: 所属行业
-- `taxpayer_type`: 纳税人资质
+**爬取返回 N/A？**
+- Cookie 过期——更新后重试
+- 公司名称不准确——使用全称
+- 网站结构变化——需更新 CSS 选择器
 
-### 联系方式
-- `phone`: 联系电话
-- `email`: 企业邮箱
-- `address`: 注册地址
+**批量爬取如何拿结果？**
+1. `POST /crawl/batch` → 获取 `task_id`
+2. 轮询 `GET /crawl/task/{task_id}` 直到 `status="completed"`
+3. 根据 `result_file` 调用 `GET /crawl/download/{filename}` 下载
 
-### 人员信息
-- `shareholders`: 股东信息（多个用分号分隔）
-- `executives`: 主要人员（多个用分号分隔）
-
-### 爬取信息
-- `crawl_time`: 爬取时间
-
-## 🎯 选择器调整指南
-
-**重要提示：** 启信宝的 CSS 选择器可能会动态变化。如果爬取失败提示"找不到元素"，请按以下步骤调整：
-
-### 快速方法 1：修改 selectors.json（推荐）
-
-1. 打启信宝网站（https://www.qixin.com/）
-2. 按 `F12` 打开开发者工具
-3. 点击元素选择器（左上角箭头图标）
-4. 点击页面上的目标元素
-5. 右键点击高亮的代码 → Copy → Copy selector
-6. 打开 `selectors.json` 文件
-7. 将新的选择器添加到对应数组的**最前面**
-
-### 快速方法 2：直接告诉我
-
-如果你找到了新的选择器，直接告诉我：
-- "把搜索框选择器改成 XXX"
-- "公司名称的选择器改成 XXX"
-
-我会帮你更新代码。
-
-### 手动方法 3：修改 crawler.py
-
-在 `crawler.py` 中找到对应的选择器并替换：
-
-```python
-# 原选择器
-'company_name': ['.company-name h1', 'h1.company-title']
-
-# 修改为新的选择器
-'company_name': ['.your-new-selector']
-```
-
-## ⚠️ 注意事项
+## 注意事项
 
 ### 法律合规
-- ✅ 本工具仅用于个人研究、学习目的
-- ✅ 使用自己的 VIP 账号，访问有权限的内容
-- ✅ 遵守启信宝服务条款
-- ❌ 不得用于商业目的或转售数据
-- ❌ 不得过度频繁请求，避免对服务器造成压力
+- 本工具仅用于个人研究、学习目的
+- 使用自己的 VIP 账号，访问有权限的内容
+- 遵守启信宝服务条款
+- 不得用于商业目的或转售数据
+- 不得过度频繁请求，避免对服务器造成压力
 
 ### 使用建议
-1. **首次使用**: 建议先用单公司测试模式，确保配置正确
-2. **Cookie 有效期**: Cookie 可能过期，如遇登录问题请重新获取
-3. **反爬策略**: 保持合理的请求延迟（建议 3-6 秒）
-4. **数据验证**: 爬取后验证数据准确性
+- 先用高级搜索 API 筛选目标企业，再对需要的企业逐条爬取
+- 保持合理的请求频率，内置限速机制会自动调整
+- 批量任务数建议控制在 200 以内
 
-### 常见问题
-
-**Q: 提示"联系方式需要VIP"？**
-A: 检查 Cookie 是否正确配置，确保使用的是 VIP 账号的 Cookie。
-
-**Q: 爬取速度很慢？**
-A: 这是正常的，为了避免被检测，设置了随机延迟。可以调整 `config.json` 中的 `delays` 参数。
-
-**Q: 找不到搜索框/结果？**
-A: 网站结构可能变化，需要使用开发者工具检查并更新选择器。
-
-**Q: 如何提高成功率？**
-A:
-- 使用有效的 VIP Cookie
-- 设置合理的延迟时间
-- 使用 `headless: false` 模式调试
-- 确保网络连接稳定
-
-**Q: 能否爬取其他字段？**
-A: 可以，修改 `crawler.py` 中的提取逻辑，添加新的字段和选择器。
-
-## 🔄 版本历史
-
-### v1.0.0 (2024-01-01)
-- ✨ 首次发布
-- ✅ 支持基本信息、联系方式、股东高管提取
-- ✅ 三种运行模式
-- ✅ Excel/CSV 导出
-- ✅ 反爬优化
-
-## 📝 开发计划
-
-- [ ] 支持验证码识别
-- [ ] 添加断点续传功能
-- [ ] 支持代理池
-- [ ] 添加数据库存储
-- [ ] Web UI 界面
-
-## 📄 许可证
+## 许可证
 
 本项目仅供学习交流使用，请勿用于非法用途。使用本工具产生的一切后果由使用者自行承担。
-
-## 🤝 贡献
-
-欢迎提交 Issue 和 Pull Request！
-
-## 📧 联系方式
-
-如有问题或建议，请提交 Issue。
-
----
-
-**⚠️ 免责声明**: 本工具仅用于技术研究和学习目的，使用者需自行承担使用本工具的法律风险。请遵守相关法律法规和网站服务条款。

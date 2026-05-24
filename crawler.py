@@ -699,7 +699,7 @@ class QixinbaoCrawler:
           status:     经营状态 [1=存续, 2=注销, 3=吊销, 4=撤销, 5=迁出, 6=设立中, 7=清算中, 8=停业]
           reg_capi:   注册资本 ["0-100", "100-200", "200-500", "500-1000", "1000-"]
           paid_capi:  实缴资本 (同上范围 + "has"/"no")
-          establish:  成立年限 ["1y", "1-5y", "5-10y", "10-15y", "15y+"]
+          establish:  成立年限 ["1y", "1-5y", "5-10y", "10-15y", "15y+"]，内部转换为 multiYear [1,2,3,4,5]
           company_type: 公司类型 ["state-owned", "collective", "cooperative", ...]
           org_type:   组织类型 ["new三板", "listed", "social", "law-firm", ...]
           employee:   员工人数 ["<50", "50-99", "100-499", "500+"]
@@ -729,7 +729,9 @@ class QixinbaoCrawler:
         if paid_capi:
             body["paidCapi"] = paid_capi
         if establish:
-            body["establish"] = establish
+            # establish 字符串转 multiYear 整数: 1y->1, 1-5y->2, 5-10y->3, 10-15y->4, 15y+->5
+            mapping = {"1y": 1, "1-5y": 2, "5-10y": 3, "10-15y": 4, "15y+": 5}
+            body["multiYear"] = [mapping.get(v, v) for v in establish]
         if company_type:
             body["companyType"] = company_type
         if org_type:

@@ -117,7 +117,8 @@
       "Bash(git add *)",
       "Bash(git commit -m ' *)",
       "Bash(git push *)",
-      "Bash(taskkill //F //IM git-remote-https.exe)"
+      "Bash(taskkill //F //IM git-remote-https.exe)",
+      "Bash(git config *)"
     ],
     "additionalDirectories": [
       "\\tmp"

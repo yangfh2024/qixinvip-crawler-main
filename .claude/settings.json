@@ -118,7 +118,16 @@
       "Bash(git commit -m ' *)",
       "Bash(git push *)",
       "Bash(taskkill //F //IM git-remote-https.exe)",
-      "Bash(git config *)"
+      "Bash(git config *)",
+      "Bash(python -c \"import datetime; print\\('当前时间:', datetime.datetime.now\\(\\).strftime\\('%H:%M:%S'\\)\\)\")",
+      "Bash(python -c \"from datetime import datetime; print\\(datetime.now\\(\\).strftime\\('%H:%M:%S'\\)\\)\")",
+      "Bash(python -m uvicorn app.main:app --host 0.0.0.0 --port 8004)",
+      "Bash(curl -s -X POST http://localhost:8004/crawl/advanced -H 'Content-Type: application/json' -d '{\"keyword\": \"科技\", \"page\": 1, \"page_size\": 3}')",
+      "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\('时间:', __import__\\(\\\\\"datetime\\\\\"\\).datetime.now\\(\\).strftime\\(\\\\\"%H:%M:%S\\\\\"\\)\\); print\\('success:', d.get\\('success'\\)\\); print\\('total:', d.get\\('total'\\)\\); print\\('items:', len\\(d.get\\('items',[]\\)\\)\\); print\\('error:', d.get\\('error',''\\)\\)\")",
+      "Bash(curl -s -X POST http://localhost:8004/crawl/advanced -H \"Content-Type: application/json\" -d \"{\\\\\"keyword\\\\\": \\\\\"科技\\\\\", \\\\\"page\\\\\": 1, \\\\\"page_size\\\\\": 3}\")",
+      "Bash(f:/AI/qixinvip-crawler-main/venv/Scripts/python.exe -m uvicorn app.main:app --host 0.0.0.0 --port 8004)",
+      "Bash(curl -s -X POST http://localhost:8004/crawl/advanced -H \"Content-Type: application/json\" --data-raw \"{\\\\\"keyword\\\\\":\\\\\"科技\\\\\",\\\\\"page\\\\\":1,\\\\\"page_size\\\\\":3}\")",
+      "Bash(f:/AI/qixinvip-crawler-main/venv/Scripts/python.exe -c ' *)"
     ],
     "additionalDirectories": [
       "\\tmp"

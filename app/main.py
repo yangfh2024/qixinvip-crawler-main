@@ -150,7 +150,12 @@ async def _ensure_browser():
         browser_manager = BrowserManager(_config)
         try:
             await browser_manager.start()
-            print("[浏览器] 延迟启动成功")
+            # 注入登录 Cookie，使浏览器保持登录状态
+            config = load_config()
+            cookie = parse_cookie_string(config.get("cookie", ""), domain=".qixin.com")
+            if cookie:
+                await browser_manager.context.add_cookies(cookie)
+            print("[浏览器] 延迟启动成功（已注入 Cookie）")
         except Exception as e:
             browser_manager = None
             tb = traceback.format_exc()
@@ -254,6 +259,9 @@ async def crawl_advanced(request: AdvancedSearchRequest):
     - 取决于 API 是否稳定
     """
     try:
+        # 确保浏览器已启动（用于热更新 cookie）
+        await _ensure_browser()
+
         crawler = QixinbaoCrawler()
         result = crawler.advanced_search(
             keyword=request.keyword,
@@ -312,6 +320,10 @@ async def crawl_advanced(request: AdvancedSearchRequest):
                     success=False,
                     error="Cookie 已过期或无效，请重新扫码登录后更新 cookie.txt",
                 )
+
+        # ── 热更新 Cookie（每次成功查询后保持 cookie.txt 最新） ──
+        if browser_manager is not None:
+            await browser_manager.refresh_cookie_file()
 
         # 转换 API 返回的字段为统一的格式
         items = []

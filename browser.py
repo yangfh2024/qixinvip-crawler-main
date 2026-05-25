@@ -151,6 +151,41 @@ class BrowserManager:
 
         await random_delay(0.5, 1.5)        # 随机等待
 
+    async def get_cookies(self) -> List[Dict]:
+        """
+        从浏览器 context 导出当前有效的 cookies
+
+        用于高级搜索 API 成功后热更新 cookie.txt，保持 cookie 始终新鲜。
+
+        Returns:
+            Playwright 格式的 cookie 字典列表 [{name, value, domain, path}, ...]
+        """
+        if self.context is None:
+            return []
+        try:
+            return await self.context.cookies()
+        except Exception:
+            return []
+
+    async def refresh_cookie_file(self, filepath: str = "cookie.txt"):
+        """
+        从浏览器 context 提取 cookies 并写入文件
+
+        每次 API 查询成功后调用，确保 cookie.txt 始终是浏览器中最新的 cookie。
+        写入格式兼容 cookie.txt 的 "key=value; key2=value2" 格式。
+        """
+        cookies = await self.get_cookies()
+        if not cookies:
+            return
+
+        cookie_str = "; ".join(f"{c['name']}={c['value']}" for c in cookies)
+        try:
+            with open(filepath, "w", encoding="utf-8") as f:
+                f.write(cookie_str)
+            print(f"[Cookie] 已热更新 cookie.txt（{len(cookies)} 条）")
+        except Exception as e:
+            print(f"[Cookie] 热更新失败: {e}")
+
     async def stop(self):
         """停止浏览器——释放所有资源"""
         if self.context:

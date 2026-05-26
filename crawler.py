@@ -38,21 +38,24 @@ class QixinbaoCrawler:
     _max_delay: float = 10.0           # 最长间隔，最多等 10 秒
     _min_delay: float = 1.0            # 最短间隔，1s（低于此值易触发限速）
 
-    def __init__(self, config_path: str = 'config.json'):
+    def __init__(self, config_path: str = 'config.json', browser_manager=None):
         """
         初始化爬虫
 
         Args:
             config_path: 配置文件路径（默认 config.json）
+            browser_manager: 浏览器管理器实例（API 模式由外部注入；CLI 模式自行创建）
         """
-        self.config = load_config(config_path)               # 加载配置
-        self.browser_manager = BrowserManager(self.config)    # 创建浏览器管理器
-        self.cookie = parse_cookie_string(                    # 解析 Cookie
+        self.config = load_config(config_path)
+        # API 模式由外部注入；CLI 模式自行创建
+        self.browser_manager = browser_manager or BrowserManager(self.config)
+        # 解析 Cookie（CLI 模式需要，用于 browser 爬取；API 模式通过 context 管理登录态）
+        self.cookie = parse_cookie_string(
             self.config.get('cookie', ''),
             domain='.qixin.com'
         )
-        self.delays = self.config.get('delays', {'min': 1.0, 'max': 3.0})  # 操作延迟
-        self.base_url = "https://www.qixin.com"               # 启信宝网址
+        self.delays = self.config.get('delays', {'min': 1.0, 'max': 3.0})
+        self.base_url = "https://www.qixin.com"
 
     async def search_company(self, page: Page, company_name: str) -> bool:
         """
@@ -799,6 +802,129 @@ class QixinbaoCrawler:
             print(f"[限速] 触发限速，间隔从 {old:.1f}s 升至 {QixinbaoCrawler._current_delay:.1f}s")
         else:
             # 平稳运行时逐渐恢复最短间隔
+            QixinbaoCrawler._current_delay = max(
+                QixinbaoCrawler._current_delay * 0.95, QixinbaoCrawler._min_delay
+            )
+
+        return data
+
+    async def advanced_search_browser(
+        self,
+        keyword: str = "",
+        status: Optional[List[int]] = None,
+        province: Optional[List[str]] = None,
+        industry: Optional[List[str]] = None,
+        reg_capi: Optional[List[str]] = None,
+        paid_capi: Optional[List[str]] = None,
+        establish: Optional[List[str]] = None,
+        company_type: Optional[List[str]] = None,
+        org_type: Optional[List[str]] = None,
+        employee: Optional[List[str]] = None,
+        insured: Optional[List[str]] = None,
+        listing: Optional[List[str]] = None,
+        scale: Optional[List[str]] = None,
+        page: int = 1,
+        page_size: int = 10,
+    ) -> Dict:
+        """
+        高级搜索——通过浏览器 session 调 API（persistent context 模式）
+
+        与 advanced_search 的区别：
+        - advanced_search：使用独立的 requests 库，cookie 从 cookie.txt 读取
+        - advanced_search_browser：使用 browser_manager.context.request，共享浏览器完整登录态
+
+        使用场景：
+        - 启用 persistent context 模式后，登录态由浏览器自动管理，应使用此方法。
+        - browser_manager 必须已启动并保持登录状态。
+
+        参数与返回值同 advanced_search。
+        """
+        if self.browser_manager is None or self.browser_manager.context is None:
+            return {"items": [], "isLimit": True, "_no_context": True}
+
+        # ── 按参数构建请求体 ──────────────────────────────
+        body: Dict = {"page": page, "size": page_size, "key": keyword}
+        if status:
+            body["status"] = status
+        if province:
+            body["areas"] = province
+        if industry:
+            body["industry"] = industry
+        if reg_capi:
+            body["regCapi"] = reg_capi
+        if paid_capi:
+            body["paidCapi"] = paid_capi
+        if establish:
+            mapping = {"1y": 1, "1-5y": 2, "5-10y": 3, "10-15y": 4, "15y+": 5}
+            body["multiYear"] = [mapping.get(v, v) for v in establish]
+        if company_type:
+            body["companyType"] = company_type
+        if org_type:
+            body["orgType"] = org_type
+        if employee:
+            body["employee"] = employee
+        if insured:
+            body["insured"] = insured
+        if listing:
+            body["listingStatus"] = listing
+        if scale:
+            body["scale"] = scale
+
+        # ── 计算签名 ───────────────────────────────────
+        json_body = qixin_json(body)
+        header_name, header_value = compute_qixin_signature(
+            "/search/advanced", json_body,
+        )
+
+        headers = {
+            "User-Agent": (
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+            ),
+            "Content-Type": "application/json",
+            "X-Requested-With": "XMLHttpRequest",
+            "Origin": "https://www.qixin.com",
+            "Referer": "https://www.qixin.com/search/advance",
+            header_name: header_value,
+        }
+
+        # ── 限速 ───────────────────────────────────────
+        elapsed = time.time() - QixinbaoCrawler._last_api_time
+        if elapsed < QixinbaoCrawler._current_delay:
+            await asyncio.sleep(QixinbaoCrawler._current_delay - elapsed)
+
+        # ── 通过浏览器 session 发请求（共享登录态） ──────
+        try:
+            resp = await self.browser_manager.context.request.post(
+                "https://www.qixin.com/api-proxy/search/advanced",
+                headers=headers,
+                data=json_body,
+                timeout=15000,
+            )
+        except Exception as e:
+            print(f"[API 请求异常] {e}")
+            return {"items": [], "isLimit": True}
+
+        QixinbaoCrawler._last_api_time = time.time()
+
+        # 403 → WAF 拦截
+        if resp.status == 403:
+            return {"items": [], "isLimit": True, "_forbidden": True}
+
+        # 非 200 → 限速
+        if resp.status != 200:
+            return {"items": [], "isLimit": True}
+
+        data = await resp.json()
+
+        # 限速检测 & 自适应间隔调整
+        if data.get("isLimit"):
+            old = QixinbaoCrawler._current_delay
+            QixinbaoCrawler._current_delay = min(
+                QixinbaoCrawler._current_delay * 2, QixinbaoCrawler._max_delay
+            )
+            print(f"[限速] 触发限速，间隔从 {old:.1f}s 升至 {QixinbaoCrawler._current_delay:.1f}s")
+        else:
             QixinbaoCrawler._current_delay = max(
                 QixinbaoCrawler._current_delay * 0.95, QixinbaoCrawler._min_delay
             )

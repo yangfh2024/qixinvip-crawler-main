@@ -60,6 +60,9 @@ manual.html
 playwright-report/
 test-results/
 
+# Browser persistent context (contains cookies/login state)
+qixin_user_data/
+
 # Environment
 .env
 .env.local

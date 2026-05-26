@@ -127,7 +127,10 @@
       "Bash(curl -s -X POST http://localhost:8004/crawl/advanced -H \"Content-Type: application/json\" -d \"{\\\\\"keyword\\\\\": \\\\\"科技\\\\\", \\\\\"page\\\\\": 1, \\\\\"page_size\\\\\": 3}\")",
       "Bash(f:/AI/qixinvip-crawler-main/venv/Scripts/python.exe -m uvicorn app.main:app --host 0.0.0.0 --port 8004)",
       "Bash(curl -s -X POST http://localhost:8004/crawl/advanced -H \"Content-Type: application/json\" --data-raw \"{\\\\\"keyword\\\\\":\\\\\"科技\\\\\",\\\\\"page\\\\\":1,\\\\\"page_size\\\\\":3}\")",
-      "Bash(f:/AI/qixinvip-crawler-main/venv/Scripts/python.exe -c ' *)"
+      "Bash(f:/AI/qixinvip-crawler-main/venv/Scripts/python.exe -c ' *)",
+      "Bash(taskkill //F //IM python.exe)",
+      "Bash(sleep 8 && cat /tmp/claude/f--AI-qixinvip-crawler-main/7beec73d-47ec-4e36-a6ff-ad4a81ffc7af/tasks/b9dkylr8h.output 2>/dev/null || echo \"文件未生成\")",
+      "Read(//tmp/claude/f--AI-qixinvip-crawler-main/7beec73d-47ec-4e36-a6ff-ad4a81ffc7af/tasks/**)"
     ],
     "additionalDirectories": [
       "\\tmp"

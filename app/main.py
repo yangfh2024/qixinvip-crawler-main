@@ -143,19 +143,15 @@ async def _ensure_browser():
     确保浏览器已启动（懒加载）
 
     第一次请求时才会启动浏览器，后续请求复用。
-    这叫"懒加载"——用的时候再加载，不用提前占用资源。
+    persistent context 模式下，登录态由浏览器自动管理（cookie/localStorage 等），
+    不需要手动注入 cookie。
     """
     global browser_manager
     if browser_manager is None:
         browser_manager = BrowserManager(_config)
         try:
             await browser_manager.start()
-            # 注入登录 Cookie，使浏览器保持登录状态
-            config = load_config()
-            cookie = parse_cookie_string(config.get("cookie", ""), domain=".qixin.com")
-            if cookie:
-                await browser_manager.context.add_cookies(cookie)
-            print("[浏览器] 延迟启动成功（已注入 Cookie）")
+            print("[浏览器] 延迟启动成功（persistent context 模式）")
         except Exception as e:
             browser_manager = None
             tb = traceback.format_exc()
@@ -176,11 +172,9 @@ async def _crawl_single(company_name: str, timeout: int = 120) -> dict:
     await _ensure_browser()
 
     config = load_config()
-    cookie = parse_cookie_string(config.get("cookie", ""), domain=".qixin.com")
 
     crawler = QixinbaoCrawler()
     crawler.browser_manager = browser_manager
-    crawler.cookie = cookie
     crawler.config = config
 
     # 带上超时控制，防止某个公司一直卡住
@@ -200,19 +194,20 @@ async def _crawl_single(company_name: str, timeout: int = 120) -> dict:
 
 @app.get("/health", summary="健康检查（查看服务是否正常运行）")
 async def health_check():
-    """检查服务状态——浏览器是否就绪、Cookie 是否有效"""
-    cookie_info = _cookie_status()
+    """检查服务状态——浏览器是否就绪、登录态是否有效"""
+    logged_in = False
+    if browser_manager is not None and browser_manager.context is not None:
+        logged_in = await browser_manager.is_logged_in()
     return {
         "status": "ok",
         "browser_ready": browser_manager is not None,
-        "cookie_valid": cookie_info["valid"],
-        "cookie_count": cookie_info["count"],
+        "logged_in": logged_in,
         "rate_limit": {
             "current_delay": QixinbaoCrawler._current_delay,
             "min_delay": QixinbaoCrawler._min_delay,
             "max_delay": QixinbaoCrawler._max_delay,
         },
-        "version": "2.0.0",
+        "version": "2.1.0",
         "timestamp": datetime.now().isoformat(),
     }
 
@@ -247,11 +242,12 @@ async def crawl_single(request: SingleCrawlRequest):
 @app.post("/crawl/advanced", response_model=AdvancedSearchResponse, summary="高级搜索（直接调 API，更快）")
 async def crawl_advanced(request: AdvancedSearchRequest):
     """
-    高级搜索——直接调启信宝 API，不需要启动浏览器。
+    高级搜索——通过浏览器 session 调启信宝 API（persistent context 模式）
 
     优势：
     - 速度快（通常 0.1-0.5 秒出结果）
-    - 不消耗浏览器资源
+    - 共享浏览器完整登录态（cookie + localStorage + indexedDB）
+    - 不依赖 cookie.txt，登录态由浏览器自动持久化
     - 支持多维度筛选（经营状态、地区、行业、注册资本等）
 
     劣势：
@@ -259,11 +255,25 @@ async def crawl_advanced(request: AdvancedSearchRequest):
     - 取决于 API 是否稳定
     """
     try:
-        # 确保浏览器已启动（用于热更新 cookie）
+        # 确保浏览器已启动（persistent context，自动管理登录态）
         await _ensure_browser()
 
+        # ── 登录态检测 ──────────────────────────────
+        # 首次请求时检测登录态，未登录则给出明确提示
+        is_logged_in = await browser_manager.is_logged_in()
+        if not is_logged_in:
+            return AdvancedSearchResponse(
+                success=False,
+                error="未检测到 VIP 登录态。请手动扫码登录：\n"
+                      "1. 关闭浏览器数据目录下的锁文件（如果有）\n"
+                      "2. 手动打开浏览器窗口访问 qixin.com 扫码登录\n"
+                      "3. 登录后重新调用本接口",
+            )
+
         crawler = QixinbaoCrawler()
-        result = crawler.advanced_search(
+        crawler.browser_manager = browser_manager
+
+        result = await crawler.advanced_search_browser(
             keyword=request.keyword,
             status=request.status,
             province=request.province,
@@ -284,19 +294,18 @@ async def crawl_advanced(request: AdvancedSearchRequest):
         import re as _re
         _strip_em = lambda s: _re.sub(r"</?em>", "", s) if isinstance(s, str) else s
 
-        # ── 限速 / WAF 拦截检测与自动重试 ────────────
-        if result.get("isLimit"):
-            if result.get("_forbidden"):
-                # 403 → WAF 拦截，非频率问题，不重试
-                return AdvancedSearchResponse(
-                    success=False,
-                    error="请求被 WAF 拦截，当前 Cookie 无法调高级搜索 API。"
-                          "建议使用扫码登录刷新 cookie，或改用浏览器爬取模式",
-                )
-            # 普通限速（isLimit=true, status=200），等间隔后重试一次
+        # ── 异常处理 ────────────────────────────────
+        if result.get("_no_context"):
+            return AdvancedSearchResponse(
+                success=False,
+                error="浏览器 context 未初始化，请重启服务",
+            )
+
+        if result.get("_forbidden") or result.get("isLimit"):
+            # 限速 / WAF 拦截：等间隔后重试一次
             import time as _time
             _time.sleep(QixinbaoCrawler._current_delay)
-            result = crawler.advanced_search(
+            result = await crawler.advanced_search_browser(
                 keyword=request.keyword, status=request.status,
                 province=request.province, industry=request.industry,
                 establish=request.establish, reg_capi=request.reg_capi,
@@ -311,20 +320,7 @@ async def crawl_advanced(request: AdvancedSearchRequest):
                     error="请求被限速，请稍后重试",
                 )
 
-        # ── Cookie 过期检测 ──────────────────────────
-        # totalNum=0 可能是指标不匹配，也可能是 cookie 失效了
-        if result.get("totalNum") == 0:
-            cookie_ok = QixinbaoCrawler.check_cookie_valid()
-            if not cookie_ok:
-                return AdvancedSearchResponse(
-                    success=False,
-                    error="Cookie 已过期或无效，请重新扫码登录后更新 cookie.txt",
-                )
-
-        # ── 热更新 Cookie（每次成功查询后保持 cookie.txt 最新） ──
-        if browser_manager is not None:
-            await browser_manager.refresh_cookie_file()
-
+        # totalNum=0 但无 error，可能是关键词无结果，非登录问题
         # 转换 API 返回的字段为统一的格式
         items = []
         for item in result.get("items", []):
@@ -406,11 +402,9 @@ async def _run_batch(task_id: str):
     try:
         await _ensure_browser()
         config = load_config()
-        cookie = parse_cookie_string(config.get("cookie", ""), domain=".qixin.com")
 
         crawler = QixinbaoCrawler()
         crawler.browser_manager = browser_manager
-        crawler.cookie = cookie
         crawler.config = config
 
         exporter = get_exporter(config)
@@ -497,6 +491,51 @@ async def check_cookie():
         has_auth_cookies=info["has_auth"],
         message=msg,
     )
+
+
+@app.post("/login/setup", summary="扫码登录（首次设置）")
+async def login_setup():
+    """
+    触发扫码登录流程——打开可见浏览器窗口，用户扫码后自动持久化登录态。
+
+    流程：
+    1. 关闭已有浏览器
+    2. 打开可见浏览器访问启信宝登录页
+    3. 等待用户扫码（60秒）
+    4. 关闭浏览器，登录态自动持久化到 qixin_user_data 目录
+    5. 重新以 headless 模式启动浏览器
+
+    之后正常调用 /crawl/advanced 即可。
+    """
+    import shutil, os
+
+    global browser_manager
+
+    # 关闭已有浏览器
+    if browser_manager:
+        try:
+            await browser_manager.stop()
+        except Exception:
+            pass
+        browser_manager = None
+
+    # 清理 user_data_dir（如果有残留状态）
+    user_data_dir = os.path.join(os.path.dirname(__file__), "..", "qixin_user_data")
+    if os.path.exists(user_data_dir):
+        shutil.rmtree(user_data_dir)
+
+    print("[登录] 正在打开浏览器，请扫码...")
+
+    # 创建临时可见浏览器进行扫码
+    temp_manager = BrowserManager(_config, user_data_dir)
+    await temp_manager.start()
+    # 扫码完成后，browser_manager 置 None，下次 API 调用时会重新初始化
+    browser_manager = None
+
+    return {
+        "message": "扫码登录完成，登录态已持久化。请在下方调用 /crawl/advanced 接口。",
+        "logged_in": True,
+    }
 
 
 @app.post("/cookie/update", summary="更新 Cookie")
